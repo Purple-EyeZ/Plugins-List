@@ -17,7 +17,7 @@
             "Wolfie"
         ],
         "status": "working",
-        "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet/",
+        "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet/",
         "warningMessage": ""
     },
@@ -243,7 +243,7 @@
         "warningMessage": "Crashes on long pressing any pictures in full screen."
     },
     {
-        "name": " Breado's Quotes",
+        "name": "Breado's Quotes",
         "description": "A Plugin to give you a quote on command.",
         "authors": [
             "Breado"
@@ -768,11 +768,11 @@
         "name": "Quick Delete",
         "description": "Remove confirmation when deleting a message or an embed.",
         "authors": [
-            "The Sun ",
+            "The Sun",
             "Purple_Ξye™"
         ],
         "status": "working",
-        "sourceUrl": "https://purple-eyez.github.io/RevengePlugins/QuickDelete/",
+        "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/QuickDelete/",
         "warningMessage": ""
     },
@@ -780,10 +780,11 @@
         "name": "BetterBetterChatGestures",
         "description": "Adds several new gestures in the chat.",
         "authors": [
-            "Rosie<3, forked by MYSTRAVIL"
+            "Rosie<3",
+            "forked by MYSTRAVIL"
         ],
         "status": "warning",
-        "sourceUrl": "https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/",
+        "sourceUrl": "https://github.com/mystravil/vendetta-plugins",
         "installUrl": "https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/",
         "warningMessage": "Enabling the \"Open Keyboard Automatically\" option will crash the app."
     },
@@ -802,10 +803,11 @@
         "name": "Hidden Channels Fix",
         "description": "Reworked from cloudburst's original script.",
         "authors": [
-            "cloudburst, Training Dummy"
+            "cloudburst",
+            "Training Dummy"
         ],
         "status": "working",
-        "sourceUrl": "https://trainingdummy.github.io/vendetta-plugins/hidden-channels/",
+        "sourceUrl": "https://github.com/trainingdummy/vendetta-plugins",
         "installUrl": "https://trainingdummy.github.io/vendetta-plugins/hidden-channels/",
         "warningMessage": ""
     },
@@ -816,7 +818,7 @@
             "Angelica"
         ],
         "status": "working",
-        "sourceUrl": "https://angelix1.github.io/MP/angel/antied/",
+        "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antied/",
         "warningMessage": ""
     },
@@ -827,7 +829,7 @@
             "Awesomegamergame"
         ],
         "status": "working",
-        "sourceUrl": "https://awesomegamergame.github.io/bunny-plugins/dashless",
+        "sourceUrl": "https://github.com/awesomegamergame/bunny-plugins",
         "installUrl": "https://awesomegamergame.github.io/bunny-plugins/dashless",
         "warningMessage": ""
     },
@@ -840,7 +842,7 @@
             "Rico040 ;)"
         ],
         "status": "working",
-        "sourceUrl": "https://rico040.github.io/bunny-plugins/dislate/",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/dislate/",
         "warningMessage": ""
     },
@@ -851,7 +853,7 @@
             "MSMA"
         ],
         "status": "working",
-        "sourceUrl": "https://martinz64.github.io/vendetta-plugins/PlatformIndicators/",
+        "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/PlatformIndicators/",
         "warningMessage": ""
     },
@@ -863,7 +865,7 @@
             "Rico040"
         ],
         "status": "working",
-        "sourceUrl": "https://rico040.github.io/bunny-plugins/picture-links/",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/picture-links/",
         "warningMessage": ""
     },
@@ -876,7 +878,7 @@
             "aliernfrog"
         ],
         "status": "working",
-        "sourceUrl": "https://aliernfrog.github.io/vd-plugins/Stealmoji/",
+        "sourceUrl": "https://github.com/aliernfrog/vd-plugins",
         "installUrl": "https://aliernfrog.github.io/vd-plugins/Stealmoji/",
         "warningMessage": ""
     },
@@ -888,7 +890,7 @@
             "Rico040"
         ],
         "status": "working",
-        "sourceUrl": "https://rico040.github.io/bunny-plugins/userbg/",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/userbg/",
         "warningMessage": ""
     },
@@ -955,7 +957,7 @@
             "redstonekasi"
         ],
         "status": "working",
-        "sourceUrl": "https://raw.githubusercontent.com/NarwhalKid/revenge-plugin/refs/heads/master/audiofix/",
+        "sourceUrl": "https://github.com/NarwhalKid/revenge-plugin",
         "installUrl": "https://raw.githubusercontent.com/NarwhalKid/revenge-plugin/refs/heads/master/audiofix/",
         "warningMessage": ""
     },
@@ -977,7 +979,7 @@
             "Narwhal"
         ],
         "status": "warning",
-        "sourceUrl": "https://raw.githubusercontent.com/NarwhalKid/revenge-plugin/refs/heads/master/spotifyfix/",
+        "sourceUrl": "https://github.com/NarwhalKid/revenge-plugin",
         "installUrl": "https://raw.githubusercontent.com/NarwhalKid/revenge-plugin/refs/heads/master/spotifyfix/",
         "warningMessage": "Spotify activity no longer shows up on your profile."
     },
@@ -999,7 +1001,7 @@
             "mugman"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/mugman.catvibers.me/vendetta-plugins/urban/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/mugman.catvibers.me/vendetta-plugins/urban/",
         "warningMessage": ""
     },
@@ -1012,7 +1014,7 @@
             "Nuckyz"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/carince.github.io/VendettaPlugins/muteNewGuilds/",
+        "sourceUrl": "https://github.com/carince/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/carince.github.io/VendettaPlugins/muteNewGuilds/",
         "warningMessage": ""
     },
@@ -1023,7 +1025,7 @@
             "Zykrah"
         ],
         "status": "working",
-        "sourceUrl": "https://guide.zykrah.me/vendetta-plugins/HideBlockedMessages/",
+        "sourceUrl": "https://guide.zykrah.me/vendetta-plugins/HideBlockedMessages",
         "installUrl": "https://guide.zykrah.me/vendetta-plugins/HideBlockedMessages/",
         "warningMessage": ""
     },
@@ -1034,7 +1036,7 @@
             "pylix"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/HideGiftButton/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/HideGiftButton/",
         "warningMessage": "Use \"Better Chat Buttons\" instead."
     },
@@ -1045,7 +1047,7 @@
             "pylix"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/MoreConfirm/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/MoreConfirm/",
         "warningMessage": ""
     },
@@ -1056,7 +1058,7 @@
             "pylix"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/NoAutoReplyMention/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/NoAutoReplyMention/",
         "warningMessage": ""
     },
@@ -1067,7 +1069,7 @@
             "pylix"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/NoIdle/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/NoIdle/",
         "warningMessage": ""
     },
@@ -1078,7 +1080,7 @@
             "pylix"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/Last.fm/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/Last.fm/",
         "warningMessage": ""
     },
@@ -1089,7 +1091,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ShowImageLinks/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ShowImageLinks/",
         "warningMessage": ""
     },
@@ -1100,7 +1102,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ShowTag/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ShowTag/",
         "warningMessage": ""
     },
@@ -1111,7 +1113,7 @@
             "nikosszzz"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/nikosszzz.github.io/vd-plugins/friendInvites/",
+        "sourceUrl": "https://github.com/nikosszzz/vd-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/nikosszzz.github.io/vd-plugins/friendInvites/",
         "warningMessage": ""
     },
@@ -1122,7 +1124,7 @@
             "jdev082"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/jdev082.github.io/vd-repo2/CatFacts/",
+        "sourceUrl": "https://github.com/jdev082/vd-repo2",
         "installUrl": "https://vd-plugins.github.io/proxy/jdev082.github.io/vd-repo2/CatFacts/",
         "warningMessage": ""
     },
@@ -1133,7 +1135,7 @@
             "sdh"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/vendetta.sdh.gay/LoveFemboys/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/vendetta.sdh.gay/LoveFemboys/",
         "warningMessage": ""
     },
@@ -1144,7 +1146,7 @@
             "Vendicated"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/vendicated.github.io/its-called-vendetta-cause-its-owned-by-ven-plugins/ClickableBioLinks/",
+        "sourceUrl": "https://github.com/vendicated/its-called-vendetta-cause-its-owned-by-ven-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/vendicated.github.io/its-called-vendetta-cause-its-owned-by-ven-plugins/ClickableBioLinks/",
         "warningMessage": ""
     },
@@ -1155,7 +1157,7 @@
             "kob.kuba"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/kbd0t.github.io/vendetta-plugins/shutupClyde/",
+        "sourceUrl": "https://github.com/kbd0t/vendetta-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/kbd0t.github.io/vendetta-plugins/shutupClyde/",
         "warningMessage": ""
     },
@@ -1166,7 +1168,7 @@
             "sunnie"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/actuallythesun.github.io/vendetta-plugins/SplitLargeMessages/",
+        "sourceUrl": "https://github.com/actuallythesun/vendetta-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/actuallythesun.github.io/vendetta-plugins/SplitLargeMessages/",
         "warningMessage": ""
     },
@@ -1177,7 +1179,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Moyai/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Moyai/",
         "warningMessage": ""
     },
@@ -1188,7 +1190,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/TabletMode/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/TabletMode/",
         "warningMessage": ""
     },
@@ -1199,7 +1201,7 @@
             "pylix"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/HoldGIFSend/",
+        "sourceUrl": "https://github.com/amsyarasyiq/letup",
         "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/HoldGIFSend/",
         "warningMessage": ""
     },
@@ -1210,7 +1212,7 @@
             "Cynosphere"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/AlwaysAnimate/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/AlwaysAnimate/",
         "warningMessage": ""
     },
@@ -1221,7 +1223,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Pastelize/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Pastelize/",
         "warningMessage": ""
     },
@@ -1232,7 +1234,7 @@
             "Cynosphere"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/CompactMode/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/CompactMode/",
         "warningMessage": ""
     },
@@ -1243,7 +1245,7 @@
             "nexpid"
         ],
         "status": "working",
-        "sourceUrl": "https://bunny.nexpid.xyz/plugin-embeds",
+        "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://bunny.nexpid.xyz/plugin-embeds",
         "warningMessage": ""
     },
@@ -1254,7 +1256,7 @@
             "nexpid"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/better-timestamps/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/better-timestamps/",
         "warningMessage": ""
     },
@@ -1265,7 +1267,7 @@
             "nexpid"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/hide-servers/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/hide-servers/",
         "warningMessage": ""
     },
@@ -1276,7 +1278,7 @@
             "Cynosphere"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ChatboxAvatar/",
+        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ChatboxAvatar/",
         "warningMessage": ""
     },
@@ -1287,7 +1289,7 @@
             "Kitomanari"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/addonList/",
+        "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/addonList/",
         "warningMessage": ""
     },
@@ -1298,7 +1300,7 @@
             "ECHO"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/exhq.github.io/vendetta/uwuify/",
+        "sourceUrl": "https://github.com/exhq/vendetta",
         "installUrl": "https://vd-plugins.github.io/proxy/exhq.github.io/vendetta/uwuify/",
         "warningMessage": ""
     },
@@ -1309,7 +1311,7 @@
             "Kitomanari"
         ],
         "status": "working",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/spotifyShareCommands/",
+        "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/spotifyShareCommands/",
         "warningMessage": ""
     },
@@ -1320,7 +1322,7 @@
             "Rosie<3"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/better-chat-gestures/releases/latest/download/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/better-chat-gestures/releases/latest/download/",
         "warningMessage": ""
     },
@@ -1331,7 +1333,7 @@
             "Rosie<3"
         ],
         "status": "broken",
-        "sourceUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/vd-pronoun-db/releases/latest/download/",
+        "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/vd-pronoun-db/releases/latest/download/",
         "warningMessage": ""
     },
@@ -1342,7 +1344,7 @@
             "nexpid"
         ],
         "status": "working",
-        "sourceUrl": "https://bunny.nexpid.xyz/userpfp",
+        "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://bunny.nexpid.xyz/userpfp",
         "warningMessage": ""
     }

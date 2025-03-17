@@ -1,4 +1,4 @@
-import { showToast } from './shared.js';
+import { showToast, showPopup } from './shared.js';
 
 const DATA_PATH = '../plugins-data.json';
 
@@ -27,6 +27,49 @@ async function loadPlugins() {
     } catch (error) {
         showToast('Error loading plugins: ' + error.message);
     }
+}
+
+function generateSourceUrl(installUrl) {
+    installUrl = installUrl.replace(/\/$/, '');
+
+    if (installUrl.includes('/proxy/')) {
+        const actualUrl = installUrl.split('/proxy/')[1];
+        if (actualUrl) {
+            // Handle github.io URLs behind proxy
+            const githubIoMatch = actualUrl.match(/([^.]+)\.github\.io\/([^/]+)/);
+            if (githubIoMatch) {
+                const [, username, repo] = githubIoMatch;
+                return `https://github.com/${username}/${repo}`;
+            }
+            
+            // Handle raw.githubusercontent.com URLs behind proxy
+            const rawMatch = actualUrl.match(/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)/);
+            if (rawMatch) {
+                const [, username, repo] = rawMatch;
+                return `https://github.com/${username}/${repo}`;
+            }
+        }
+    }
+
+    // github.io URLs
+    if (installUrl.includes('github.io')) {
+        const match = installUrl.match(/https?:\/\/([^.]+)\.github\.io\/([^/]+)/);
+        if (match) {
+            const [, username, repo] = match;
+            return `https://github.com/${username}/${repo}`;
+        }
+    }
+
+    // raw.githubusercontent.com URLs
+    if (installUrl.includes('raw.githubusercontent.com')) {
+        const match = installUrl.match(/https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)/);
+        if (match) {
+            const [, username, repo] = match;
+            return `https://github.com/${username}/${repo}`;
+        }
+    }
+
+    return installUrl;
 }
 
 async function updatePluginManifests() {
@@ -121,7 +164,9 @@ function createPluginElement(plugin) {
         </div>
         <div class="plugin-action-buttons">
             <button class="admin-button danger delete-plugin">Delete</button>
-            <button class="admin-button check-plugin">Check Status</button>
+            <button class="admin-button edit-plugin">
+                <span class="material-symbols-rounded">edit</span> Edit Details
+            </button>
         </div>
     `;
 
@@ -142,7 +187,127 @@ function createPluginElement(plugin) {
         }
     });
 
+    div.querySelector('.edit-plugin').addEventListener('click', () => {
+        showPluginDetailsPopup(plugin);
+    });
+
     return div;
+}
+
+async function updateSingleField(plugin, field, value) {
+    try {
+        const manifestUrl = plugin.installUrl.endsWith('/') ? plugin.installUrl + 'manifest.json' : plugin.installUrl + '/manifest.json';
+        const response = await fetch(manifestUrl);
+        const manifest = await response.json();
+
+        switch(field) {
+            case 'name':
+                plugin.name = manifest.name;
+                break;
+            case 'description':
+                plugin.description = manifest.description;
+                break;
+            case 'authors':
+                plugin.authors = manifest.authors?.map(author => author.name) || ['Unknown'];
+                break;
+            case 'sourceUrl':
+                plugin.sourceUrl = generateSourceUrl(plugin.installUrl);
+                break;
+            default:
+                return false;
+        }
+        return true;
+    } catch (error) {
+        console.error(`Error updating ${field}:`, error);
+        return false;
+    }
+}
+
+function showPluginDetailsPopup(plugin) {
+    const popupContent = `
+        <div class="plugin-details-form">
+            <div class="form-group">
+                <label>Name:</label>
+                <div class="input-with-button">
+                    <input type="text" id="plugin-name" value="${plugin.name || ''}" />
+                    <button class="admin-button refetch-field" data-field="name">
+                        <span class="material-symbols-rounded">refresh</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <div class="input-with-button">
+                    <textarea id="plugin-description">${plugin.description || ''}</textarea>
+                    <button class="admin-button refetch-field" data-field="description">
+                        <span class="material-symbols-rounded">refresh</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Authors:</label>
+                <div class="input-with-button">
+                    <input type="text" id="plugin-authors" value="${plugin.authors?.join(', ') || ''}" />
+                    <button class="admin-button refetch-field" data-field="authors">
+                        <span class="material-symbols-rounded">refresh</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Install URL:</label>
+                <input type="text" id="plugin-install-url" value="${plugin.installUrl || ''}" />
+            </div>
+            <div class="form-group">
+                <label>Source URL:</label>
+                <div class="input-with-button">
+                    <input type="text" id="plugin-source-url" value="${plugin.sourceUrl || ''}" />
+                    <button class="admin-button refetch-field" data-field="sourceUrl">
+                        <span class="material-symbols-rounded">refresh</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    showPopup({
+        title: `Edit Plugin: ${plugin.name}`,
+        message: popupContent,
+        primaryButton: {
+            text: 'Save',
+            action: () => {
+                plugin.name = document.getElementById('plugin-name').value;
+                plugin.description = document.getElementById('plugin-description').value;
+                plugin.authors = document.getElementById('plugin-authors').value.split(',').map(a => a.trim());
+                plugin.installUrl = document.getElementById('plugin-install-url').value;
+                plugin.sourceUrl = document.getElementById('plugin-source-url').value;
+                
+                updatePluginsList();
+                hidePopup();
+                showToast('Plugin details updated!');
+            }
+        },
+        closeOnOutsideClick: true
+    });
+
+    document.querySelectorAll('.refetch-field').forEach(button => {
+        button.addEventListener('click', async () => {
+            const field = button.dataset.field;
+            const success = await updateSingleField(plugin, field);
+            
+            if (success) {
+                if (field === 'authors') {
+                    document.getElementById('plugin-authors').value = plugin.authors.join(', ');
+                } else if (field === 'sourceUrl') {
+                    document.getElementById('plugin-source-url').value = plugin.sourceUrl;
+                } else {
+                    document.getElementById(`plugin-${field}`).value = plugin[field];
+                }
+                showToast(`${field} updated successfully!`);
+            } else {
+                showToast(`Failed to update ${field}`);
+            }
+        });
+    });
 }
 
 // Update the plugins list
@@ -197,7 +362,7 @@ addPluginForm.addEventListener('submit', async (e) => {
             description: manifest.description,
             authors: manifest.authors?.map(author => author.name) || ['Unknown'],
             status: 'working',
-            sourceUrl: url,
+            sourceUrl: generateSourceUrl(url),
             installUrl: url,
             warningMessage: ''
         };

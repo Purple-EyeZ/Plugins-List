@@ -763,6 +763,43 @@ h1 img {
     transition: color 0.3s;
 }
 
+.plugin-details-form {
+    margin-top: 15px;
+}
+
+.input-with-button {
+    display: flex;
+    gap: 8px;
+    align-items: start;
+}
+
+.input-with-button input,
+.input-with-button textarea {
+    flex: 1;
+    min-width: 0;
+}
+
+.input-with-button .admin-button {
+    padding: 8px;
+    flex-shrink: 0;
+}
+
+.input-with-button textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.refetch-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refetch-field .material-symbols-rounded {
+    margin: 0;
+    font-size: 20px;
+}
+
 @media (pointer: fine) {
     .search-bar:hover {
         border-color: #8e2de2;
@@ -825,6 +862,10 @@ h1 img {
 
     .warning-message:hover {
         border-color: #8e2de2;
+    }
+
+    .refetch-field:hover {
+        background-color: #8e2de2;
     }
 }
 
