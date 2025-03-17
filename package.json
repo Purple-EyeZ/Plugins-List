@@ -1,0 +1,20 @@
+{
+  "name": "plugins-list",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "build:no-clean": "node build.js --no-clean",
+    "deploy": "gh-pages -d dist",
+    "clean": "rimraf dist",
+    "start": "npm run build && serve dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "html-minifier-terser": "^7.2.0",
+    "glob": "^11.0.1",
+    "gh-pages": "^6.3.0",
+    "serve": "^14.2.4",
+    "rimraf": "^6.0.1"
+  }
+}
