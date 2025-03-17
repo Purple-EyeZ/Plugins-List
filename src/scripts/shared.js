@@ -69,7 +69,7 @@ export function showPopup({
     message, 
     infoBox = null, 
     primaryButton = { text: 'OK', action: () => hidePopup() },
-    secondaryButton = { text: 'Annuler', action: () => hidePopup() },
+    secondaryButton = { text: 'Cancel', action: () => hidePopup() },
     closeOnOutsideClick = true
 }) {
     let popup = document.getElementById('custom-popup');
