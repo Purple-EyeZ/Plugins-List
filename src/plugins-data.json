@@ -559,7 +559,7 @@
         "authors": [
             "fres"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/fres621/vendetta-plugins",
         "installUrl": "https://fres621.github.io/vendetta-plugins/BetterSearch/",
         "warningMessage": ""
@@ -736,10 +736,10 @@
         "authors": [
             "Rico040"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/hideappbutton/",
-        "warningMessage": ""
+        "warningMessage": "Use \"Better Chat Buttons\" instead."
     },
     {
         "name": "BrainFuckEval",
@@ -1255,7 +1255,7 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/better-timestamps/",
         "warningMessage": ""
@@ -1277,7 +1277,7 @@
         "authors": [
             "Cynosphere"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ChatboxAvatar/",
         "warningMessage": ""
