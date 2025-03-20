@@ -581,10 +581,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://bunny.nexpid.xyz/song-spotlight/",
-        "warningMessage": "Broken on 266.6+"
+        "warningMessage": ""
     },
     {
         "name": "LastMessageDate",
