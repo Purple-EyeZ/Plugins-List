@@ -31,10 +31,14 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: List build output
+        run: ls -R ./dist
+
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          name: github-pages
 
   deploy:
     needs: build
