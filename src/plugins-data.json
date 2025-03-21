@@ -259,7 +259,7 @@
         "authors": [
             "toonlink"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/twnlink/vendetta-plugins",
         "installUrl": "https://twnlink.github.io/vendetta-plugins/FreeProfileColors/",
         "warningMessage": ""
