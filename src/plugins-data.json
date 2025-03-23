@@ -152,7 +152,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/c10udburst-discord/vendetta-plugins",
         "installUrl": "https://c10udburst-discord.github.io/vendetta-plugins/delete-embeds/",
-        "warningMessage": "It's now built-in to the app."
+        "warningMessage": "It's now a built-in feature."
     },
     {
         "name": "Typing Avatars",
@@ -248,7 +248,7 @@
         "authors": [
             "Breado"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/breadowebtech/breadoplugs",
         "installUrl": "https://breadowebtech.github.io/breadoplugs/quotes/",
         "warningMessage": ""
