@@ -248,7 +248,7 @@
         "authors": [
             "Breado"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/breadowebtech/breadoplugs",
         "installUrl": "https://breadowebtech.github.io/breadoplugs/quotes/",
         "warningMessage": ""
