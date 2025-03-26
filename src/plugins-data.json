@@ -614,10 +614,10 @@
         "authors": [
             "maisy"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/maisymoe/strife",
         "installUrl": "https://maisymoe.github.io/strife/Experiments/",
-        "warningMessage": ""
+        "warningMessage": "It's now a built-in feature of the mod.\n\n- To enable Discord Experiments, go to Settings > Revenge and enable 'Activate Discord Experiments'"
     },
     {
         "name": "NoTrack",
@@ -1189,7 +1189,7 @@
         "authors": [
             "Cynosphere"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/TabletMode/",
         "warningMessage": ""
