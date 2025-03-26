@@ -2,7 +2,7 @@ import{isFixedSearchFocused as w}from"./search.js";let a=window.scrollY;const n=
         <div class="popup-content">
             <div class="popup-title">${o}</div>
             <div class="popup-message">${t}</div>
-            ${c?`<div class="popup-info-box">${c}</div>`:""}
+            ${c?`<div class="popup-info-box">${c.replace(/\n/g,"<br>")}</div>`:""}
             <div class="popup-buttons">
                 <button class="popup-button popup-secondary-button" id="popup-secondary-btn">${d.text}</button>
                 <button class="popup-button popup-primary-button" id="popup-primary-btn">${i.text}</button>
