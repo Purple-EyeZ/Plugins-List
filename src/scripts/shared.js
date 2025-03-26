@@ -84,7 +84,7 @@ export function showPopup({
         <div class="popup-content">
             <div class="popup-title">${title}</div>
             <div class="popup-message">${message}</div>
-            ${infoBox ? `<div class="popup-info-box">${infoBox}</div>` : ''}
+            ${infoBox ? `<div class="popup-info-box">${infoBox.replace(/\n/g, '<br>')}</div>` : ''}
             <div class="popup-buttons">
                 <button class="popup-button popup-secondary-button" id="popup-secondary-btn">${secondaryButton.text}</button>
                 <button class="popup-button popup-primary-button" id="popup-primary-btn">${primaryButton.text}</button>
