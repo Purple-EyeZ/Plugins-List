@@ -381,10 +381,10 @@
         "authors": [
             "redstonekasi"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/redstonekasi/vendetta-plugins",
         "installUrl": "https://redstonekasi.github.io/vendetta-plugins/message-logger/",
-        "warningMessage": ""
+        "warningMessage": "Works, but may cause random crashes"
     },
     {
         "name": "JumpTo",
@@ -1299,7 +1299,7 @@
         "authors": [
             "ECHO"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/exhq/vendetta",
         "installUrl": "https://vd-plugins.github.io/proxy/exhq.github.io/vendetta/uwuify/",
         "warningMessage": ""
@@ -1346,6 +1346,29 @@
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://bunny.nexpid.xyz/userpfp",
+        "warningMessage": ""
+    },
+    {
+        "name": "LoginSound",
+        "description": "ディスコード!",
+        "authors": [
+            "Rico040"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
+        "installUrl": "https://rico040.github.io/bunny-plugins/login-sound/",
+        "warningMessage": ""
+    },
+    {
+        "name": "ActionSheetFinder",
+        "description": "Utility plugin to find ActionSheet key of pressed sheet. Port of Enmity plugin.",
+        "authors": [
+            "Rico040",
+            "byeoon"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
+        "installUrl": "https://rico040.github.io/bunny-plugins/action-sheet-finder/",
         "warningMessage": ""
     }
 ]
