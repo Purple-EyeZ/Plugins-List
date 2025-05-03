@@ -1358,5 +1358,17 @@
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/login-sound/",
         "warningMessage": ""
+    },
+    {
+        "name": "ActionSheetFinder",
+        "description": "Utility plugin to find ActionSheet key of pressed sheet. Port of Enmity plugin.",
+        "authors": [
+            "Rico040",
+            "byeoon"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/rico040/bunny-plugins",
+        "installUrl": "https://rico040.github.io/bunny-plugins/action-sheet-finder/",
+        "warningMessage": ""
     }
 ]
