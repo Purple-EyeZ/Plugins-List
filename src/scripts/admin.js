@@ -325,7 +325,7 @@ function updatePluginsList() {
 }
 
 // Save changes (need to find a better way to handle this)
-async function saveChanges() {
+/*async function saveChanges() {
     try {
         const jsonString = JSON.stringify(plugins, null, 4);
         const blob = new Blob([jsonString], { type: 'application/json' });
@@ -344,6 +344,31 @@ async function saveChanges() {
         showToast('JSON file ready to download!');
     } catch (error) {
         showToast('Error preparing file: ' + error.message);
+    }
+}*/
+
+// Save changes directly to the local file
+async function saveChanges() {
+    try {
+        const jsonString = JSON.stringify(plugins, null, 4);
+        
+        // Send to local server
+        const response = await fetch('http://localhost:3000/save-plugins', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonString
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Save failed: ${response.statusText}`);
+        }
+        
+        const result = await response.json();
+        showToast(result.message || 'File saved successfully!');
+    } catch (error) {
+        showToast('Error saving file: ' + error.message);
     }
 }
 

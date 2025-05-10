@@ -450,7 +450,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/cloud-sync/",
+        "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
         "warningMessage": ""
     },
     {
@@ -461,7 +461,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/twemoji-everywhere/",
+        "installUrl": "https://revenge.nexpid.xyz/twemoji-everywhere/",
         "warningMessage": ""
     },
     {
@@ -472,7 +472,7 @@
         ],
         "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/local-pins/",
+        "installUrl": "https://revenge.nexpid.xyz/local-pins/",
         "warningMessage": "Doesn't shows locally pinned messages in pins."
     },
     {
@@ -483,7 +483,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/plugin-browser/",
+        "installUrl": "https://revenge.nexpid.xyz/plugin-browser/",
         "warningMessage": ""
     },
     {
@@ -495,7 +495,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/monet-theme/",
+        "installUrl": "https://revenge.nexpid.xyz/monet-theme/",
         "warningMessage": ""
     },
     {
@@ -528,7 +528,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/char-counter/",
+        "installUrl": "https://revenge.nexpid.xyz/char-counter/",
         "warningMessage": ""
     },
     {
@@ -550,7 +550,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/clean-urls/",
+        "installUrl": "https://revenge.nexpid.xyz/clean-urls/",
         "warningMessage": ""
     },
     {
@@ -583,7 +583,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/song-spotlight/",
+        "installUrl": "https://revenge.nexpid.xyz/song-spotlight/",
         "warningMessage": ""
     },
     {
@@ -649,7 +649,7 @@
         ],
         "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/doom/",
+        "installUrl": "https://revenge.nexpid.xyz/doom/",
         "warningMessage": ""
     },
     {
@@ -660,7 +660,7 @@
         ],
         "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/tenor-gif-fix/",
+        "installUrl": "https://revenge.nexpid.xyz/tenor-gif-fix/",
         "warningMessage": "Temporarily replaced by NexxUtils."
     },
     {
@@ -671,7 +671,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/use-system-emoji/",
+        "installUrl": "https://revenge.nexpid.xyz/use-system-emoji/",
         "warningMessage": ""
     },
     {
@@ -683,7 +683,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/message-preview/",
+        "installUrl": "https://revenge.nexpid.xyz/message-preview/",
         "warningMessage": ""
     },
     {
@@ -902,7 +902,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/kiryu-facecam",
+        "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam",
         "warningMessage": ""
     },
     {
@@ -924,7 +924,7 @@
         ],
         "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/nexxutils",
+        "installUrl": "https://revenge.nexpid.xyz/nexxutils",
         "warningMessage": "Still in development."
     },
     {
@@ -946,7 +946,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/themes-plus",
+        "installUrl": "https://revenge.nexpid.xyz/themes-plus",
         "warningMessage": ""
     },
     {
@@ -1246,7 +1246,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/plugin-embeds",
+        "installUrl": "https://revenge.nexpid.xyz/plugin-embeds",
         "warningMessage": ""
     },
     {
@@ -1345,7 +1345,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://bunny.nexpid.xyz/userpfp",
+        "installUrl": "https://revenge.nexpid.xyz/userpfp",
         "warningMessage": ""
     },
     {
