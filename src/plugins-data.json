@@ -426,7 +426,7 @@
         "authors": [
             "sapphire"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/aeongdesu/vdplugins",
         "installUrl": "https://aeongdesu.github.io/vdplugins/FirstMessage/",
         "warningMessage": ""
@@ -900,7 +900,7 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam",
         "warningMessage": ""
