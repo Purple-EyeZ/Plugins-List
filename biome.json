@@ -1,0 +1,12 @@
+{
+    "linter": {
+        "rules": {
+            "a11y": {
+                "useGenericFontNames": "off"
+            },
+            "style": {
+                "noParameterAssign": "off"
+            }
+        }
+    }
+}
