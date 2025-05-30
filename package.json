@@ -7,7 +7,7 @@
     "build:no-clean": "node build.js --no-clean",
     "deploy": "gh-pages -d dist",
     "clean": "rimraf dist",
-    "start": "npm run build && serve dist",
+    "start": "bun run build && serve dist",
     "admin": "node server.js"
   },
   "devDependencies": {
