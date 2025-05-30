@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,8 @@
             margin-top: 20px;
         }
 
-        p, li {
+        p,
+        li {
             color: #b0b0b0;
             line-height: 1.6;
         }
@@ -42,6 +44,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="fixed-banner" id="fixedBanner">
         <button id="searchButton" class="search-button">
@@ -52,7 +55,8 @@
     </div>
 
     <h1 style="line-height: 45px; text-align: center;">
-        <span class="material-symbols-rounded" style="font-size: 42px; vertical-align: middle; line-height: 40px;">info</span>
+        <span class="material-symbols-rounded"
+            style="font-size: 42px; vertical-align: middle; line-height: 40px;">info</span>
         About
     </h1>
 
@@ -63,12 +67,25 @@
         <p>The status of each plugin is based on whether it works on the latest stable version of Discord.</p>
         <ul>
             <li><strong>Working</strong>: The plugin functions as expected with no known issues.</li>
-            <li><strong>Warning</strong>: Some features of the plugin may not work properly. It might be partially broken or have minor bugs.</li>
+            <li>
+                <strong>Warning</strong>: Some features of the plugin may not work properly. It might be partially
+                broken or have minor bugs.
+                <br>
+                <small>
+                    <font color="gray">
+                        💡 Tip: click <em>Copy Link</em> to see why the plugin is marked as Warning (a popup will
+                        display the reason).
+                    </font>
+                </small>
+            </li>
             <li><strong>Broken</strong>: The plugin doesn't function correctly or causes major issues.</li>
         </ul>
 
         <h2>Unproxied Plugins</h2>
-        <p>All the plugins listed here are <strong>unproxied</strong>, meaning their developers can update or modify them at any time. This also means they haven't been reviewed or verified. If you don't trust these plugins, <strong>don't install them</strong>.</p>
+        <p>All the plugins listed here are <strong>unproxied</strong>, meaning their developers can update or modify
+            them at any time. This also means they haven't been reviewed or verified. If you don't trust these plugins,
+            <strong>don't install them</strong>.
+        </p>
 
         <div class="separator"></div>
 
@@ -91,7 +108,8 @@
     <button id="backToTopButton" class="back-to-top">
         <span class="material-symbols-rounded">arrow_upward</span>
     </button>
-    
+
     <script type="module" src="../scripts/shared.js"></script>
 </body>
+
 </html>
