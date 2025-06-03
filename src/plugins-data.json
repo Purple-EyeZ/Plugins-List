@@ -60,7 +60,7 @@
         "authors": [
             "sapphire"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/aeongdesu/vdplugins",
         "installUrl": "https://aeongdesu.github.io/vdplugins/BypassNSFWGate/",
         "warningMessage": ""
@@ -1145,7 +1145,7 @@
         "authors": [
             "Vendicated"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/vendicated/its-called-vendetta-cause-its-owned-by-ven-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/vendicated.github.io/its-called-vendetta-cause-its-owned-by-ven-plugins/ClickableBioLinks/",
         "warningMessage": ""
