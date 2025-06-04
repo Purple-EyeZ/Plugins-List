@@ -139,6 +139,24 @@ export function hidePopup() {
 	}
 }
 
+function showMigrationPopup() {
+	const currentUrl = window.location.href.toLowerCase();
+	if (currentUrl.includes("purple-eyez.github.io/plugins-list")) {
+		showPopup({
+			title: "Migration Notice",
+			message: "This website is moving to a new address!",
+			primaryButton: {
+				text: "Take Me There",
+				action: () => {
+					window.location.href = "https://plugins-list.pages.dev/";
+				},
+			},
+			secondaryButton: null,
+			closeOnOutsideClick: false,
+		});
+	}
+}
+
 // Init
 function initScrollHandling() {
 	handleScroll();
@@ -146,5 +164,6 @@ function initScrollHandling() {
 }
 
 window.onload = () => {
+	showMigrationPopup();
 	initScrollHandling();
 };

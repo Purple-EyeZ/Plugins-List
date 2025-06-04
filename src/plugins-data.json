@@ -100,17 +100,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Hidden channels",
-        "description": "View the name and description of channels you can't access",
-        "authors": [
-            "cloudburst"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/c10udburst-discord/vendetta-plugins",
-        "installUrl": "https://c10udburst-discord.github.io/vendetta-plugins/hidden-channels/",
-        "warningMessage": "Use 'Hidden Channels Fix' instead."
-    },
-    {
         "name": "devkitplus",
         "description": "Various tools of varying degree of usefulness.",
         "authors": [
@@ -800,18 +789,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Hidden Channels Fix",
-        "description": "Reworked from cloudburst's original script.",
-        "authors": [
-            "cloudburst",
-            "Training Dummy"
-        ],
-        "status": "working",
-        "sourceUrl": "https://github.com/trainingdummy/vendetta-plugins",
-        "installUrl": "https://trainingdummy.github.io/vendetta-plugins/hidden-channels/",
-        "warningMessage": ""
-    },
-    {
         "name": "Antied v1.4.0",
         "description": "Keeps deleted messages and logs edited messages, until you restart/reloads the app",
         "authors": [
@@ -903,17 +880,6 @@
         "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam",
-        "warningMessage": ""
-    },
-    {
-        "name": "NSFW Blur",
-        "description": "Blur image previews and disable embed media in NSFW channels.",
-        "authors": [
-            "sylv256"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://revenge.sylv.gay/nsfw-blur/",
-        "installUrl": "https://revenge.sylv.gay/nsfw-blur/",
         "warningMessage": ""
     },
     {
@@ -1016,17 +982,6 @@
         "status": "working",
         "sourceUrl": "https://github.com/carince/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/carince.github.io/VendettaPlugins/muteNewGuilds/",
-        "warningMessage": ""
-    },
-    {
-        "name": "HideBlockedMessages",
-        "description": "A plugin that removes the `X blocked message/s` prompt from chat.",
-        "authors": [
-            "Zykrah"
-        ],
-        "status": "working",
-        "sourceUrl": "https://guide.zykrah.me/vendetta-plugins/HideBlockedMessages",
-        "installUrl": "https://guide.zykrah.me/vendetta-plugins/HideBlockedMessages/",
         "warningMessage": ""
     },
     {
@@ -1369,6 +1324,30 @@
         "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/action-sheet-finder/",
+        "warningMessage": ""
+    },
+    {
+        "name": "Hidden Channels",
+        "description": "Reworked from cloudburst's original script.",
+        "authors": [
+            "cloudburst",
+            "Training Dummy",
+            "Lioncat6"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/lioncat6/revenge-plugins",
+        "installUrl": "https://lioncat6.github.io/revenge-plugins/hidden-channels/",
+        "warningMessage": ""
+    },
+    {
+        "name": "HideBlockedAndIgnoredMessages",
+        "description": "A plugin that removes the `X blocked or ignored message/s` prompt from chat.",
+        "authors": [
+            "Zykrah, forked by シグマ siguma"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/vendetta-plugins",
+        "installUrl": "https://shipwr3ckd.github.io/vendetta-plugins/HideBlockedMessages/",
         "warningMessage": ""
     }
 ]
