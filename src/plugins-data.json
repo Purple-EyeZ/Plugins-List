@@ -785,7 +785,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/PalmDevs/revenge-plugins/tree/main/plugins",
-        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/better-chat-buttons",
+        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/better-chat-buttons/",
         "warningMessage": ""
     },
     {
@@ -807,7 +807,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/awesomegamergame/bunny-plugins",
-        "installUrl": "https://awesomegamergame.github.io/bunny-plugins/dashless",
+        "installUrl": "https://awesomegamergame.github.io/bunny-plugins/dashless/",
         "warningMessage": ""
     },
     {
@@ -879,7 +879,7 @@
         ],
         "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam",
+        "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam/",
         "warningMessage": ""
     },
     {
@@ -890,7 +890,7 @@
         ],
         "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://revenge.nexpid.xyz/nexxutils",
+        "installUrl": "https://revenge.nexpid.xyz/nexxutils/",
         "warningMessage": "Still in development."
     },
     {
@@ -901,7 +901,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/PalmDevs/revenge-plugins/tree/main/plugins",
-        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/better-calls",
+        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/better-calls/",
         "warningMessage": ""
     },
     {
@@ -912,7 +912,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://revenge.nexpid.xyz/themes-plus",
+        "installUrl": "https://revenge.nexpid.xyz/themes-plus/",
         "warningMessage": ""
     },
     {
@@ -935,7 +935,7 @@
         ],
         "status": "broken",
         "sourceUrl": "https://github.com/PalmDevs/revenge-plugins/tree/main/plugins",
-        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/no-suggestions",
+        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/no-suggestions/",
         "warningMessage": "Deprecated."
     },
     {
@@ -957,7 +957,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/PalmDevs/revenge-plugins/tree/main/plugins",
-        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/force-timestamp-locale",
+        "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/force-timestamp-locale/",
         "warningMessage": ""
     },
     {
@@ -1201,7 +1201,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://revenge.nexpid.xyz/plugin-embeds",
+        "installUrl": "https://revenge.nexpid.xyz/plugin-embeds/",
         "warningMessage": ""
     },
     {
@@ -1300,7 +1300,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
-        "installUrl": "https://revenge.nexpid.xyz/userpfp",
+        "installUrl": "https://revenge.nexpid.xyz/userpfp/",
         "warningMessage": ""
     },
     {
@@ -1343,11 +1343,23 @@
         "name": "HideBlockedAndIgnoredMessages",
         "description": "A plugin that removes the `X blocked or ignored message/s` prompt from chat.",
         "authors": [
-            "Zykrah, forked by シグマ siguma"
+            "Zykrah",
+            "シグマ siguma"
         ],
         "status": "working",
-        "sourceUrl": "https://github.com/shipwr3ckd/vendetta-plugins",
-        "installUrl": "https://shipwr3ckd.github.io/vendetta-plugins/HideBlockedMessages/",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/HideBlockedAndIgnoredMessages/",
+        "warningMessage": ""
+    },
+    {
+        "name": "CopyBios",
+        "description": "Copy bio text",
+        "authors": [
+            "シグマ siguma"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/CopyBios/",
         "warningMessage": ""
     }
 ]
