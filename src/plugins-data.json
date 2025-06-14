@@ -1361,5 +1361,17 @@
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/CopyBios/",
         "warningMessage": ""
+    },
+    {
+        "name": "Plugins List",
+        "description": "A modified version of Nexpid's plugin browser that uses https://plugins-list.pages.dev as source.",
+        "authors": [
+            "nexpid",
+            "Purple_Ξye™"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/purple-eyez/Plugins-List_Plugin",
+        "installUrl": "https://purple-eyez.github.io/Plugins-List_Plugin/plugins-list/",
+        "warningMessage": ""
     }
 ]
