@@ -1334,10 +1334,10 @@
             "Training Dummy",
             "Lioncat6"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/lioncat6/revenge-plugins",
         "installUrl": "https://lioncat6.github.io/revenge-plugins/hidden-channels/",
-        "warningMessage": ""
+        "warningMessage": "Causes a crash when opening DMs"
     },
     {
         "name": "HideBlockedAndIgnoredMessages",
