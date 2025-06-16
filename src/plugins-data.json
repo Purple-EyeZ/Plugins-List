@@ -748,10 +748,10 @@
             "maisy",
             "Rico040"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/freemoji/",
-        "warningMessage": ""
+        "warningMessage": "broken on 284+"
     },
     {
         "name": "Quick Delete",
@@ -1334,10 +1334,10 @@
             "Training Dummy",
             "Lioncat6"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/lioncat6/revenge-plugins",
         "installUrl": "https://lioncat6.github.io/revenge-plugins/hidden-channels/",
-        "warningMessage": "Causes a crash when opening DMs"
+        "warningMessage": ""
     },
     {
         "name": "HideBlockedAndIgnoredMessages",
