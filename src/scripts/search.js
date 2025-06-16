@@ -18,6 +18,7 @@ const elements = {
 	container:
 		document.getElementById("plugins-container") ||
 		document.getElementById("plugins-list"),
+	featuredPluginContainer: document.getElementById("featured-plugin-container"),
 };
 
 function debounce(func, wait) {
@@ -136,6 +137,21 @@ function updateSearchSubtext(query, cardsOrCount) {
 	subtext.classList.add("visible");
 }
 
+function handleFeaturedPluginVisibility(query) {
+	if (elements.featuredPluginContainer) {
+		const featuredCard = elements.featuredPluginContainer.querySelector(
+			".featured-plugin-card",
+		);
+		if (featuredCard) {
+			if (query && query.trim() !== "") {
+				if (featuredCard.classList.contains("expanded")) {
+					featuredCard.classList.remove("expanded");
+				}
+			}
+		}
+	}
+}
+
 function addSearchFunctionality() {
 	const { searchBar, fixedSearchBar, clearButton, clearButtonFixed } = elements;
 
@@ -149,6 +165,7 @@ function addSearchFunctionality() {
 		const otherBar = e.target === searchBar ? fixedSearchBar : searchBar;
 		otherBar.value = value;
 		toggleClearButton(otherBar, value);
+		handleFeaturedPluginVisibility(value);
 	};
 
 	for (const bar of [searchBar, fixedSearchBar]) {
@@ -165,6 +182,7 @@ function addSearchFunctionality() {
 			toggleClearButton(bar, "");
 		}
 		filterPlugins("");
+		handleFeaturedPluginVisibility("");
 		input.focus();
 	};
 
