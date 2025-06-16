@@ -105,10 +105,74 @@ function showChangesPopup(changes) {
 	});
 }
 
+const featuredPluginContainer = document.getElementById(
+	"featured-plugin-container",
+);
+
+function createFeaturedPluginCard(plugin) {
+	const template = document.getElementById("featured-plugin-template");
+
+	if (!template) {
+		console.error("Featured plugin template not found!");
+		return null;
+	}
+
+	const cardFragment = template.content.cloneNode(true);
+	const cardElement = cardFragment.querySelector(".featured-plugin-card");
+
+	if (!cardElement) {
+		console.error("Root .featured-plugin-card not found in template!");
+		return null;
+	}
+
+	const nameElement = cardElement.querySelector(".featured-plugin-name");
+	if (nameElement) nameElement.textContent = plugin.name;
+
+	const authorsElement = cardElement.querySelector(".featured-plugin-author");
+	if (authorsElement)
+		authorsElement.textContent = `By: ${plugin.authors.join(", ")}`;
+
+	const descriptionElement = cardElement.querySelector(
+		".featured-plugin-description",
+	);
+	if (descriptionElement) descriptionElement.textContent = plugin.description;
+
+	const copyButton = cardElement.querySelector(".plugin-copy-button");
+	if (copyButton) {
+		copyButton.addEventListener("click", (event) => {
+			event.stopPropagation();
+			copyToClipboard(plugin.installUrl);
+			showToast(`Link for ${plugin.name} copied to clipboard!`);
+		});
+	}
+
+	cardElement.addEventListener("click", () => {
+		cardElement.classList.toggle("expanded");
+	});
+
+	return cardElement;
+}
+
+function renderFeaturedPlugin(pluginData) {
+	if (featuredPluginContainer) {
+		featuredPluginContainer.innerHTML = "";
+
+		if (pluginData) {
+			const featuredCard = createFeaturedPluginCard(pluginData);
+			if (featuredCard) {
+				featuredPluginContainer.appendChild(featuredCard);
+			}
+		}
+	}
+}
+
 fetch("plugins-data.json")
 	.then((response) => response.json())
 	.then((data) => {
 		pluginsData = data;
+
+		const featuredPlugin = pluginsData.find((p) => p.name === "Plugins List");
+		renderFeaturedPlugin(featuredPlugin);
 
 		const changes = analyzePluginChanges(data);
 

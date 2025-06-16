@@ -38,7 +38,7 @@ h1 img {
     margin: 0 auto;
     width: 100%;
     max-width: 400px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     transition: height 0.3s ease;
 }
 
@@ -353,12 +353,13 @@ h1 img {
     appearance: none;
     padding: 8px 40px 8px 12px;
     border-radius: 9999px;
-    border: 1px solid #4a00e0;
+    border: 1px solid transparent;
     background-color: #121212;
     color: #e0e0e0;
     cursor: pointer;
     outline: none;
     font-family: inherit;
+    box-shadow: 0px 0px 7px 0px rgb(83 0 220);
 }
 
 .select-container::after {
@@ -798,6 +799,155 @@ h1 img {
 .refetch-field .material-symbols-rounded {
     margin: 0;
     font-size: 20px;
+}
+
+/* Featured Plugin Card */
+#featured-plugin-container {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.featured-plugin-card {
+    --card-border-radius: 18px;
+    --card-glow-expansion: 6px;
+    --card-glow-blur: 15px;
+    --card-border-thickness: 3px;
+    --card-gradient: linear-gradient(120deg, #4a00e0, #8e2de2, #4a00e0);
+    --card-animation-duration: 6s;
+
+    background-color: #1f2122;
+    border-radius: var(--card-border-radius);
+    padding: 15px 20px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.featured-plugin-card::after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--card-glow-expansion)); 
+    left: calc(-1 * var(--card-glow-expansion)); 
+    right: calc(-1 * var(--card-glow-expansion)); 
+    bottom: calc(-1 * var(--card-glow-expansion));
+    border-radius: calc(var(--card-border-radius) + var(--card-glow-expansion)); 
+    background: var(--card-gradient);
+    background-size: 300% 100%;
+    animation: glow-border-animation var(--card-animation-duration) linear infinite;
+    filter: blur(var(--card-glow-blur));
+    opacity: 0.55;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.featured-plugin-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-border-thickness);
+    background: var(--card-gradient);
+    background-size: 300% 100%;
+    animation: glow-border-animation var(--card-animation-duration) linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+@keyframes glow-border-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 150% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.featured-plugin-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.featured-plugin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-plugin-intro-text {
+    font-size: 0.95em;
+    color: #b0b3b8;
+    font-style: italic;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.featured-plugin-chevron {
+    color: #b0b3b8;
+    transition: transform 0.4s ease-in-out;
+    font-size: 28px;
+}
+
+.featured-plugin-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.featured-plugin-card.expanded .featured-plugin-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.featured-plugin-card.expanded .featured-plugin-chevron {
+    transform: rotate(180deg);
+}
+
+.featured-plugin-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.featured-plugin-author {
+    font-size: 14px;
+    color: #b0b3b8;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.featured-plugin-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e4e6eb;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.featured-plugin-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.featured-plugin-buttons-container .plugin-button {
+    padding: 10px 25px;
+    min-width: 150px;
 }
 
 @media (pointer: fine) {
