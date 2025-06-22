@@ -259,7 +259,7 @@
         "authors": [
             "Dziurwa"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/dziurwa14/vendetta-plugins",
         "installUrl": "https://dziurwa14.github.io/vendetta-plugins/customVoiceMessages/",
         "warningMessage": ""
@@ -592,7 +592,7 @@
         "authors": [
             "maisy"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/maisymoe/strife",
         "installUrl": "https://maisymoe.github.io/strife/AnonymousFileNames/",
         "warningMessage": ""
@@ -748,10 +748,10 @@
             "maisy",
             "Rico040"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/freemoji/",
-        "warningMessage": "broken on 284+"
+        "warningMessage": ""
     },
     {
         "name": "Quick Delete",
