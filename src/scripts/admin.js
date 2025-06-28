@@ -157,7 +157,7 @@ function updateCounters() {
 // Create plugin element
 function createPluginElement(plugin) {
 	const div = document.createElement("div");
-	div.className = "admin-plugin-item";
+	div.className = "card admin-plugin-item";
 
 	div.innerHTML = `
         <div class="plugin-info">
@@ -172,11 +172,11 @@ function createPluginElement(plugin) {
             </select>
             
             <span class="plugin-info-label">Message:</span>
-            <textarea class="warning-message">${plugin.warningMessage || ""}</textarea>
+            <textarea class="form-control warning-message">${plugin.warningMessage || ""}</textarea>
         </div>
         <div class="plugin-action-buttons">
-            <button class="admin-button danger delete-plugin">Delete</button>
-            <button class="admin-button edit-plugin">
+            <button class="btn btn--danger admin-button delete-plugin">Delete</button>
+            <button class="btn btn--secondary admin-button edit-plugin">
                 <span class="material-symbols-rounded">edit</span> Edit Details
             </button>
         </div>
@@ -245,8 +245,8 @@ function showPluginDetailsPopup(plugin) {
             <div class="form-group">
                 <label>Name:</label>
                 <div class="input-with-button">
-                    <input type="text" id="plugin-name" value="${plugin.name || ""}" />
-                    <button class="admin-button refetch-field" data-field="name">
+                    <input type="text" id="plugin-name" class="form-control" value="${plugin.name || ""}" />
+                    <button class="btn btn--secondary admin-button refetch-field" data-field="name">
                         <span class="material-symbols-rounded">refresh</span>
                     </button>
                 </div>
@@ -254,8 +254,8 @@ function showPluginDetailsPopup(plugin) {
             <div class="form-group">
                 <label>Description:</label>
                 <div class="input-with-button">
-                    <textarea id="plugin-description">${plugin.description || ""}</textarea>
-                    <button class="admin-button refetch-field" data-field="description">
+                    <textarea id="plugin-description" class="form-control">${plugin.description || ""}</textarea>
+                    <button class="btn btn--secondary admin-button refetch-field" data-field="description">
                         <span class="material-symbols-rounded">refresh</span>
                     </button>
                 </div>
@@ -263,21 +263,21 @@ function showPluginDetailsPopup(plugin) {
             <div class="form-group">
                 <label>Authors:</label>
                 <div class="input-with-button">
-                    <input type="text" id="plugin-authors" value="${plugin.authors?.join(", ") || ""}" />
-                    <button class="admin-button refetch-field" data-field="authors">
+                    <input type="text" id="plugin-authors" class="form-control" value="${plugin.authors?.join(", ") || ""}" />
+                    <button class="btn btn--secondary admin-button refetch-field" data-field="authors">
                         <span class="material-symbols-rounded">refresh</span>
                     </button>
                 </div>
             </div>
             <div class="form-group">
                 <label>Install URL:</label>
-                <input type="text" id="plugin-install-url" value="${plugin.installUrl || ""}" />
+                <input type="text" id="plugin-install-url" class="form-control" value="${plugin.installUrl || ""}" />
             </div>
             <div class="form-group">
                 <label>Source URL:</label>
                 <div class="input-with-button">
-                    <input type="text" id="plugin-source-url" value="${plugin.sourceUrl || ""}" />
-                    <button class="admin-button refetch-field" data-field="sourceUrl">
+                    <input type="text" id="plugin-source-url" class="form-control" value="${plugin.sourceUrl || ""}" />
+                    <button class="btn btn--secondary admin-button refetch-field" data-field="sourceUrl">
                         <span class="material-symbols-rounded">refresh</span>
                     </button>
                 </div>
@@ -404,6 +404,8 @@ addPluginForm.addEventListener("submit", async (e) => {
 saveChangesButton.addEventListener("click", saveChanges);
 
 checkPluginsButton.addEventListener("click", updatePluginManifests);
+
+filterAllButton.classList.add("active");
 
 filterAllButton.addEventListener("click", () => {
 	currentFilter = "all";

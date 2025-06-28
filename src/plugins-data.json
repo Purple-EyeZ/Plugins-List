@@ -1373,5 +1373,17 @@
         "sourceUrl": "https://github.com/purple-eyez/Plugins-List_Plugin",
         "installUrl": "https://purple-eyez.github.io/Plugins-List_Plugin/plugins-list/",
         "warningMessage": ""
+    },
+    {
+        "name": "KonoChan-Randomizer",
+        "description": "picks a random picture from KonoChan.",
+        "authors": [
+            "btmc727",
+            "Rico040"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/otkusteyler/KonoChan-Randomizer-",
+        "installUrl": "https://otkusteyler.github.io/KonoChan-Randomizer-/",
+        "warningMessage": ""
     }
 ]
