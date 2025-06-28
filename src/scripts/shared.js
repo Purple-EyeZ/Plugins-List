@@ -31,17 +31,22 @@ function handleScroll() {
 }
 
 // Back to Top button
-window.onscroll = () => {
-	const scrolled = document.documentElement.scrollTop > 400;
-	backToTopButton.style.display = scrolled ? "block" : "none";
-};
-
-backToTopButton.addEventListener("click", () => {
-	window.scrollTo({
-		top: 0,
-		behavior: "smooth",
+if (backToTopButton) {
+	window.addEventListener("scroll", () => {
+		if (window.scrollY > 300) {
+			backToTopButton.classList.add("show");
+		} else {
+			backToTopButton.classList.remove("show");
+		}
 	});
-});
+
+	backToTopButton.addEventListener("click", () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	});
+}
 
 // Dropdown Menu
 document.addEventListener("DOMContentLoaded", () => {
@@ -87,13 +92,13 @@ export function showPopup({
 	}
 
 	popup.innerHTML = `
-        <div class="popup-content">
+        <div class="card popup-content">
             <div class="popup-title">${title}</div>
             <div class="popup-message">${message}</div>
             ${infoBox ? `<div class="popup-info-box">${infoBox.replace(/\n/g, "<br>")}</div>` : ""}
             <div class="popup-buttons">
-                ${secondaryButton ? `<button class="popup-button popup-secondary-button" id="popup-secondary-btn">${secondaryButton.text}</button>` : ""}
-                <button class="popup-button popup-primary-button" id="popup-primary-btn">${primaryButton.text}</button>
+                ${secondaryButton ? `<button class="btn btn--secondary popup-secondary-button" id="popup-secondary-btn">${secondaryButton.text}</button>` : ""}
+                <button class="btn btn--primary popup-primary-button" id="popup-primary-btn">${primaryButton.text}</button>
             </div>
         </div>
     `;

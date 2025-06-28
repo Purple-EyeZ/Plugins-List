@@ -7,42 +7,9 @@
     <title>About - Revenge Plugins</title>
     <link rel="icon" type="image/svg" href="../assets/revenge-dark.svg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .content-container {
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: left;
-            background-color: #121212;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            color: #e0e0e0;
-            margin-top: 20px;
-        }
-
-        p,
-        li {
-            color: #b0b0b0;
-            line-height: 1.6;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .separator {
-            margin-top: 20px;
-            border-top: 1px solid #4a00e0;
-            opacity: 0.6;
-        }
-    </style>
 </head>
 
 <body>
@@ -60,7 +27,7 @@
         About
     </h1>
 
-    <div class="content-container">
+    <div class="card about-page-content">
         <p>This page is a simple list of plugins. It also shows whether each plugin is working or not.</p>
 
         <h2>Plugin Status</h2>
@@ -93,7 +60,7 @@
     </div>
 
     <div class="menu-container">
-        <button id="menuButton" class="menu-button">
+        <button id="menuButton" class="menu-button btn btn--primary">
             <span class="material-symbols-rounded">menu</span> Menu
         </button>
         <div id="dropdownMenu" class="dropdown-menu">
@@ -105,7 +72,7 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button id="backToTopButton" class="back-to-top">
+    <button id="backToTopButton" class="btn btn--primary back-to-top">
         <span class="material-symbols-rounded">arrow_upward</span>
     </button>
 

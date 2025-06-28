@@ -7,7 +7,6 @@
     <title>Revenge Plugins</title>
     <link rel="icon" type="image/svg" href="assets/revenge-dark.svg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -18,7 +17,7 @@
         <button id="searchButton" class="search-button">
             <i class="material-symbols-rounded">search</i>
         </button>
-        <input type="text" id="fixedSearchBar" class="search-bar hidden" placeholder="Search something...">
+        <input type="text" id="fixedSearchBar" class="form-control search-bar hidden" placeholder="Search something...">
         <button type="button" id="clearFixedSearch" class="clear-button" style="display: none;">&times;</button>
     </div>
 
@@ -34,7 +33,7 @@
 
     <div class="search-container">
         <div class="search-bar-wrapper">
-            <input type="text" id="search-bar" class="search-bar" placeholder="Search something...">
+            <input type="text" id="search-bar" class="form-control search-bar" placeholder="Search something...">
             <button type="button" id="clearSearch" class="clear-button" style="display: none;">&times;</button>
         </div>
         <div id="searchSubtext" class="search-subtext"></div>
@@ -50,18 +49,18 @@
                 <span class="material-symbols-rounded featured-plugin-chevron">expand_more</span>
             </div>
             <div class="featured-plugin-details">
-                <h3 class="featured-plugin-name"></h3>
-                <div class="featured-plugin-author"></div>
-                <div class="featured-plugin-description"></div>
+                <h3 class="featured-plugin-name card__title"></h3>
+                <div class="featured-plugin-author card__author"></div>
+                <div class="featured-plugin-description card__description"></div>
                 <div class="featured-plugin-buttons-container">
-                    <button class="plugin-button plugin-copy-button">Copy Link</button>
+                    <button class="btn btn--primary featured-copy-button">Copy Link</button>
                 </div>
             </div>
         </div>
     </template>
 
     <div class="menu-container">
-        <button id="menuButton" class="menu-button">
+        <button id="menuButton" class="menu-button btn btn--primary">
             <span class="material-symbols-rounded">menu</span> Menu
         </button>
         <div id="dropdownMenu" class="dropdown-menu">
@@ -98,7 +97,7 @@
     <div id="toast"></div>
 
     <!-- Back to Top Button -->
-    <button id="backToTopButton" class="back-to-top">
+    <button id="backToTopButton" class="btn btn--primary back-to-top">
         <span class="material-symbols-rounded">arrow_upward</span>
     </button>
 

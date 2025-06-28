@@ -137,7 +137,7 @@ function createFeaturedPluginCard(plugin) {
 	);
 	if (descriptionElement) descriptionElement.textContent = plugin.description;
 
-	const copyButton = cardElement.querySelector(".plugin-copy-button");
+	const copyButton = cardElement.querySelector(".featured-copy-button");
 	if (copyButton) {
 		copyButton.addEventListener("click", (event) => {
 			event.stopPropagation();
@@ -192,18 +192,18 @@ const showBrokenToggle = document.getElementById("show-broken");
 
 function createPluginCard(plugin) {
 	const card = document.createElement("div");
-	card.className = "plugin-card";
+	card.className = "card plugin-card";
 
 	let statusClass = "";
 	switch (plugin.status) {
 		case "working":
-			statusClass = "status-working";
+			statusClass = "status-badge--working";
 			break;
 		case "warning":
-			statusClass = "status-warning";
+			statusClass = "status-badge--warning";
 			break;
 		case "broken":
-			statusClass = "status-broken";
+			statusClass = "status-badge--broken";
 			break;
 	}
 
@@ -211,14 +211,14 @@ function createPluginCard(plugin) {
 
 	card.innerHTML = `
     <div class="plugin-header">
-        <h3 class="plugin-name">${plugin.name}</h3>
-        <span class="plugin-status ${statusClass}">${plugin.status}</span>
+        <h3 class="plugin-name card__title">${plugin.name}</h3>
+        <span class="status-badge ${statusClass}">${plugin.status}</span>
     </div>
-    <div class="plugin-author">By: ${authorsList}</div>
-    <div class="plugin-description">${plugin.description}</div>
+    <div class="plugin-author card__author">By: ${authorsList}</div>
+    <div class="plugin-description card__description">${plugin.description}</div>
     <div class="plugin-buttons">
-        <button class="plugin-button source-button" data-url="${plugin.sourceUrl}">Source Code</button>
-        <button class="plugin-button plugin-copy-button" data-status="${plugin.status}" data-url="${plugin.installUrl}" data-warning="${plugin.warningMessage || ""}">Copy Link</button>
+        <button class="btn btn--secondary source-button" data-url="${plugin.sourceUrl}">Source Code</button>
+        <button class="btn btn--primary plugin-copy-button" data-status="${plugin.status}" data-url="${plugin.installUrl}" data-warning="${plugin.warningMessage || ""}">Copy Link</button>
     </div>
 `;
 
@@ -238,11 +238,6 @@ function createPluginCard(plugin) {
 				plugin.status === "broken"
 					? "Installing broken plugins may crash your client or cause unexpected behavior."
 					: "This plugin may not work as expected.";
-
-			const titleMessage =
-				plugin.status === "broken"
-					? "This plugin is broken"
-					: "This plugin is partially broken";
 
 			showPopup({
 				title: "Warning!",
