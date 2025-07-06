@@ -1346,10 +1346,10 @@
             "Zykrah",
             "シグマ siguma"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/HideBlockedAndIgnoredMessages/",
-        "warningMessage": "Broken on 286+"
+        "warningMessage": ""
     },
     {
         "name": "CopyBios",
