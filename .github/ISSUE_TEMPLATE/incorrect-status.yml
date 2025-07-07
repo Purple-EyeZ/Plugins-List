@@ -1,0 +1,56 @@
+name: Report incorrect plugin status
+description: Report a plugin that is mislabeled (e.g. 'working' but is 'broken').
+title: "[Status Report]: "
+labels: ["status-update"]
+assignees:
+  - Purple-EyeZ
+body:
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin Name
+      description: Provide the name of the plugin you are reporting.
+      placeholder: "Example: BetterFolders"
+      required: true
+
+  - type: input
+    id: discord-version
+    attributes:
+      label: Discord Version
+      description: What is your Discord version?
+      placeholder: "Example: 286.15"
+      required: true
+
+  - type: dropdown
+    id: new-status
+    attributes:
+      label: New Status
+      description: What should the new status be?
+      options:
+        - label: Working
+          value: working
+        - label: Warning
+          value: warning
+        - label: Broken
+          value: broken
+      required: true
+
+  - type: textarea
+    id: reason-evidence
+    attributes:
+      label: Reason / Evidence
+      description: |
+        Please provide a clear and concise description of why the status should be changed.
+        If relevant, include steps to reproduce the issue or screenshots.
+      placeholder: |
+        Example: "The plugin crashes my client when I do this.", "This feature no longer works."
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Select to confirm you’ve filled all fields correctly.
+      options:
+        - label: I have provided all the requested information.
+          required: true

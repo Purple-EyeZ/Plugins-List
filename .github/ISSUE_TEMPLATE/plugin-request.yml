@@ -1,0 +1,47 @@
+name: Add a new plugin
+description: Suggest a new plugin to be added to the list.
+title: "[Plugin Request]: "
+labels:
+  - new-plugin
+assignees:
+  - Purple-EyeZ
+body:
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin Name
+      description: The name of the plugin you want to add.
+      placeholder: "Example: BetterFolders"
+      required: true
+
+  - type: input
+    id: plugin-install-url
+    attributes:
+      label: Plugin Install URL
+      description: Provide the installation link.
+      placeholder: "https://author.github.io/Repository/Plugin/"
+      required: true
+
+  - type: input
+    id: plugin-source-url
+    attributes:
+      label: Plugin Source URL
+      description: Provide the link to the source code.
+      placeholder: "https://github.com/Author/Repository"
+      required: true
+
+  - type: textarea
+    id: plugin-description
+    attributes:
+      label: Plugin Description
+      description: A brief description of what the plugin does (if the name isn’t self-explanatory).
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Select to confirm you’ve filled all fields correctly.
+      options:
+        - label: I have provided all the requested information.
+          required: true
