@@ -1,8 +1,8 @@
 ---
 name: Add a new plugin
-description: Suggest a new plugin to be added to the list.
+about: Suggest a new plugin to be added to the list.
 title: "[Plugin Request]: "
-labels: ["enhancement", "new-plugin"]
+labels: ["new-plugin"]
 assignees:
   - Purple-EyeZ
 ---

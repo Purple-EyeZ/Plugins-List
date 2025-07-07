@@ -1,8 +1,8 @@
 ---
 name: Report incorrect plugin status
-description: Report a plugin that is mislabeled (e.g. 'working' but is 'broken').
+about: Report a plugin that is mislabeled (e.g. 'working' but is 'broken').
 title: "[Status Report]: "
-labels: ["bug", "status-update"]
+labels: ["status-update"]
 assignees:
   - Purple-EyeZ
 ---
