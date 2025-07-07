@@ -12,6 +12,7 @@ body:
       label: Plugin Name
       description: The name of the plugin you want to add.
       placeholder: "Example: BetterFolders"
+    validations:
       required: true
 
   - type: input
@@ -20,6 +21,7 @@ body:
       label: Plugin Install URL
       description: Provide the installation link.
       placeholder: "https://author.github.io/Repository/Plugin/"
+    validations:
       required: true
 
   - type: input
@@ -28,6 +30,7 @@ body:
       label: Plugin Source URL
       description: Provide the link to the source code.
       placeholder: "https://github.com/Author/Repository"
+    validations:
       required: true
 
   - type: textarea
@@ -35,6 +38,7 @@ body:
     attributes:
       label: Plugin Description
       description: A brief description of what the plugin does (if the name isn’t self-explanatory).
+    validations:
       required: false
 
   - type: checkboxes
