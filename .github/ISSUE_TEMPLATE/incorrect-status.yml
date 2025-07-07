@@ -29,12 +29,9 @@ body:
       label: New Status
       description: What should the new status be?
       options:
-        - label: Working
-          value: working
-        - label: Warning
-          value: warning
-        - label: Broken
-          value: broken
+        - Working
+        - Warning
+        - Broken
     validations:
       required: true
 
