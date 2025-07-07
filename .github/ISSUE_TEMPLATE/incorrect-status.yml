@@ -11,6 +11,7 @@ body:
       label: Plugin Name
       description: Provide the name of the plugin you are reporting.
       placeholder: "Example: BetterFolders"
+    validations:
       required: true
 
   - type: input
@@ -19,6 +20,7 @@ body:
       label: Discord Version
       description: What is your Discord version?
       placeholder: "Example: 286.15"
+    validations:
       required: true
 
   - type: dropdown
@@ -33,6 +35,7 @@ body:
           value: warning
         - label: Broken
           value: broken
+    validations:
       required: true
 
   - type: textarea
@@ -44,6 +47,7 @@ body:
         If relevant, include steps to reproduce the issue or screenshots.
       placeholder: |
         Example: "The plugin crashes my client when I do this.", "This feature no longer works."
+    validations:
       required: true
 
   - type: checkboxes
