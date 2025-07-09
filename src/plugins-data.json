@@ -1346,7 +1346,7 @@
             "Zykrah",
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/HideBlockedAndIgnoredMessages/",
         "warningMessage": ""
