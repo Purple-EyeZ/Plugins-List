@@ -1346,7 +1346,7 @@
             "Zykrah",
             "シグマ siguma"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/HideBlockedAndIgnoredMessages/",
         "warningMessage": ""
@@ -1384,6 +1384,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/otkusteyler/KonoChan-Randomizer-",
         "installUrl": "https://otkusteyler.github.io/KonoChan-Randomizer-/",
+        "warningMessage": ""
+    },
+    {
+        "name": "catbox.moe",
+        "description": "Upload your silly ahh files larger than 10MBs to catbox.moe.",
+        "authors": [
+            "シグマ siguma"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/catbox.moe/",
         "warningMessage": ""
     }
 ]
