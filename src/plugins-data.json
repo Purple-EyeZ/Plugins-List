@@ -499,17 +499,6 @@
         "warningMessage": ""
     },
     {
-        "name": "FileContentPreview",
-        "description": "Allows you to preview the contents of text files in the app.",
-        "authors": [
-            "fres"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/fres621/vendetta-plugins",
-        "installUrl": "https://fres621.github.io/vendetta-plugins/FileContentPreview/",
-        "warningMessage": ""
-    },
-    {
         "name": "Char Counter",
         "description": "Adds a character counter above the chat input",
         "authors": [
@@ -1395,6 +1384,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/catbox.moe/",
+        "warningMessage": ""
+    },
+    {
+        "name": "FileContentPreview",
+        "description": "Allows you to preview the contents of text files in the app.",
+        "authors": [
+            "fres"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/fres621/revenge-plugs",
+        "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
         "warningMessage": ""
     }
 ]
