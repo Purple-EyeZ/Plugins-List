@@ -180,7 +180,9 @@ fetch("plugins-data.json")
 			showChangesPopup(changes);
 		}
 
-		renderPlugins();
+		if (pluginsContainer) {
+			renderPlugins();
+		}
 	})
 	.catch((error) => {
 		console.error("Error loading plugins data:", error);
@@ -262,7 +264,6 @@ function createPluginCard(plugin) {
 	return card;
 }
 
-// Function to copy to clipboard
 function copyToClipboard(text) {
 	navigator.clipboard.writeText(text).catch((err) => {
 		console.error("Failed to copy: ", err);
@@ -271,35 +272,40 @@ function copyToClipboard(text) {
 
 // Render plugins with current filters
 window.renderPlugins = function renderPlugins() {
+	if (!pluginsContainer) {
+		return;
+	}
 	pluginsContainer.innerHTML = "";
 
 	let filteredPlugins = [...pluginsData];
 
-	if (!showBrokenToggle.checked) {
+	if (showBrokenToggle && !showBrokenToggle.checked) {
 		filteredPlugins = filteredPlugins.filter(
 			(plugin) => plugin.status !== "broken",
 		);
 	}
 
 	// Sort plugins
-	switch (sortSelect.value) {
-		case "default":
-			filteredPlugins.sort((a, b) => {
-				if (a.status === "broken" && b.status !== "broken") return 1;
-				if (a.status !== "broken" && b.status === "broken") return -1;
-				return a.name.localeCompare(b.name);
-			});
-			break;
-		case "broken-first":
-			filteredPlugins.sort((a, b) => {
-				if (a.status === "broken" && b.status !== "broken") return -1;
-				if (a.status !== "broken" && b.status === "broken") return 1;
-				return a.name.localeCompare(b.name);
-			});
-			break;
-		case "alphabetical":
-			filteredPlugins.sort((a, b) => a.name.localeCompare(b.name));
-			break;
+	if (sortSelect) {
+		switch (sortSelect.value) {
+			case "default":
+				filteredPlugins.sort((a, b) => {
+					if (a.status === "broken" && b.status !== "broken") return 1;
+					if (a.status !== "broken" && b.status === "broken") return -1;
+					return a.name.localeCompare(b.name);
+				});
+				break;
+			case "broken-first":
+				filteredPlugins.sort((a, b) => {
+					if (a.status === "broken" && b.status !== "broken") return -1;
+					if (a.status !== "broken" && b.status === "broken") return 1;
+					return a.name.localeCompare(b.name);
+				});
+				break;
+			case "alphabetical":
+				filteredPlugins.sort((a, b) => a.name.localeCompare(b.name));
+				break;
+		}
 	}
 
 	for (const plugin of filteredPlugins) {
@@ -309,8 +315,12 @@ window.renderPlugins = function renderPlugins() {
 };
 
 // Event listeners for filters
-sortSelect.addEventListener("change", renderPlugins);
-showBrokenToggle.addEventListener("change", renderPlugins);
+if (sortSelect) {
+	sortSelect.addEventListener("change", renderPlugins);
+}
+if (showBrokenToggle) {
+	showBrokenToggle.addEventListener("change", renderPlugins);
+}
 
 // Initial render
 document.addEventListener("DOMContentLoaded", renderPlugins);

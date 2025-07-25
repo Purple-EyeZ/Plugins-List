@@ -1,8 +1,6 @@
-const CONSTANTS = {
-	ANIMATION: {
-		DEBOUNCE: 150,
-	},
-};
+import fuzzysort from "fuzzysort";
+
+const DEBOUNCE = 150;
 
 const searchState = {
 	currentValue: "",
@@ -20,6 +18,8 @@ const elements = {
 		document.getElementById("plugins-list"),
 	featuredPluginContainer: document.getElementById("featured-plugin-container"),
 };
+
+let searchablePlugins = [];
 
 function debounce(func, wait) {
 	let timeout;
@@ -45,76 +45,77 @@ function normalizeText(text) {
 // Filter plugins based on search query
 function filterPlugins(query) {
 	const isAdminPage = elements.container.id === "plugins-list";
-	const items = Array.from(
-		elements.container.getElementsByClassName(
-			isAdminPage ? "admin-plugin-item" : "plugin-card",
-		),
+	const itemsSelector = isAdminPage ? "admin-plugin-item" : "plugin-card";
+	const allItemsInDom = Array.from(
+		elements.container.getElementsByClassName(itemsSelector),
 	);
+
+	const isCacheInvalid =
+		searchablePlugins.length === 0 ||
+		searchablePlugins.length !== allItemsInDom.length ||
+		(searchablePlugins.length > 0 && !searchablePlugins[0].element.isConnected);
+
+	if (isCacheInvalid) {
+		searchablePlugins = allItemsInDom.map((item) => {
+			const data = { element: item };
+			if (isAdminPage) {
+				data.name = normalizeText(
+					item.querySelector(".plugin-info span:nth-child(2)")?.textContent,
+				);
+				data.warningMessage = item.querySelector(".warning-message")?.value;
+			} else {
+				data.name = normalizeText(
+					item.querySelector(".plugin-name")?.textContent,
+				);
+				data.description = normalizeText(
+					item.querySelector(".plugin-description")?.textContent,
+				);
+				data.author = normalizeText(
+					item.querySelector(".plugin-author")?.textContent,
+				);
+			}
+			return data;
+		});
+	}
+
 	const normalizedQuery = normalizeText(query);
 
 	if (!normalizedQuery) {
-		for (const item of items) {
-			item.style.display = isAdminPage ? "block" : "flex";
+		for (const { element } of searchablePlugins) {
+			element.style.display = isAdminPage ? "block" : "flex";
 		}
-		updateSearchSubtext("", items);
 		if (!isAdminPage) {
 			window.renderPlugins?.();
+		} else {
+			for (const item of allItemsInDom) {
+				elements.container.appendChild(item);
+			}
 		}
+		updateSearchSubtext("", allItemsInDom.length);
 		return;
 	}
 
-	if (isAdminPage) {
-		let visibleCount = 0;
-		for (const item of items) {
-			const name = normalizeText(
-				item.querySelector(".plugin-info span:nth-child(2)")?.textContent,
-			);
-			const warningMessage = item.querySelector(".warning-message")?.value;
+	const keys = isAdminPage
+		? ["name", "warningMessage"]
+		: ["name", "author", "description"];
 
-			const matches =
-				name?.includes(normalizedQuery) ||
-				(warningMessage &&
-					normalizeText(warningMessage).includes(normalizedQuery));
+	const results = fuzzysort.go(normalizedQuery, searchablePlugins, {
+		keys: keys,
+	});
 
-			item.style.display = matches ? "block" : "none";
-			if (matches) visibleCount++;
-		}
-		updateSearchSubtext(query, visibleCount);
-	} else {
-		const scoredItems = items.map((card) => {
-			const name = normalizeText(
-				card.querySelector(".plugin-name").textContent,
-			);
-			const description = normalizeText(
-				card.querySelector(".plugin-description").textContent,
-			);
-			const author = normalizeText(
-				card.querySelector(".plugin-author").textContent,
-			);
-
-			let score = 0;
-			if (name.includes(normalizedQuery)) score += 100;
-			if (author.includes(normalizedQuery)) score += 50;
-			if (description.includes(normalizedQuery)) score += 25;
-			if (name.startsWith(normalizedQuery)) score += 50;
-
-			return { card, score, hasMatch: score > 0 };
-		});
-
-		scoredItems.sort((a, b) => b.score - a.score);
-
-		for (const { card, hasMatch } of scoredItems) {
-			card.style.display = hasMatch ? "flex" : "none";
-			if (hasMatch) {
-				elements.container.appendChild(card);
-			}
-		}
-
-		updateSearchSubtext(
-			query,
-			scoredItems.filter((i) => i.hasMatch).map((i) => i.card),
-		);
+	for (const { element } of searchablePlugins) {
+		element.style.display = "none";
 	}
+
+	const visibleItems = [];
+	for (const result of results) {
+		const { element } = result.obj;
+		element.style.display = isAdminPage ? "block" : "flex";
+		elements.container.appendChild(element);
+		visibleItems.push(element);
+	}
+
+	updateSearchSubtext(query, visibleItems.length);
 }
 
 function updateSearchSubtext(query, cardsOrCount) {
@@ -244,7 +245,7 @@ if (fixedSearchBar) {
 export const isFixedSearchFocused = () =>
 	document.getElementById("fixedSearchBar")?.dataset.isFocused === "true";
 
-const debouncedFilter = debounce(filterPlugins, CONSTANTS.ANIMATION.DEBOUNCE);
+const debouncedFilter = debounce(filterPlugins, DEBOUNCE);
 
 // Initialize search
 document.addEventListener("DOMContentLoaded", () => {
