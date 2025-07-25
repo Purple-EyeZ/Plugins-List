@@ -257,11 +257,12 @@
         "name": "Custom Voice Messages",
         "description": "Allows Sending any audio as a voice message",
         "authors": [
-            "Dziurwa"
+            "Dziurwa",
+            "シグマ siguma"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/dziurwa14/vendetta-plugins",
-        "installUrl": "https://dziurwa14.github.io/vendetta-plugins/customVoiceMessages/",
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/customVoiceMessages/",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/customVoiceMessages/",
         "warningMessage": ""
     },
     {
@@ -559,10 +560,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/song-spotlight/",
-        "warningMessage": ""
+        "warningMessage": "can't scroll inside scrollviews"
     },
     {
         "name": "LastMessageDate",
@@ -579,11 +580,12 @@
         "name": "AnonymousFileNames",
         "description": "Randomises file names before you upload them.",
         "authors": [
-            "maisy"
+            "maisy",
+            "シグマ siguma"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/maisymoe/strife",
-        "installUrl": "https://maisymoe.github.io/strife/AnonymousFileNames/",
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/AnonymousFileNames/",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/AnonymousFileNames/",
         "warningMessage": ""
     },
     {
@@ -636,10 +638,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/tenor-gif-fix/",
-        "warningMessage": "Temporarily replaced by NexxUtils."
+        "warningMessage": ""
     },
     {
         "name": "Use System Emoji",
@@ -1336,7 +1338,7 @@
             "シグマ siguma"
         ],
         "status": "working",
-        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/HideBlockedAndIgnoredMessages/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/HideBlockedAndIgnoredMessages/",
         "warningMessage": ""
     },
@@ -1347,7 +1349,7 @@
             "シグマ siguma"
         ],
         "status": "working",
-        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/CopyBios/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/CopyBios/",
         "warningMessage": ""
     },
@@ -1382,7 +1384,7 @@
             "シグマ siguma"
         ],
         "status": "working",
-        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/catbox.moe/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/catbox.moe/",
         "warningMessage": ""
     },
@@ -1395,6 +1397,53 @@
         "status": "working",
         "sourceUrl": "https://github.com/fres621/revenge-plugs",
         "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
+        "warningMessage": ""
+    },
+    {
+        "name": "Rich Presence",
+        "description": "Sets Discord Rich Presence for your profile.",
+        "authors": [
+            "pylix",
+            "シグマ siguma"
+        ],
+        "status": "warning",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/RichPresence/",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/RichPresence/",
+        "warningMessage": "- RPC buttons don't show up to client side on discord mobile.\n\n- Activity type=4(custom) doesn't work as discord handles it differently and not like other activity types. So don't use it."
+    },
+    {
+        "name": "Silent Messages",
+        "description": "Send messages without notifying the receiver.",
+        "authors": [
+            "シグマ siguma"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/silentmessages/",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/silentmessages/",
+        "warningMessage": ""
+    },
+    {
+        "name": "NSFW Blur",
+        "description": "Blur image previews and disable embed media in NSFW channels.",
+        "authors": [
+            "sylv256",
+            "シグマ siguma"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/nsfw-blur/",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/nsfw-blur",
+        "warningMessage": ""
+    },
+    {
+        "name": "Read All",
+        "description": "Read all server and DM notifications with single command - /readall",
+        "authors": [
+            "Win8.1VMUser",
+            "btmc727"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
+        "installUrl": "https://apexteampl.github.io/Apex-Plugins/ReadAll",
         "warningMessage": ""
     }
 ]
