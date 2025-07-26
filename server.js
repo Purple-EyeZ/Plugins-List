@@ -2,6 +2,7 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import esbuild from "esbuild";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,8 +11,7 @@ const projectPath = __dirname;
 const srcPath = path.join(projectPath, "src");
 const pluginsFilePath = path.join(srcPath, "plugins-data.json");
 
-// Create HTTP server
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 	res.setHeader("Access-Control-Allow-Origin", "*");
 	res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
 	res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -22,15 +22,31 @@ const server = http.createServer((req, res) => {
 		return;
 	}
 
-	// Serve static files
 	if (req.method === "GET" && !req.url.startsWith("/save")) {
-		let filePath;
-		if (req.url === "/") {
-			filePath = path.join(srcPath, "index.html");
-		} else if (req.url.startsWith("/src/")) {
-			filePath = path.join(projectPath, req.url);
-		} else {
-			filePath = path.join(srcPath, req.url);
+		const requestedPath = req.url === "/" ? "/index.html" : req.url;
+		const safePath = path
+			.normalize(requestedPath)
+			.replace(/^(\.\.[\/\\])+/, "");
+		const filePath = path.join(srcPath, safePath);
+
+		if (path.extname(filePath) === ".js") {
+			try {
+				const result = await esbuild.build({
+					entryPoints: [filePath],
+					bundle: true,
+					write: false,
+					format: "esm",
+					sourcemap: "inline",
+					target: "es2015",
+				});
+				res.writeHead(200, { "Content-Type": "text/javascript" });
+				res.end(result.outputFiles[0].text);
+			} catch (err) {
+				console.error(`❌ esbuild error for ${filePath}:`, err);
+				res.writeHead(500, { "Content-Type": "text/plain" });
+				res.end("esbuild compilation failed");
+			}
+			return;
 		}
 
 		fs.readFile(filePath, (err, data) => {
@@ -44,8 +60,7 @@ const server = http.createServer((req, res) => {
 			const ext = path.extname(filePath);
 			let contentType = "text/html";
 
-			if (ext === ".js") contentType = "text/javascript";
-			else if (ext === ".css") contentType = "text/css";
+			if (ext === ".css") contentType = "text/css";
 			else if (ext === ".json") contentType = "application/json";
 			else if (ext === ".png") contentType = "image/png";
 			else if (ext === ".jpg" || ext === ".jpeg") contentType = "image/jpeg";
@@ -65,7 +80,6 @@ const server = http.createServer((req, res) => {
 			try {
 				JSON.parse(body);
 
-				// Write to file
 				fs.writeFile(pluginsFilePath, body, (err) => {
 					if (err) {
 						console.error("❌ Write error:", err);
@@ -109,7 +123,7 @@ const PORT = 3000;
 server.listen(PORT, () => {
 	console.log(`✅ Server started on http://localhost:${PORT}`);
 	console.log(
-		`ℹ️  Admin page accessible at http://localhost:${PORT}/src/Admin/index.html`,
+		`ℹ️  Admin page accessible at http://localhost:${PORT}/Admin/index.html`,
 	);
 	console.log(`ℹ️  Changes will be saved to ${pluginsFilePath}`);
 });

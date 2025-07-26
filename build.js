@@ -80,7 +80,7 @@ const minifyFunctions = {
 const esbuildConfig = {
 	outdir: PATHS.dist,
 	outbase: PATHS.src,
-	bundle: false,
+	bundle: true,
 	minify: true,
 	sourcemap: false,
 	target: ["es2015"],
@@ -114,7 +114,10 @@ const build = async (clean = true) => {
 		const jsFiles = await glob(`${PATHS.src}/**/*.js`);
 		await esbuild.build({
 			...esbuildConfig,
-			entryPoints: jsFiles,
+			entryPoints: [
+				`${PATHS.src}/scripts/admin.js`,
+				`${PATHS.src}/scripts/plugins.js`,
+			],
 		});
 		console.log("📦 JavaScript files processed");
 

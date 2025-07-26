@@ -8,6 +8,7 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 
 // Control display of banner
 function handleScroll() {
+	if (!fixedBanner) return;
 	const scrollThreshold = 15; // px scrolled before showing the banner
 	const scrollY = window.scrollY;
 	const scrollingDown = scrollY > previousScrollY;
