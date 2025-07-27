@@ -371,7 +371,7 @@
         "authors": [
             "aliernfrog"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/aliernfrog/vd-plugins",
         "installUrl": "https://aliernfrog.github.io/vd-plugins/JumpTo/",
         "warningMessage": ""
