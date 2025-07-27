@@ -55,17 +55,6 @@
         "warningMessage": ""
     },
     {
-        "name": "BypassNSFWGate",
-        "description": "I don't know about tos",
-        "authors": [
-            "sapphire"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/aeongdesu/vdplugins",
-        "installUrl": "https://aeongdesu.github.io/vdplugins/BypassNSFWGate/",
-        "warningMessage": ""
-    },
-    {
         "name": "ViewRaw",
         "description": "View raw message data",
         "authors": [
@@ -1444,6 +1433,18 @@
         "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/ReadAll",
+        "warningMessage": ""
+    },
+    {
+        "name": "BetterNSFWGateBypass",
+        "description": "Allows you to access NSFW channels without setting your age.",
+        "authors": [
+            "Slara",
+            "Win8.1VMUser"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
+        "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
         "warningMessage": ""
     }
 ]
