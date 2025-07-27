@@ -1,12 +1,13 @@
 :root {
     --color-primary: #4a00e0;
     --color-primary-hover: #8e2de2;
-    --color-secondary: #3a3b3c;
+    --color-secondary: #91939538;
     --color-secondary-hover: #555657;
     --color-background-page: #17191A;
-    --color-background-surface: #1f2122;
+    --color-background-surface: #4f4e511a;
     --color-background-surface-hover: #2c2e30;
-    --color-background-input: #121212;
+    --color-background-input: #131212b0;
+    --color-background-featured-card: #1e1e1ecc;
     --color-text-primary: #e0e0e0;
     --color-text-secondary: #b0b3b8;
     --color-text-tertiary: #848485;
@@ -86,12 +87,25 @@
 }
 
 /* Component: Card */
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border-radius: var(--radius-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+/*
 .card {
     background-color: var(--color-background-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
     padding: 20px;
 }
+    */
 
 .card__title {
     font-weight: bold;
@@ -171,7 +185,6 @@
 /* ====================================================== */
 
 html {
-    background-color: var(--color-background-page);
     font-size: 14px;
 }
 
@@ -182,6 +195,22 @@ body {
     padding: 20px;
     color: var(--color-text-primary);
     padding-bottom: 80px;
+    background: radial-gradient(circle at 20% 30%, #2b2a3b, #1b1a28);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.background-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(128, 0, 255, 0.15), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(255, 0, 128, 0.1), transparent 50%);
+  filter: blur(80px);
 }
 
 header {
@@ -295,9 +324,9 @@ h1 img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(31, 33, 34, 0.9);
+    background-color: rgba(79, 78, 81, 0.1);
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px) saturate(160%);
     box-shadow: 0 2px 10px 8px rgba(0, 0, 0, 0.2);
     z-index: var(--z-index-banner);
     transform: translateY(-100%);
@@ -792,7 +821,7 @@ h1 img {
     --card-gradient: linear-gradient(120deg, #4a00e0, #8e2de2, #4a00e0);
     --card-animation-duration: 6s;
 
-    background-color: var(--color-background-surface);
+    background-color: var(--color-background-featured-card);
     border-radius: var(--card-border-radius);
     padding: 15px 20px;
     position: relative;
