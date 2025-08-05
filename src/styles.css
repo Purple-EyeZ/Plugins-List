@@ -210,8 +210,8 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(128, 0, 255, 0.15), transparent 40%),
-              radial-gradient(circle at 80% 80%, rgba(255, 0, 128, 0.1), transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(128, 0, 255, 0.2), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(255, 0, 128, 0.12), transparent 50%);
   filter: blur(80px);
 }
 
