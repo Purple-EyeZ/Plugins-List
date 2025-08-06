@@ -1442,9 +1442,9 @@
             "Slara",
             "Win8.1VMUser"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
-        "warningMessage": "In the plugin settings, enable the first toggle and use this password: SlaraIsSigmaCat"
+        "warningMessage": ""
     }
 ]
