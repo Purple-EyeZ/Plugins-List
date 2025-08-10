@@ -114,11 +114,12 @@
         "name": "Staff Tags",
         "description": "Shows extra tags for staff members.",
         "authors": [
-            "Fiery"
+            "Fiery",
+            "シグマ siguma"
         ],
         "status": "broken",
-        "sourceUrl": "https://github.com/fierdetta/staff-tags",
-        "installUrl": "https://fierdetta.github.io/staff-tags/",
+        "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
+        "installUrl": "https://shipwr3ckd.github.io/revengeplugin/staff-tags/",
         "warningMessage": ""
     },
     {
@@ -1016,7 +1017,7 @@
         ],
         "status": "working",
         "sourceUrl": "https://github.com/amsyarasyiq/letup",
-        "installUrl": "https://vd-plugins.github.io/proxy/amsyarasyiq.github.io/letup/Last.fm/",
+        "installUrl": "https://amsyarasyiq.github.io/letup/Last.fm/",
         "warningMessage": ""
     },
     {
@@ -1442,9 +1443,9 @@
             "Slara",
             "Win8.1VMUser"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
-        "warningMessage": "In the plugin settings, enable the first toggle and use this password: SlaraIsSigmaCat"
+        "warningMessage": ""
     }
 ]
