@@ -1115,7 +1115,7 @@
         "authors": [
             "Cynosphere"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
         "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Moyai/",
         "warningMessage": ""
