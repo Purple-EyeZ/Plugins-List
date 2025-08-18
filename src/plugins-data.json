@@ -671,11 +671,12 @@
         "name": "FakeProfileThemesAndEffects",
         "description": "Allows profile theming and the usage of profile effects by hiding the colors and effect ID in your About Me using invisible, zero-width characters",
         "authors": [
-            "ryan"
+            "ryan",
+            "シグマ siguma"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/ryan-0324/vendetta-plugins",
-        "installUrl": "https://ryan-0324.github.io/vendetta-plugins/FakeProfileThemesAndEffects/",
+        "status": "working",
+        "sourceUrl": "https://github.com/shipwr3ckd/FPTE",
+        "installUrl": "https://shipwr3ckd.github.io/FPTE/FakeProfileThemesAndEffects/",
         "warningMessage": ""
     },
     {
