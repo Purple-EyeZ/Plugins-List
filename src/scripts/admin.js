@@ -1,5 +1,5 @@
 import { showToast, showPopup } from "./shared.js";
-import { initSearchFromURL } from "./search.js";
+import { initSearchFromURL, searchState, filterPlugins } from "./search.js";
 
 const DATA_PATH = "../plugins-data.json";
 
@@ -345,6 +345,8 @@ function updatePluginsList() {
 	for (const plugin of filteredPlugins) {
 		pluginsList.appendChild(createPluginElement(plugin));
 	}
+
+	filterPlugins(searchState.currentValue);
 }
 
 // Save changes

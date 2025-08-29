@@ -1,7 +1,8 @@
 import { showPopup, showToast } from "./shared.js";
-import { initSearchFromURL } from "./search.js";
+import { initSearchFromURL, searchState, filterPlugins } from "./search.js";
 
 let pluginsData = [];
+let isRendering = false;
 
 function analyzePluginChanges(currentPlugins) {
 	const previousStateJSON = localStorage.getItem("previousPluginsState");
@@ -274,7 +275,11 @@ function copyToClipboard(text) {
 
 // Render plugins with current filters
 window.renderPlugins = function renderPlugins() {
+	if (isRendering) return;
+	isRendering = true;
+
 	if (!pluginsContainer) {
+		isRendering = false;
 		return;
 	}
 	pluginsContainer.innerHTML = "";
@@ -314,6 +319,9 @@ window.renderPlugins = function renderPlugins() {
 		const card = createPluginCard(plugin);
 		pluginsContainer.appendChild(card);
 	}
+
+	filterPlugins(searchState.currentValue);
+	isRendering = false;
 };
 
 // Event listeners for filters

@@ -2,7 +2,7 @@ import fuzzysort from "fuzzysort";
 
 const DEBOUNCE = 150;
 
-const searchState = {
+export const searchState = {
 	currentValue: "",
 	wasCleared: false,
 };
@@ -43,7 +43,7 @@ function normalizeText(text) {
 }
 
 // Filter plugins based on search query
-function filterPlugins(query) {
+export function filterPlugins(query) {
 	const isAdminPage = elements.container.id === "plugins-list";
 	const itemsSelector = isAdminPage ? "admin-plugin-item" : "plugin-card";
 	const allItemsInDom = Array.from(
