@@ -435,7 +435,7 @@
     },
     {
         "name": "Twemoji Everywhere",
-        "description": "Turns all (possible) system emoji into Twemoji 👋😀🎉",
+        "description": "Turns all system emoji used on Discord into Twemoji! 👋😀🎉",
         "authors": [
             "nexpid"
         ],
@@ -513,7 +513,7 @@
     },
     {
         "name": "Clean URLs",
-        "description": "Removes tracking garbage from links you send and receive",
+        "description": "Removes tracking garbage from links sent and received",
         "authors": [
             "nexpid"
         ],
@@ -771,10 +771,10 @@
         "warningMessage": ""
     },
     {
-        "name": "Antied v1.4.0",
+        "name": "Antied v1.4.2a",
         "description": "Keeps deleted messages and logs edited messages, until you restart/reloads the app",
         "authors": [
-            "Angelica"
+            "Angelw0lf"
         ],
         "status": "working",
         "sourceUrl": "https://github.com/angelix1/MP",
@@ -870,10 +870,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/nexxutils/",
-        "warningMessage": "Still in development."
+        "warningMessage": ""
     },
     {
         "name": "Better Calls",
@@ -1323,7 +1323,7 @@
     },
     {
         "name": "HideBlockedAndIgnoredMessages",
-        "description": "A plugin that removes the `X blocked or ignored message/s` prompt from chat.",
+        "description": "A plugin that removes the `X blocked or ignored message/s` prompt and replies to the blocked or ignored messages from chat.",
         "authors": [
             "Zykrah",
             "シグマ siguma"
@@ -1427,7 +1427,7 @@
     },
     {
         "name": "Read All",
-        "description": "Read all server and DM notifications with single command - /readall",
+        "description": "Read all server and DM notifications with single command - /read",
         "authors": [
             "Win8.1VMUser",
             "btmc727"
@@ -1447,6 +1447,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
+        "warningMessage": ""
+    },
+    {
+        "name": "More Alts!",
+        "description": "Adds ability to safely add more alts to Discord!",
+        "authors": [
+            "Win8.1VMUser"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
+        "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
         "warningMessage": ""
     }
 ]
