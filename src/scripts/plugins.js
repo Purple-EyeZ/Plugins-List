@@ -1,4 +1,5 @@
 import { showPopup, showToast } from "./shared.js";
+import { initSearchFromURL } from "./search.js";
 
 let pluginsData = [];
 
@@ -182,6 +183,7 @@ fetch("plugins-data.json")
 
 		if (pluginsContainer) {
 			renderPlugins();
+			initSearchFromURL();
 		}
 	})
 	.catch((error) => {
@@ -321,6 +323,3 @@ if (sortSelect) {
 if (showBrokenToggle) {
 	showBrokenToggle.addEventListener("change", renderPlugins);
 }
-
-// Initial render
-document.addEventListener("DOMContentLoaded", renderPlugins);

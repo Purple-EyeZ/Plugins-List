@@ -1,4 +1,5 @@
 import { showToast, showPopup } from "./shared.js";
+import { initSearchFromURL } from "./search.js";
 
 const DATA_PATH = "../plugins-data.json";
 
@@ -24,6 +25,7 @@ async function loadPlugins() {
 		plugins = await response.json();
 		updatePluginsList();
 		updateCounters();
+		initSearchFromURL();
 	} catch (error) {
 		showToast(`Error loading plugins: ${error.message}`);
 	}

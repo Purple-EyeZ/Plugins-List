@@ -23,7 +23,8 @@ const server = http.createServer(async (req, res) => {
 	}
 
 	if (req.method === "GET" && !req.url.startsWith("/save")) {
-		const requestedPath = req.url === "/" ? "/index.html" : req.url;
+		const pathname = req.url.split("?")[0];
+		const requestedPath = pathname === "/" ? "/index.html" : pathname;
 		const safePath = path
 			.normalize(requestedPath)
 			.replace(/^(\.\.[\/\\])+/, "");

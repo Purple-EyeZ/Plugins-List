@@ -164,9 +164,19 @@ function addSearchFunctionality() {
 		toggleClearButton(e.target, value);
 
 		const otherBar = e.target === searchBar ? fixedSearchBar : searchBar;
-		otherBar.value = value;
-		toggleClearButton(otherBar, value);
+		if (otherBar) {
+			otherBar.value = value;
+			toggleClearButton(otherBar, value);
+		}
 		handleFeaturedPluginVisibility(value);
+
+		const url = new URL(window.location);
+		if (value) {
+			url.searchParams.set("q", value);
+		} else {
+			url.searchParams.delete("q");
+		}
+		window.history.replaceState({}, "", url);
 	};
 
 	for (const bar of [searchBar, fixedSearchBar]) {
@@ -179,12 +189,20 @@ function addSearchFunctionality() {
 		searchState.currentValue = "";
 		searchState.wasCleared = true;
 		for (const bar of [searchBar, fixedSearchBar]) {
-			bar.value = "";
-			toggleClearButton(bar, "");
+			if (bar) {
+				bar.value = "";
+				toggleClearButton(bar, "");
+			}
 		}
 		filterPlugins("");
 		handleFeaturedPluginVisibility("");
-		input.focus();
+		if (input) {
+			input.focus();
+		}
+
+		const url = new URL(window.location);
+		url.searchParams.delete("q");
+		window.history.replaceState({}, "", url);
 	};
 
 	for (const { button, input } of [
@@ -244,6 +262,27 @@ if (fixedSearchBar) {
 
 export const isFixedSearchFocused = () =>
 	document.getElementById("fixedSearchBar")?.dataset.isFocused === "true";
+
+export function initSearchFromURL() {
+	const urlParams = new URLSearchParams(window.location.search);
+	const searchQuery = urlParams.get("q");
+
+	if (searchQuery) {
+		const { searchBar, fixedSearchBar } = elements;
+		searchState.currentValue = searchQuery;
+
+		if (searchBar) {
+			searchBar.value = searchQuery;
+			toggleClearButton(searchBar, searchQuery);
+		}
+		if (fixedSearchBar) {
+			fixedSearchBar.value = searchQuery;
+			toggleClearButton(fixedSearchBar, searchQuery);
+		}
+		filterPlugins(searchQuery);
+		handleFeaturedPluginVisibility(searchQuery);
+	}
+}
 
 const debouncedFilter = debounce(filterPlugins, DEBOUNCE);
 
