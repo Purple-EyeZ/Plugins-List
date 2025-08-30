@@ -16,10 +16,10 @@
         "authors": [
             "Wolfie"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet/",
-        "warningMessage": ""
+        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
     },
     {
         "name": "Osu! Stats",
@@ -117,7 +117,7 @@
             "Fiery",
             "シグマ siguma"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/staff-tags/",
         "warningMessage": ""
@@ -1060,10 +1060,10 @@
         "authors": [
             "jdev082"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/jdev082/vd-repo2",
         "installUrl": "https://vd-plugins.github.io/proxy/jdev082.github.io/vd-repo2/CatFacts/",
-        "warningMessage": ""
+        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
     },
     {
         "name": "LoveFemboys",
@@ -1225,10 +1225,10 @@
         "authors": [
             "Kitomanari"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/addonList/",
-        "warningMessage": ""
+        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+ (ephemeral messages still work)"
     },
     {
         "name": "uwuify",
@@ -1363,10 +1363,10 @@
             "btmc727",
             "Rico040"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/otkusteyler/KonoChan-Randomizer-",
         "installUrl": "https://otkusteyler.github.io/KonoChan-Randomizer-/",
-        "warningMessage": ""
+        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
     },
     {
         "name": "catbox.moe",
@@ -1444,10 +1444,10 @@
             "Slara",
             "Win8.1VMUser"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
-        "warningMessage": ""
+        "warningMessage": "The UK bypass (age verification) doesn’t work on 292+ (NSFW channel content doesn’t load)"
     },
     {
         "name": "More Alts!",
