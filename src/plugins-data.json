@@ -1447,7 +1447,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/nsfwbypass",
-        "warningMessage": "The UK bypass (age verification) doesn’t work on 292+ (NSFW channel content doesn’t load)"
+        "warningMessage": "The UK bypass (age verification) doesn’t work anymore (NSFW channel content doesn’t load)\n\nUse a vpn to a country with some freedom"
     },
     {
         "name": "More Alts!",
