@@ -506,10 +506,10 @@
         "authors": [
             "Dziurwa"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/dziurwa14/vendetta-plugins",
         "installUrl": "https://dziurwa14.github.io/vendetta-plugins/Freecons/",
-        "warningMessage": ""
+        "warningMessage": "If it doesn’t work after restarting the app, force stop & clear cache (might not work on first try)"
     },
     {
         "name": "Clean URLs",
@@ -754,10 +754,10 @@
             "Rosie<3",
             "forked by MYSTRAVIL"
         ],
-        "status": "warning",
+        "status": "broken",
         "sourceUrl": "https://github.com/mystravil/vendetta-plugins",
         "installUrl": "https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/",
-        "warningMessage": "Enabling the \"Open Keyboard Automatically\" option will crash the app."
+        "warningMessage": "Broken on 295+"
     },
     {
         "name": "Better Chat Buttons",
