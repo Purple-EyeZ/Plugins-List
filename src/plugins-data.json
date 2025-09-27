@@ -17,7 +17,7 @@
             "Wolfie"
         ],
         "status": "broken",
-        "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet",
+        "sourceUrl": "https://github.com/WolfPlugs/vendetta-plugins",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet/",
         "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
     },
@@ -28,7 +28,7 @@
             "Wolfkid"
         ],
         "status": "working",
-        "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/osu/",
+        "sourceUrl": "https://github.com/WolfPlugs/vendetta-plugins",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/osu/",
         "warningMessage": ""
     },
@@ -38,8 +38,8 @@
         "authors": [
             "Wolfie"
         ],
-        "status": "broken",
-        "sourceUrl": "https://plugins.obamabot.me/vendetta-plugins/globalBadges/",
+        "status": "working",
+        "sourceUrl": "https://github.com/WolfPlugs/vendetta-plugins",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/globalBadges/",
         "warningMessage": ""
     },
@@ -59,12 +59,13 @@
         "description": "View raw message data",
         "authors": [
             "sapphire",
-            "Vendicated"
+            "Vendicated",
+            "Bwlok"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/aeongdesu/vdplugins",
-        "installUrl": "https://aeongdesu.github.io/vdplugins/ViewRaw/",
-        "warningMessage": "Option to View raw doesn't appears in the context menu."
+        "status": "working",
+        "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/ViewRaw",
+        "installUrl": "https://bwlok.github.io/revenge-plugins/ViewRaw",
+        "warningMessage": ""
     },
     {
         "name": "UtilCommands",
@@ -1014,11 +1015,12 @@
         "name": "Last.fm",
         "description": "Show off your last.fm status on your Discord profile.",
         "authors": [
-            "pylix"
+            "pylix",
+            "kmmiio99o"
         ],
         "status": "working",
-        "sourceUrl": "https://github.com/amsyarasyiq/letup",
-        "installUrl": "https://amsyarasyiq.github.io/letup/Last.fm/",
+        "sourceUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
+        "installUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
         "warningMessage": ""
     },
     {
