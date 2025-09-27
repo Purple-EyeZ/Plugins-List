@@ -59,12 +59,13 @@
         "description": "View raw message data",
         "authors": [
             "sapphire",
-            "Vendicated"
+            "Vendicated",
+            "Bwlok"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/aeongdesu/vdplugins",
-        "installUrl": "https://aeongdesu.github.io/vdplugins/ViewRaw/",
-        "warningMessage": "Option to View raw doesn't appears in the context menu."
+        "status": "working",
+        "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/ViewRaw",
+        "installUrl": "https://bwlok.github.io/revenge-plugins/ViewRaw",
+        "warningMessage": ""
     },
     {
         "name": "UtilCommands",
