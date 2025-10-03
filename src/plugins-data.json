@@ -658,17 +658,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Decor",
-        "description": "Create and use your own custom avatar decorations, or pick your favorite from the presets.",
-        "authors": [
-            "Fiery"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/decor-discord/vendetta-plugin",
-        "installUrl": "https://decor-discord.github.io/vendetta-plugin/",
-        "warningMessage": ""
-    },
-    {
         "name": "FakeProfileThemesAndEffects",
         "description": "Allows profile theming and the usage of profile effects by hiding the colors and effect ID in your About Me using invisible, zero-width characters",
         "authors": [
@@ -772,15 +761,15 @@
         "warningMessage": ""
     },
     {
-        "name": "Antied v1.4.2a",
-        "description": "Keeps deleted messages and logs edited messages, until you restart/reloads the app",
+        "name": "Antied",
+        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app.",
         "authors": [
             "Angelw0lf"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antied/",
-        "warningMessage": ""
+        "warningMessage": "⚠️ Styling is broken on 298+\n\n⚠️ Editing your own messages may include previous edit logs. Add yourself to the ignore list to prevent this."
     },
     {
         "name": "Dashless",
@@ -1365,10 +1354,10 @@
             "btmc727",
             "Rico040"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/otkusteyler/KonoChan-Randomizer-",
         "installUrl": "https://otkusteyler.github.io/KonoChan-Randomizer-/",
-        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
+        "warningMessage": ""
     },
     {
         "name": "catbox.moe",
@@ -1460,6 +1449,18 @@
         "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
+        "warningMessage": ""
+    },
+    {
+        "name": "Decor",
+        "description": "Create and use your own custom avatar decorations, or pick your favorite from the presets.",
+        "authors": [
+            "Fiery",
+            "Bwlok"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/Decor",
+        "installUrl": "https://bwlok.github.io/revenge-plugins/Decor",
         "warningMessage": ""
     }
 ]
