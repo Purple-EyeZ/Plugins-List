@@ -1,12 +1,12 @@
 :root {
     --color-primary: #4a00e0;
     --color-primary-hover: #8e2de2;
-    --color-secondary: #3a3b3c;
-    --color-secondary-hover: #555657;
-    --color-background-page: #17191A;
-    --color-background-surface: #1f2122;
-    --color-background-surface-hover: #2c2e30;
-    --color-background-input: #121212;
+    --color-secondary: #2d2f31;
+    --color-secondary-hover: #38393b;
+    --color-background-page: #06020a;
+    --color-background-surface: #151519;
+    --color-background-surface-hover: #212325;
+    --color-background-input: #17191a;
     --color-text-primary: #e0e0e0;
     --color-text-secondary: #b0b3b8;
     --color-text-tertiary: #848485;
@@ -16,9 +16,12 @@
     --color-danger: #F44336;
     --color-danger-hover: #D32F2F;
     --color-white: #FFF;
-    --color-toast-background: #1f2122e6;
-    --color-border: #222325;
+    --color-toast-background: #121314c2;
+    --color-border: #282a2d;
     --color-link-hover: #b161f3;
+    --color-focus-border: #c1cad3;
+    --color-focus-shadow: #7f828799;
+    --color-background-info-box: #0b0d0e;
 
     --font-body: 'Noto Sans', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -88,7 +91,6 @@
 /* Component: Card */
 .card {
     background-color: var(--color-background-surface);
-    border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
     padding: 20px;
 }
@@ -129,20 +131,20 @@
 .form-control {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-input);
     background-color: var(--color-background-input);
     color: var(--color-text-primary);
     font-family: inherit;
     font-size: 1rem;
-    transition: box-shadow 0.3s, border-color 0.3s;
+    transition: box-shadow 0.4s, border-color 0.4s;
 }
 
 .form-control:focus,
 .form-control:focus:hover {
     outline: none;
-    border-color: var(--color-primary-hover);
-    box-shadow: 0 0 15px rgba(142, 45, 226, 0.3);
+    border-color: var(--color-focus-border);
+    box-shadow: 0 0 15px var(--color-focus-shadow);
 }
 
 /* Component: Status Badge */
@@ -173,6 +175,7 @@
 html {
     background-color: var(--color-background-page);
     font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -228,8 +231,6 @@ h1 img {
 .search-bar {
     font-size: 1.07rem;
     border-radius: var(--radius-button);
-    border-color: transparent;
-    box-shadow: 0px 0px 7px 0px var(--color-primary);
     padding-left: 16px;
     padding-right: 40px;
 }
@@ -240,13 +241,13 @@ h1 img {
 
 .form-control.search-bar:focus,
 .form-control.search-bar:focus:hover {
-    border-color: var(--color-primary-hover);
-    box-shadow: 0 0 25px rgba(142, 45, 226, 0.8), 0 0 50px rgba(142, 45, 226, 0.5);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 8px 1px rgb(80 0 218 / 90%);
 }
 
 #searchButton i {
     font-size: 1.79rem;
-    color: #ebebeb;
+    color: var(--color-text-primary);
 }
 
 .clear-button {
@@ -257,6 +258,7 @@ h1 img {
     border: none;
     cursor: pointer;
     color: var(--color-text-primary);
+    z-index: var(--z-index-banner);
 }
 
 #clearSearch {
@@ -295,10 +297,6 @@ h1 img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(31, 33, 34, 0.9);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px 8px rgba(0, 0, 0, 0.2);
     z-index: var(--z-index-banner);
     transform: translateY(-100%);
     opacity: 0;
@@ -309,6 +307,32 @@ h1 img {
     padding: 10px 0;
     height: 38px;
     box-sizing: content-box;
+}
+
+.fixed-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 116px;
+    background: var(--color-background-page);
+    -webkit-mask: linear-gradient(
+        to bottom, 
+        black 5%, 
+        rgb(0 0 0 / 90%) 25%, 
+        rgb(0 0 0 / 70%) 50%, 
+        transparent 100%
+    ) no-repeat 0 0 / 100% 100%;
+
+    mask: linear-gradient(
+        to bottom, 
+        black 5%, 
+        rgb(0 0 0 / 90%) 25%, 
+        rgb(0 0 0 / 70%) 50%, 
+        transparent 100%
+    ) no-repeat 0 0 / 100% 100%;
+    pointer-events: none;
 }
 
 .fixed-banner.show {
@@ -329,6 +353,7 @@ h1 img {
     margin-left: 120px;
     padding-top: 5px;
     padding-left: 15px;
+    z-index: var(--z-index-banner);
 }
 
 .fixed-banner .search-button .material-symbols-rounded {
@@ -342,13 +367,14 @@ h1 img {
     transition: width 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
     max-width: 270px;
     max-height: 34px;
+    z-index: var(--z-index-banner);
 }
 
 .fixed-banner .search-bar.show {
     width: 50%;
     opacity: 1;
     visibility: visible;
-    transition: width 0.3s ease, opacity 0.3s ease;
+    transition: width 0.3s ease, opacity 0.3s ease, box-shadow 0.5s, border-color 0.5s;
     margin-right: 10px;
     max-width: 270px;
     max-height: 36px;
@@ -378,7 +404,7 @@ h1 img {
     background-color: var(--color-background-surface);
     border: 1px solid var(--color-secondary);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
     z-index: var(--z-index-dropdown);
     width: 160px;
 }
@@ -458,8 +484,7 @@ h1 img {
     border-radius: var(--radius-button);
     padding: 12px 24px;
     font-size: 1rem;
-    border: 1px solid var(--color-border);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgb(0 0 0 / 30%);
     transition: visibility 0s, opacity 0.3s ease-in-out;
     opacity: 0;
     z-index: var(--z-index-toast);
@@ -507,13 +532,12 @@ h1 img {
     appearance: none;
     padding: 8px 40px 8px 12px;
     border-radius: var(--radius-button);
-    border: 1px solid transparent;
+    border: 1px solid var(--color-border);
     background-color: var(--color-background-input);
     color: var(--color-text-primary);
     cursor: pointer;
     outline: none;
     font-family: inherit;
-    box-shadow: 0px 0px 7px 0px var(--color-primary);
 }
 
 .select-container::after {
@@ -624,7 +648,7 @@ h1 img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(0 0 0 / 70%);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     z-index: var(--z-index-popup);
@@ -633,8 +657,6 @@ h1 img {
 }
 
 .popup-content {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     max-width: 500px;
     width: 90%;
     color: var(--color-text-primary);
@@ -654,7 +676,7 @@ h1 img {
 }
 
 .popup-info-box {
-    background-color: rgba(18, 18, 18, 0.8);
+    background-color: var(--color-background-info-box);
     border-left: 4px solid var(--color-primary);
     padding: 10px;
     margin-bottom: 15px;
@@ -789,14 +811,14 @@ h1 img {
     --card-glow-expansion: 6px;
     --card-glow-blur: 15px;
     --card-border-thickness: 3px;
-    --card-gradient: linear-gradient(120deg, #4a00e0, #8e2de2, #4a00e0);
+    --card-gradient: linear-gradient(120deg, var(--color-primary), var(--color-primary-hover), var(--color-primary));
     --card-animation-duration: 6s;
 
     background-color: var(--color-background-surface);
     border-radius: var(--card-border-radius);
     padding: 15px 20px;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
     cursor: pointer;
 }
 
@@ -917,8 +939,7 @@ h1 img {
 
 @media (pointer: fine) {
     .form-control.search-bar:hover {
-        box-shadow: 0px 0px 7px 0px rgb(138 0 255);
-        border-color: transparent;
+        box-shadow: 0px 0px 7px 0px var(--color-focus-shadow);
     }
 
     .dropdown-menu ul li a:hover {
@@ -935,13 +956,12 @@ h1 img {
     }
 
     .form-control:hover {
-    border-color: var(--color-primary-hover);
-    box-shadow: 0 0 5px rgba(142, 45, 226, 0.2);
+    box-shadow: 0 0 5px var(--color-focus-shadow);
     }
 
     .btn--primary:hover {
         background-color: var(--color-primary-hover);
-        box-shadow: 0 0 4px rgba(178, 16, 241, 0.5), 0 2px 15px rgba(110, 13, 221, 0.575);
+        box-shadow: 0 0 4px rgb(178 16 241 / 50%), 0 2px 15px rgb(110 13 221 / 57%);
     }
     .btn--secondary:hover {
         background-color: var(--color-secondary-hover);

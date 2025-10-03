@@ -1354,10 +1354,10 @@
             "btmc727",
             "Rico040"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/otkusteyler/KonoChan-Randomizer-",
         "installUrl": "https://otkusteyler.github.io/KonoChan-Randomizer-/",
-        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
+        "warningMessage": ""
     },
     {
         "name": "catbox.moe",
