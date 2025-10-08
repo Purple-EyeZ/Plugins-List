@@ -1484,5 +1484,16 @@
         "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
         "installUrl": "https://kmmiio99o.github.io/vd-plugins/multi-scrobbler/",
         "warningMessage": ""
+    },
+    {
+        "name": "Antied Zero",
+        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app.",
+        "authors": [
+            "Angelw0lf"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/angelix1/MP",
+        "installUrl": "https://angelix1.github.io/MP/angel/antiedzero/",
+        "warningMessage": ""
     }
 ]
