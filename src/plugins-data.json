@@ -129,7 +129,7 @@
         "authors": [
             "cloudburst"
         ],
-        "status": "warning",
+        "status": "broken",
         "sourceUrl": "https://github.com/c10udburst-discord/vendetta-plugins",
         "installUrl": "https://c10udburst-discord.github.io/vendetta-plugins/delete-embeds/",
         "warningMessage": "It's now a built-in feature."
@@ -769,7 +769,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antied/",
-        "warningMessage": "⚠️ Styling is broken on 298+\n\n⚠️ Editing your own messages may include previous edit logs. Add yourself to the ignore list to prevent this."
+        "warningMessage": "⚠️ May cause random crashes\n\n⚠️ Styling is broken on 298+\n\n⚠️ Editing your own messages may include previous edit logs. Add yourself to the ignore list to prevent this."
     },
     {
         "name": "Dashless",
@@ -1008,9 +1008,9 @@
             "kmmiio99o"
         ],
         "status": "working",
-        "sourceUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
-        "installUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
-        "warningMessage": ""
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/Last.fm",
+        "warningMessage": "Multi Scrobbler succeeds the Last.fm plugin, but Last.fm will continue to receive updates"
     },
     {
         "name": "Show Image Links",
@@ -1461,6 +1461,50 @@
         "status": "working",
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/Decor",
         "installUrl": "https://bwlok.github.io/revenge-plugins/Decor",
+        "warningMessage": ""
+    },
+    {
+        "name": "Commands",
+        "description": "A collection of fixed commands including facts, petpet, and more.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/Commands",
+        "warningMessage": ""
+    },
+    {
+        "name": "Multi Scrobbler",
+        "description": "Show off your music status from Last.fm, Libre.fm, or ListenBrainz on your Discord profile with comprehensive console logging.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/multi-scrobbler/",
+        "warningMessage": ""
+    },
+    {
+        "name": "Antied Zero",
+        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
+        "authors": [
+            "Angelw0lf"
+        ],
+        "status": "warning",
+        "sourceUrl": "https://github.com/angelix1/MP",
+        "installUrl": "https://angelix1.github.io/MP/angel/antiedzero/",
+        "warningMessage": "⚠️ Editing your own messages may include previous edit logs."
+    },
+    {
+        "name": "Radial Status v1.0.0",
+        "description": "Modify members presence indicator to be ring around their profile picture.",
+        "authors": [
+            "AngelW0lf"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/angelix1/MP",
+        "installUrl": "https://angelix1.github.io/MP/angel/radialstatus",
         "warningMessage": ""
     }
 ]
