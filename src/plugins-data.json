@@ -769,7 +769,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antied/",
-        "warningMessage": "⚠️ Styling is broken on 298+\n\n⚠️ Editing your own messages may include previous edit logs. Add yourself to the ignore list to prevent this."
+        "warningMessage": "⚠️ May cause random crashes\n\n⚠️ Styling is broken on 298+\n\n⚠️ Editing your own messages may include previous edit logs. Add yourself to the ignore list to prevent this."
     },
     {
         "name": "Dashless",
@@ -1487,7 +1487,7 @@
     },
     {
         "name": "Antied Zero",
-        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app.",
+        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
         "authors": [
             "Angelw0lf"
         ],
