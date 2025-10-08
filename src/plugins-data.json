@@ -1495,5 +1495,16 @@
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antiedzero/",
         "warningMessage": ""
+    },
+    {
+        "name": "Radial Status v1.0.0",
+        "description": "Modify members presence indicator to be ring around their profile picture.",
+        "authors": [
+            "AngelW0lf"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/angelix1/MP",
+        "installUrl": "https://angelix1.github.io/MP/angel/radialstatus",
+        "warningMessage": ""
     }
 ]
