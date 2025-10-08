@@ -1491,10 +1491,10 @@
         "authors": [
             "Angelw0lf"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antiedzero/",
-        "warningMessage": ""
+        "warningMessage": "⚠️ Editing your own messages may include previous edit logs."
     },
     {
         "name": "Radial Status v1.0.0",
