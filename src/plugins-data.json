@@ -129,7 +129,7 @@
         "authors": [
             "cloudburst"
         ],
-        "status": "warning",
+        "status": "broken",
         "sourceUrl": "https://github.com/c10udburst-discord/vendetta-plugins",
         "installUrl": "https://c10udburst-discord.github.io/vendetta-plugins/delete-embeds/",
         "warningMessage": "It's now a built-in feature."
@@ -1008,9 +1008,9 @@
             "kmmiio99o"
         ],
         "status": "working",
-        "sourceUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
-        "installUrl": "https://kmmiio99o.pages.gay/vendetta-plugins/Last.fm",
-        "warningMessage": ""
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/Last.fm",
+        "warningMessage": "Multi Scrobbler succeeds the Last.fm plugin, but Last.fm will continue to receive updates"
     },
     {
         "name": "Show Image Links",
@@ -1461,6 +1461,28 @@
         "status": "working",
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/Decor",
         "installUrl": "https://bwlok.github.io/revenge-plugins/Decor",
+        "warningMessage": ""
+    },
+    {
+        "name": "Commands",
+        "description": "A collection of fixed commands including facts, petpet, and more.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/Commands",
+        "warningMessage": ""
+    },
+    {
+        "name": "Multi Scrobbler",
+        "description": "Show off your music status from Last.fm, Libre.fm, or ListenBrainz on your Discord profile with comprehensive console logging.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins",
+        "installUrl": "https://kmmiio99o.github.io/vd-plugins/multi-scrobbler/",
         "warningMessage": ""
     }
 ]
