@@ -1506,5 +1506,16 @@
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/radialstatus",
         "warningMessage": ""
+    },
+    {
+        "name": "Gif Categories",
+        "description": "Create and manage personalized GIF categories",
+        "authors": [
+            "Bwlok"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/GifCategories",
+        "installUrl": "https://revenge.bwlok.dev/GifCategories/",
+        "warningMessage": ""
     }
 ]
