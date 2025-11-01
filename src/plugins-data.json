@@ -871,10 +871,10 @@
         "authors": [
             "Palm"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/PalmDevs/revenge-plugins/tree/main/plugins",
         "installUrl": "https://raw.githubusercontent.com/PalmDevs/revenge-plugins-builds/main/better-calls/",
-        "warningMessage": ""
+        "warningMessage": "⚠️ Causes a crash when opening bot DMs"
     },
     {
         "name": "Themes+",
