@@ -1509,7 +1509,7 @@
     },
     {
         "name": "Gif Categories",
-        "description": "Create and manage personalized GIF categories",
+        "description": "Create and manage personalized GIF categories. Long press a message containing a GIF to save.",
         "authors": [
             "Bwlok"
         ],
