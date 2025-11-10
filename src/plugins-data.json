@@ -1376,10 +1376,10 @@
         "authors": [
             "fres"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/fres621/revenge-plugs",
         "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
-        "warningMessage": ""
+        "warningMessage": "Opening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
     },
     {
         "name": "Rich Presence",
@@ -1516,6 +1516,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/GifCategories",
         "installUrl": "https://revenge.bwlok.dev/GifCategories/",
+        "warningMessage": ""
+    },
+    {
+        "name": "ClipboardGIFSend",
+        "description": "Send GIF Picker gifs to clipboard instead of chat",
+        "authors": [
+            "Cristiandis"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/cristiandis/clipboardgifsend",
+        "installUrl": "https://cristiandis.github.io/clipboardgifsend",
         "warningMessage": ""
     }
 ]
