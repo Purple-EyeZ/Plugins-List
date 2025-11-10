@@ -1517,5 +1517,16 @@
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/GifCategories",
         "installUrl": "https://revenge.bwlok.dev/GifCategories/",
         "warningMessage": ""
+    },
+    {
+        "name": "ClipboardGIFSend",
+        "description": "Send GIF Picker gifs to clipboard instead of chat",
+        "authors": [
+            "Cristiandis"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/cristiandis/clipboardgifsend",
+        "installUrl": "https://cristiandis.github.io/clipboardgifsend",
+        "warningMessage": ""
     }
 ]
