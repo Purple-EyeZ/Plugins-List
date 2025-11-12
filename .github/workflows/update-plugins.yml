@@ -1,0 +1,26 @@
+name: Update Plugins List from Admin Panel
+
+on:
+  repository_dispatch:
+    types: [update-plugins-json]
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Update plugins-data.json
+        run: |
+          echo "${{ github.event.client_payload.plugins }}" | base64 --decode > src/plugins-data.json
+
+      - name: Commit and push changes to dev branch
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📝 Update plugins-data.json from Admin Panel"
+          branch: dev
+          file_pattern: "src/plugins-data.json"
+          commit_user_name: "Purple-EyeZ"

@@ -17,7 +17,8 @@
     "glob": "^11.0.1",
     "html-minifier-terser": "^7.2.0",
     "rimraf": "^6.0.1",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "wrangler": "^4.47.0"
   },
   "dependencies": {
     "fuzzysort": "^3.1.0"
