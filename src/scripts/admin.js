@@ -1,7 +1,8 @@
 import { showToast, showPopup } from "./shared.js";
 import { initSearchFromURL, searchState, filterPlugins } from "./search.js";
 
-const DATA_PATH = "../plugins-data.json";
+const GITHUB_REPO = "Purple-EyeZ/Plugins-List";
+const API_DATA_PATH = `https://api.github.com/repos/${GITHUB_REPO}/contents/src/plugins-data.json?ref=dev`;
 
 let plugins = [];
 let currentFilter = "all";
@@ -21,8 +22,16 @@ const brokenCountElement = document.getElementById("broken-count");
 
 async function loadPlugins() {
 	try {
-		const response = await fetch(DATA_PATH);
-		plugins = await response.json();
+		const response = await fetch(API_DATA_PATH);
+		const data = await response.json();
+
+		if (!response.ok) {
+			throw new Error(data.message || "Failed to fetch from GitHub API");
+		}
+
+		const content = atob(data.content);
+		plugins = JSON.parse(content);
+
 		updatePluginsList();
 		updateCounters();
 		initSearchFromURL();
@@ -354,7 +363,7 @@ async function saveChanges() {
 	try {
 		const jsonString = JSON.stringify(plugins, null, 4);
 
-		const response = await fetch("http://localhost:3000/save-plugins", {
+		const response = await fetch("/api/save-plugins", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -367,9 +376,9 @@ async function saveChanges() {
 		}
 
 		const result = await response.json();
-		showToast(result.message || "File saved successfully!");
+		showToast(result.message || "Changes saved successfully!");
 	} catch (error) {
-		showToast(`Error saving file: ${error.message}`);
+		showToast(`Error saving changes: ${error.message}`);
 	}
 }
 
