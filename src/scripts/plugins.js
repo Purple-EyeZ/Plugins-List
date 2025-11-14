@@ -1,5 +1,5 @@
+import { filterPlugins, initSearchFromURL, searchState } from "./search.js";
 import { showPopup, showToast } from "./shared.js";
-import { initSearchFromURL, searchState, filterPlugins } from "./search.js";
 
 let pluginsData = [];
 let isRendering = false;

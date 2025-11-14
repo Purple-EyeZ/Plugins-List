@@ -1,5 +1,5 @@
-import { showToast, showPopup } from "./shared.js";
-import { initSearchFromURL, searchState, filterPlugins } from "./search.js";
+import { filterPlugins, initSearchFromURL, searchState } from "./search.js";
+import { showPopup, showToast } from "./shared.js";
 
 const GITHUB_REPO = "Purple-EyeZ/Plugins-List";
 const API_DATA_PATH = `https://api.github.com/repos/${GITHUB_REPO}/contents/src/plugins-data.json?ref=dev`;
