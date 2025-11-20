@@ -22,6 +22,8 @@
 	--color-focus-border: #c1cad3;
 	--color-focus-shadow: #7f828799;
 	--color-background-info-box: #0b0d0e;
+	--color-background-danger-light: #f443361a;
+    --color-background-success-light: #2db1321a;
 
 	--font-body: "Noto Sans", sans-serif;
 	--font-heading: "Poppins", sans-serif;
@@ -684,6 +686,9 @@ h1 img {
 	width: 90%;
 	color: var(--color-text-primary);
 	margin: 0px 15px;
+	display: flex;
+    flex-direction: column;
+    max-height: 85vh;
 }
 
 .popup-title {
@@ -691,6 +696,11 @@ h1 img {
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: var(--color-white);
+}
+
+.popup-main-content {
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 .popup-message {
@@ -821,6 +831,84 @@ h1 img {
 
 .refetch-field .material-symbols-rounded {
 	font-size: 1.36rem;
+}
+
+/* Review changes popup */
+.review-change-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+}
+
+.review-plugin-name {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+}
+
+.field-change {
+    margin-bottom: 15px;
+}
+
+.field-change-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.field-name {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.diff-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.diff-view {
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.diff-view.old-value {
+    background-color: var(--color-background-danger-light);
+    position: relative;
+}
+
+.diff-view.new-value {
+    background-color: var(--color-background-success-light);
+    position: relative;
+}
+
+.diff-view::before {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--color-text-tertiary);
+    background-color: var(--color-background);
+    padding: 0 5px;
+}
+
+.diff-view.old-value::before {
+    content: "Before";
+}
+
+.diff-view.new-value::before {
+    content: "After";
 }
 
 /* Featured Plugin Card */

@@ -1,6 +1,135 @@
 import { hidePopup, showPopup, showToast } from "./shared.js";
 
 /**
+ * Creates a simple list section for the review popup.
+ * @param {string} title - The title of the section.
+ * @param {Array<object>} plugins - The list of plugins to display.
+ * @returns {HTMLElement|null} - The created DOM element or null if the list is empty.
+ */
+function createSimpleChangeList(title, plugins) {
+	if (!plugins || plugins.length === 0) return null;
+	const section = document.createElement("div");
+	const pluginListHtml = plugins.map((p) => `<li>${p.name}</li>`).join("");
+	section.innerHTML = `<h4>${title}</h4><ul>${pluginListHtml}</ul>`;
+	return section;
+}
+
+/**
+ * Shows a popup to review changes before saving.
+ * @param {object} changes - Object containing added, deleted, and modified plugins.
+ * @param {function} onConfirm - Callback to execute on confirmation.
+ * @param {function} onRevert - Callback to revert a change.
+ */
+export function showChangesReviewPopup(changes, onConfirm, onRevert) {
+	const reviewTemplate = document.getElementById("review-changes-template");
+	const changesContainer = document.createElement("div");
+
+	// Added & Deleted Plugins
+	const addedSection = createSimpleChangeList(
+		"🚀 Added Plugins:",
+		changes.added,
+	);
+	if (addedSection) changesContainer.appendChild(addedSection);
+
+	const deletedSection = createSimpleChangeList(
+		"🗑️ Deleted Plugins:",
+		changes.deleted,
+	);
+	if (deletedSection) changesContainer.appendChild(deletedSection);
+
+	// Modified Plugins
+	if (changes.modified.length > 0) {
+		const modifiedTitle = document.createElement("h4");
+		modifiedTitle.innerHTML = "✏️ Modified Plugins:";
+		changesContainer.appendChild(modifiedTitle);
+
+		changes.modified.forEach(({ plugin, fields }) => {
+			const item = reviewTemplate.content.cloneNode(true);
+			const fieldsList = item.querySelector(".field-changes-list");
+
+			item.querySelector(".review-plugin-name").textContent = plugin.name;
+
+			fields.forEach(({ field, oldValue, newValue }) => {
+				const fieldContainer = document.createElement("div");
+				fieldContainer.className = "field-change";
+
+				const header = document.createElement("div");
+				header.className = "field-change-header";
+
+				const fieldName = document.createElement("span");
+				fieldName.className = "field-name";
+				fieldName.textContent = field;
+
+				const revertButton = document.createElement("button");
+				revertButton.className = "btn btn--small btn--danger revert-change";
+				revertButton.textContent = "Revert";
+				revertButton.dataset.url = plugin.installUrl;
+				revertButton.dataset.field = field;
+
+				header.appendChild(fieldName);
+				header.appendChild(revertButton);
+
+				const diffContainer = document.createElement("div");
+				diffContainer.className = "diff-container";
+
+				const oldValueBox = document.createElement("div");
+				oldValueBox.className = "diff-view old-value";
+				oldValueBox.textContent =
+					typeof oldValue === "string"
+						? oldValue
+						: JSON.stringify(oldValue, null, 2);
+
+				const newValueBox = document.createElement("div");
+				newValueBox.className = "diff-view new-value";
+				newValueBox.textContent =
+					typeof newValue === "string"
+						? newValue
+						: JSON.stringify(newValue, null, 2);
+
+				diffContainer.appendChild(oldValueBox);
+				diffContainer.appendChild(newValueBox);
+				fieldContainer.appendChild(header);
+				fieldContainer.appendChild(diffContainer);
+				fieldsList.appendChild(fieldContainer);
+			});
+
+			changesContainer.appendChild(item);
+		});
+	}
+
+	const fullContent = document.createElement("div");
+	const messageEl = document.createElement("p");
+	messageEl.className = "popup-message";
+	messageEl.textContent =
+		"The following changes will be committed to the dev branch:";
+
+	fullContent.appendChild(messageEl);
+	fullContent.appendChild(changesContainer);
+
+	fullContent.addEventListener("click", (e) => {
+		if (e.target.classList.contains("revert-change")) {
+			const installUrl = e.target.dataset.url;
+			const field = e.target.dataset.field;
+			onRevert(installUrl, field);
+		}
+	});
+
+	showPopup({
+		title: "Review Changes",
+		contentElement: fullContent,
+		primaryButton: {
+			text: "Confirm & Save",
+			action: () => {
+				onConfirm();
+				hidePopup();
+			},
+		},
+		secondaryButton: { text: "Cancel", action: hidePopup },
+		closeOnOutsideClick: true,
+	});
+}
+
+/**
  * Updates the plugin count displays in the header.
  */
 export function updateCounters(

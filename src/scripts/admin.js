@@ -7,11 +7,12 @@ import {
 	prepareSearchableData,
 	searchState,
 } from "./search.js";
-import { showToast } from "./shared.js";
+import { hidePopup, showToast } from "./shared.js";
 
 // --- State & DOM Elements ---
 
 let plugins = [];
+let originalPlugins = [];
 let currentFilter = "all";
 
 const pluginsList = document.getElementById("plugins-list");
@@ -32,6 +33,53 @@ const counterElements = {
 };
 
 // --- Utils ---
+
+function generateChanges(original, current) {
+	const changes = {
+		added: [],
+		deleted: [],
+		modified: [],
+	};
+
+	const originalMap = new Map(original.map((p) => [p.installUrl, p]));
+	const currentMap = new Map(current.map((p) => [p.installUrl, p]));
+
+	// Detect added and modified plugins
+	for (const [installUrl, currentPlugin] of currentMap.entries()) {
+		const originalPlugin = originalMap.get(installUrl);
+		if (!originalPlugin) {
+			changes.added.push(currentPlugin);
+		} else {
+			const modifiedFields = [];
+			for (const key in currentPlugin) {
+				const originalValue = JSON.stringify(originalPlugin[key]);
+				const currentValue = JSON.stringify(currentPlugin[key]);
+				if (originalValue !== currentValue) {
+					modifiedFields.push({
+						field: key,
+						oldValue: originalPlugin[key],
+						newValue: currentPlugin[key],
+					});
+				}
+			}
+			if (modifiedFields.length > 0) {
+				changes.modified.push({
+					plugin: currentPlugin,
+					fields: modifiedFields,
+				});
+			}
+		}
+	}
+
+	// Detect deleted plugins
+	for (const [installUrl, originalPlugin] of originalMap.entries()) {
+		if (!currentMap.has(installUrl)) {
+			changes.deleted.push(originalPlugin);
+		}
+	}
+
+	return changes;
+}
 
 function generateSourceUrl(installUrl) {
 	installUrl = installUrl.replace(/\/$/, "");
@@ -168,12 +216,48 @@ addPluginForm.addEventListener("submit", async (e) => {
 });
 
 saveChangesButton.addEventListener("click", async () => {
-	try {
-		const result = await api.savePlugins(plugins);
-		showToast(result.message || "Changes saved successfully!");
-	} catch (error) {
-		showToast(`Error saving changes: ${error.message}`);
+	const changes = generateChanges(originalPlugins, plugins);
+	const hasChanges =
+		changes.added.length > 0 ||
+		changes.deleted.length > 0 ||
+		changes.modified.length > 0;
+
+	if (!hasChanges) {
+		showToast("No changes to save.");
+		return;
 	}
+
+	const showReview = () => {
+		const currentChanges = generateChanges(originalPlugins, plugins);
+		ui.showChangesReviewPopup(
+			currentChanges,
+			async () => {
+				try {
+					const result = await api.savePlugins(plugins);
+					showToast(result.message || "Changes saved successfully!");
+					originalPlugins = JSON.parse(JSON.stringify(plugins));
+				} catch (error) {
+					showToast(`Error saving changes: ${error.message}`);
+				}
+			},
+			(installUrl, field) => {
+				const originalPlugin = originalPlugins.find(
+					(p) => p.installUrl === installUrl,
+				);
+				const pluginToUpdate = plugins.find((p) => p.installUrl === installUrl);
+
+				if (pluginToUpdate && originalPlugin) {
+					pluginToUpdate[field] = originalPlugin[field];
+					rerender();
+					hidePopup();
+					showReview();
+					showToast(`Reverted change for ${pluginToUpdate.name}'s ${field}.`);
+				}
+			},
+		);
+	};
+
+	showReview();
 });
 
 checkPluginsButton.addEventListener("click", async () => {
@@ -202,7 +286,8 @@ Object.entries(filterButtons).forEach(([filterName, button]) => {
 
 async function init() {
 	try {
-		plugins = await api.fetchPlugins();
+		originalPlugins = await api.fetchPlugins();
+		plugins = JSON.parse(JSON.stringify(originalPlugins));
 		filterButtons.all.classList.add("active");
 		rerender();
 		initSearchFromURL();
