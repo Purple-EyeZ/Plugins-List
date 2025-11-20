@@ -1238,7 +1238,7 @@
         "authors": [
             "Kitomanari"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/spotifyShareCommands/",
         "warningMessage": ""
@@ -1365,10 +1365,10 @@
         "authors": [
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/catbox.moe/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/catbox.moe/",
-        "warningMessage": ""
+        "warningMessage": "Direct sending doesn’t work, you’ll need to enable either 'Copy link to clipboard' or 'Insert into the message'."
     },
     {
         "name": "FileContentPreview",
@@ -1487,7 +1487,7 @@
     },
     {
         "name": "Antied Zero",
-        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
+        "description": "[1.0.1] Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
         "authors": [
             "Angelw0lf"
         ],
@@ -1497,7 +1497,7 @@
         "warningMessage": "⚠️ Editing your own messages may include previous edit logs."
     },
     {
-        "name": "Radial Status v1.0.0",
+        "name": "Radial Status v1.0.1",
         "description": "Modify members presence indicator to be ring around their profile picture.",
         "authors": [
             "AngelW0lf"
