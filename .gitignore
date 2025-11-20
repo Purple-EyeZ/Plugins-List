@@ -6,3 +6,5 @@
 
 # Other
 .vscode/
+.env
+.wrangler/

@@ -14,13 +14,17 @@
     <meta property="og:type" content="website" />
 
     <title>Plugins Admin</title>
-    <link rel="icon" type="image/svg" href="../assets/revenge-dark.svg">
+    <link rel="icon" type="image/svg" href="/assets/revenge-dark-christmas.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/Christmas/snow.css">
 </head>
 
 <body>
+    <!-- =================================================================== -->
+    <!-- Fixed Top Banner & Navigation                                       -->
+    <!-- =================================================================== -->
     <div class="fixed-banner" id="fixedBanner">
         <button id="searchButton" class="search-button">
             <i class="material-symbols-rounded">search</i>
@@ -35,15 +39,19 @@
         </button>
         <div id="dropdownMenu" class="dropdown-menu">
             <ul>
-                <li><a href="../"><span class="material-symbols-rounded">home</span> Home</a></li>
-                <li><a href="./About/"><span class="material-symbols-rounded">info</span> About</a></li>
-                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span class="material-symbols-rounded">bug_report</span> Report</a></li>
+                <li><a href="/"><span class="material-symbols-rounded">home</span> Home</a></li>
+                <li><a href="/About/"><span class="material-symbols-rounded">info</span> About</a></li>
+                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span
+                            class="material-symbols-rounded">bug_report</span> Report</a></li>
             </ul>
         </div>
     </div>
-    
+
+    <!-- =================================================================== -->
+    <!-- Page Header & Search                                                -->
+    <!-- =================================================================== -->
     <h1>
-        <img src="../assets/revenge-dark.svg" alt="Logo">
+        <img src="/assets/revenge-dark-christmas.png" alt="Logo">
         Plugins Admin Panel
     </h1>
 
@@ -55,13 +63,17 @@
         <div id="searchSubtext" class="search-subtext"></div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- Admin Controls Panel                                                -->
+    <!-- =================================================================== -->
     <div class="admin-controls">
         <div class="card add-plugin-form-container">
             <h2>Add New Plugin</h2>
             <form id="add-plugin-form">
                 <div class="form-group">
                     <label for="new-plugin-url">Plugin URL:</label>
-                    <input type="text" id="new-plugin-url" class="form-control" required placeholder="https://example.com/plugin/">
+                    <input type="text" id="new-plugin-url" class="form-control" required
+                        placeholder="https://example.com/plugin/">
                 </div>
                 <button type="submit" class="btn btn--primary admin-button">Add Plugin</button>
             </form>
@@ -78,6 +90,9 @@
         </div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- Plugins List Section                                                -->
+    <!-- =================================================================== -->
     <div class="plugins-count">
         <span id="total-count">0</span> plugins total |
         <span id="working-count">0</span> working |
@@ -89,14 +104,56 @@
         <div class="loading">Loading plugins...</div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- UI Templates & Utility Elements                                     -->
+    <!-- =================================================================== -->
     <div id="toast" class="admin-toast"></div>
+
+    <!-- Template for an admin plugin card -->
+    <template id="admin-plugin-template">
+        <div class="card admin-plugin-item">
+            <div class="plugin-info">
+                <span class="plugin-info-label">Name:</span>
+                <span class="plugin-name"></span>
+                <span class="plugin-info-label">Status:</span>
+                <select class="status-select">
+                    <option value="working">Working</option>
+                    <option value="warning">Warning</option>
+                    <option value="broken">Broken</option>
+                </select>
+                <span class="plugin-info-label">Message:</span>
+                <textarea class="form-control warning-message"></textarea>
+            </div>
+            <div class="plugin-action-buttons">
+                <button class="btn btn--danger admin-button delete-plugin">Delete</button>
+                <button class="btn btn--secondary admin-button edit-plugin">
+                    <span class="material-symbols-rounded">edit</span> Edit Details
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template for the edit plugin popup -->
+    <template id="edit-popup-template">
+        <div class="plugin-details-form">
+        </div>
+    </template>
+
+    <!-- Template for the review changes popup -->
+    <template id="review-changes-template">
+        <div class="card review-change-item">
+            <h4 class="review-plugin-name"></h4>
+            <div class="field-changes-list"></div>
+        </div>
+    </template>
 
     <!-- Back to Top Button -->
     <button id="backToTopButton" class="btn btn--primary back-to-top">
         <span class="material-symbols-rounded">arrow_upward</span>
     </button>
 
-    <script type="module" src="../scripts/admin.js"></script>
+    <script type="module" src="/scripts/admin.js"></script>
+    <script type="module" src="/Christmas/snow.js"></script>
 </body>
 
 </html>

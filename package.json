@@ -1,23 +1,19 @@
 {
   "name": "plugins-list",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "build:no-clean": "node build.js --no-clean",
-    "deploy": "gh-pages -d dist",
-    "clean": "rimraf dist",
-    "start": "bun run build && serve dist",
-    "admin": "node server.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview",
+    "lint": "bunx biome check --write ./src ./functions"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "esbuild": "^0.25.0",
-    "gh-pages": "^6.3.0",
-    "glob": "^11.0.1",
-    "html-minifier-terser": "^7.2.0",
-    "rimraf": "^6.0.1",
-    "serve": "^14.2.4"
+    "@biomejs/biome": "^2.3.6",
+    "vite": "^7.2.4",
+    "vite-plugin-html-minifier": "^1.0.5",
+    "vite-plugin-static-copy": "^3.1.4",
+    "wrangler": "^4.49.1"
   },
   "dependencies": {
     "fuzzysort": "^3.1.0"

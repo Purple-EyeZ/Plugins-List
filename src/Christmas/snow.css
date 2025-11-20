@@ -1,0 +1,28 @@
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: white;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0vh) rotate(var(--start-rotation, 0deg));
+  }
+  to {
+    transform: translateY(105vh) rotate(var(--end-rotation, 360deg));
+    opacity: 0;
+  }
+}

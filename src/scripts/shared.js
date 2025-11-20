@@ -1,84 +1,44 @@
 import { isFixedSearchFocused } from "./search.js";
 
-let previousScrollY = window.scrollY;
+// --- DOM Elements ---
 const fixedBanner = document.querySelector(".fixed-banner");
 const backToTopButton = document.getElementById("backToTopButton");
 const menuButton = document.getElementById("menuButton");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
-// Control display of banner
-function handleScroll() {
-	if (!fixedBanner) return;
-	const scrollThreshold = 5; // px scrolled before showing the banner
-	const scrollY = window.scrollY;
-	const scrollingDown = scrollY > previousScrollY;
-	previousScrollY = scrollY;
+// --- Toast & Popup ---
 
-	const shouldShowBanner =
-		scrollY > scrollThreshold && !fixedBanner.classList.contains("show");
-	const shouldHideBanner =
-		scrollY <= scrollThreshold &&
-		fixedBanner.classList.contains("show") &&
-		!isFixedSearchFocused() &&
-		!scrollingDown;
-
-	if (shouldShowBanner) {
-		fixedBanner.classList.add("show");
-		fixedBanner.classList.remove("hide");
-	} else if (shouldHideBanner) {
-		fixedBanner.classList.add("hide");
-		fixedBanner.classList.remove("show");
-	}
-}
-
-// Back to Top button
-if (backToTopButton) {
-	window.addEventListener("scroll", () => {
-		if (window.scrollY > 300) {
-			backToTopButton.classList.add("show");
-		} else {
-			backToTopButton.classList.remove("show");
-		}
-	});
-
-	backToTopButton.addEventListener("click", () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	});
-}
-
-// Dropdown Menu
-document.addEventListener("DOMContentLoaded", () => {
-	menuButton.addEventListener("click", () => {
-		dropdownMenu.classList.toggle("visible");
-	});
-
-	// Hide menu if user clicks outside it
-	window.addEventListener("click", (event) => {
-		if (
-			event.target !== menuButton &&
-			!menuButton.contains(event.target) &&
-			!dropdownMenu.contains(event.target)
-		) {
-			dropdownMenu.classList.remove("visible");
-		}
-	});
-});
-
-// Toast message
+/**
+ * Shows a temporary toast message.
+ * @param {string} message The message to display.
+ */
+let toastTimeoutId;
 export function showToast(message) {
 	const toast = document.getElementById("toast");
-	toast.innerHTML = message;
+	if (!toast) return;
+
+	clearTimeout(toastTimeoutId);
+
+	toast.textContent = message;
 	toast.classList.add("show");
-	setTimeout(() => toast.classList.remove("show"), 2000); // 2 seconds
+	toastTimeoutId = setTimeout(() => toast.classList.remove("show"), 2500);
 }
 
-// Popup
+/**
+ * Shows a modal popup with customizable content and buttons.
+ * @param {Object} options Popup configuration.
+ * @param {string} options.title Popup title.
+ * @param {string} [options.message] Text message (ignored if contentElement provided).
+ * @param {HTMLElement} [options.contentElement] Custom DOM element for content.
+ * @param {string} [options.infoBox] Additional info text.
+ * @param {Object} [options.primaryButton] Primary button config.
+ * @param {Object} [options.secondaryButton] Secondary button config.
+ * @param {boolean} [options.closeOnOutsideClick] Whether to close when clicking outside.
+ */
 export function showPopup({
 	title,
 	message,
+	contentElement,
 	infoBox = null,
 	primaryButton = { text: "OK", action: () => hidePopup() },
 	secondaryButton = { text: "Cancel", action: () => hidePopup() },
@@ -95,8 +55,7 @@ export function showPopup({
 	popup.innerHTML = `
         <div class="card popup-content">
             <div class="popup-title">${title}</div>
-            <div class="popup-message">${message}</div>
-            ${infoBox ? `<div class="popup-info-box">${infoBox.replace(/\n/g, "<br>")}</div>` : ""}
+            <div class="popup-main-content"></div> 
             <div class="popup-buttons">
                 ${secondaryButton ? `<button class="btn btn--secondary popup-secondary-button" id="popup-secondary-btn">${secondaryButton.text}</button>` : ""}
                 <button class="btn btn--primary popup-primary-button" id="popup-primary-btn">${primaryButton.text}</button>
@@ -104,16 +63,26 @@ export function showPopup({
         </div>
     `;
 
-	document
-		.getElementById("popup-primary-btn")
-		.addEventListener("click", (e) => {
-			e.stopPropagation();
-			primaryButton.action();
-		});
+	const mainContent = popup.querySelector(".popup-main-content");
+
+	if (contentElement) {
+		mainContent.appendChild(contentElement);
+	} else {
+		let contentHTML = `<div class="popup-message">${message}</div>`;
+		if (infoBox) {
+			contentHTML += `<div class="popup-info-box">${infoBox.replace(/\n/g, "<br>")}</div>`;
+		}
+		mainContent.innerHTML = contentHTML;
+	}
+
+	popup.querySelector("#popup-primary-btn").addEventListener("click", (e) => {
+		e.stopPropagation();
+		primaryButton.action();
+	});
 
 	if (secondaryButton) {
-		document
-			.getElementById("popup-secondary-btn")
+		popup
+			.querySelector("#popup-secondary-btn")
 			.addEventListener("click", (e) => {
 				e.stopPropagation();
 				secondaryButton.action();
@@ -131,18 +100,53 @@ export function showPopup({
 	}
 
 	popup.style.display = "flex";
-
-	window.hidePopup = () => {
-		popup.style.display = "none";
-	};
 }
 
-// Function to close the popup
 export function hidePopup() {
 	const popup = document.getElementById("custom-popup");
 	if (popup) {
 		popup.style.display = "none";
 	}
+}
+
+// --- Feature Init ---
+
+function handleScroll() {
+	if (fixedBanner) {
+		const scrollThreshold = 5;
+		const shouldBeVisible =
+			window.scrollY > scrollThreshold || isFixedSearchFocused();
+		fixedBanner.classList.toggle("show", shouldBeVisible);
+		fixedBanner.classList.toggle("hide", !shouldBeVisible);
+	}
+
+	if (backToTopButton) {
+		backToTopButton.classList.toggle("show", window.scrollY > 300);
+	}
+}
+
+function initDropdownMenu() {
+	if (!menuButton || !dropdownMenu) return;
+
+	const handleClickOutside = (event) => {
+		if (
+			event.target !== menuButton &&
+			!menuButton.contains(event.target) &&
+			!dropdownMenu.contains(event.target)
+		) {
+			dropdownMenu.classList.remove("visible");
+			window.removeEventListener("click", handleClickOutside);
+		}
+	};
+
+	menuButton.addEventListener("click", () => {
+		const isVisible = dropdownMenu.classList.toggle("visible");
+		if (isVisible) {
+			window.addEventListener("click", handleClickOutside);
+		} else {
+			window.removeEventListener("click", handleClickOutside);
+		}
+	});
 }
 
 function showMigrationPopup() {
@@ -163,13 +167,17 @@ function showMigrationPopup() {
 	}
 }
 
-// Init
-function initScrollHandling() {
+// --- Global Init ---
+
+document.addEventListener("DOMContentLoaded", () => {
+	showMigrationPopup();
+	initDropdownMenu();
+
+	if (backToTopButton) {
+		backToTopButton.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	}
 	handleScroll();
 	window.addEventListener("scroll", handleScroll);
-}
-
-window.onload = () => {
-	showMigrationPopup();
-	initScrollHandling();
-};
+});
