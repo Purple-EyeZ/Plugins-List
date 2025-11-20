@@ -21,6 +21,9 @@
 </head>
 
 <body>
+    <!-- =================================================================== -->
+    <!-- Fixed Top Banner & Navigation                                       -->
+    <!-- =================================================================== -->
     <div class="fixed-banner" id="fixedBanner">
         <button id="searchButton" class="search-button">
             <i class="material-symbols-rounded">search</i>
@@ -43,6 +46,9 @@
         </div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- Page Header & Search                                                -->
+    <!-- =================================================================== -->
     <h1>
         <img src="/assets/revenge-dark.svg" alt="Logo">
         Plugins Admin Panel
@@ -56,6 +62,9 @@
         <div id="searchSubtext" class="search-subtext"></div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- Admin Controls Panel                                                -->
+    <!-- =================================================================== -->
     <div class="admin-controls">
         <div class="card add-plugin-form-container">
             <h2>Add New Plugin</h2>
@@ -80,6 +89,9 @@
         </div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- Plugins List Section                                                -->
+    <!-- =================================================================== -->
     <div class="plugins-count">
         <span id="total-count">0</span> plugins total |
         <span id="working-count">0</span> working |
@@ -91,7 +103,40 @@
         <div class="loading">Loading plugins...</div>
     </div>
 
+    <!-- =================================================================== -->
+    <!-- UI Templates & Utility Elements                                     -->
+    <!-- =================================================================== -->
     <div id="toast" class="admin-toast"></div>
+
+    <!-- Template for an admin plugin card -->
+    <template id="admin-plugin-template">
+        <div class="card admin-plugin-item">
+            <div class="plugin-info">
+                <span class="plugin-info-label">Name:</span>
+                <span class="plugin-name"></span>
+                <span class="plugin-info-label">Status:</span>
+                <select class="status-select">
+                    <option value="working">Working</option>
+                    <option value="warning">Warning</option>
+                    <option value="broken">Broken</option>
+                </select>
+                <span class="plugin-info-label">Message:</span>
+                <textarea class="form-control warning-message"></textarea>
+            </div>
+            <div class="plugin-action-buttons">
+                <button class="btn btn--danger admin-button delete-plugin">Delete</button>
+                <button class="btn btn--secondary admin-button edit-plugin">
+                    <span class="material-symbols-rounded">edit</span> Edit Details
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template for the edit plugin popup -->
+    <template id="edit-popup-template">
+        <div class="plugin-details-form">
+        </div>
+    </template>
 
     <!-- Back to Top Button -->
     <button id="backToTopButton" class="btn btn--primary back-to-top">

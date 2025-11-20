@@ -1,10 +1,13 @@
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
+import htmlMinifier from "vite-plugin-html-minifier";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
 	root: "src",
 	plugins: [
+		htmlMinifier(),
+
 		viteStaticCopy({
 			targets: [
 				{

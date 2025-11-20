@@ -2,6 +2,7 @@ import fuzzysort from "fuzzysort";
 
 const DEBOUNCE = 150;
 
+// --- State & DOM Elements ---
 export const searchState = {
 	currentValue: "",
 	wasCleared: false,
@@ -19,17 +20,36 @@ const elements = {
 	featuredPluginContainer: document.getElementById("featured-plugin-container"),
 };
 
+// --- Search Data ---
 let searchablePlugins = [];
 
-function debounce(func, wait) {
-	let timeout;
-	return (...args) => {
-		clearTimeout(timeout);
-		return new Promise((resolve) => {
-			timeout = setTimeout(() => resolve(func(...args)), wait);
-		});
-	};
+/**
+ * Builds the search cache from raw plugin data and DOM elements.
+ * @param {Array<object>} pluginsData The raw array of plugin objects.
+ * @param {Array<HTMLElement>} pluginElements The array of corresponding DOM elements.
+ */
+export function prepareSearchableData(pluginsData, pluginElements) {
+	const elementMap = new Map(pluginElements.map((el, i) => [i, el]));
+
+	searchablePlugins = pluginsData.map((plugin, index) => {
+		return {
+			element: elementMap.get(index),
+			name: normalizeText(plugin.name),
+			description: normalizeText(plugin.description),
+			author: normalizeText(plugin.authors?.join(", ")),
+			warningMessage: normalizeText(plugin.warningMessage),
+		};
+	});
 }
+
+/**
+ * Explicitly invalidates the search cache. Should be called before a rerender.
+ */
+export function invalidateSearchCache() {
+	searchablePlugins = [];
+}
+
+// --- Search Logic ---
 
 function normalizeText(text) {
 	if (!text) return "";
@@ -42,7 +62,6 @@ function normalizeText(text) {
 		.trim();
 }
 
-// Filter plugins based on search query
 export function filterPlugins(query) {
 	const isAdminPage = elements.container.id === "plugins-list";
 	const itemsSelector = isAdminPage ? "admin-plugin-item" : "plugin-card";
@@ -50,43 +69,13 @@ export function filterPlugins(query) {
 		elements.container.getElementsByClassName(itemsSelector),
 	);
 
-	const isCacheInvalid =
-		searchablePlugins.length === 0 ||
-		searchablePlugins.length !== allItemsInDom.length ||
-		(searchablePlugins.length > 0 && !searchablePlugins[0].element.isConnected);
-
-	if (isCacheInvalid) {
-		searchablePlugins = allItemsInDom.map((item) => {
-			const data = { element: item };
-			if (isAdminPage) {
-				data.name = normalizeText(
-					item.querySelector(".plugin-info span:nth-child(2)")?.textContent,
-				);
-				data.warningMessage = item.querySelector(".warning-message")?.value;
-			} else {
-				data.name = normalizeText(
-					item.querySelector(".plugin-name")?.textContent,
-				);
-				data.description = normalizeText(
-					item.querySelector(".plugin-description")?.textContent,
-				);
-				data.author = normalizeText(
-					item.querySelector(".plugin-author")?.textContent,
-				);
-			}
-			return data;
-		});
-	}
-
 	const normalizedQuery = normalizeText(query);
 
 	if (!normalizedQuery) {
 		for (const { element } of searchablePlugins) {
 			element.style.display = isAdminPage ? "block" : "flex";
 		}
-		if (!isAdminPage) {
-			window.renderPlugins?.();
-		} else {
+		if (isAdminPage) {
 			for (const item of allItemsInDom) {
 				elements.container.appendChild(item);
 			}
@@ -103,6 +92,24 @@ export function filterPlugins(query) {
 		keys: keys,
 	});
 
+	// Sort results: name matches first, then by score
+	results.sort((a, b) => {
+		const aNameResult = fuzzysort.single(normalizedQuery, a.obj.name);
+		const bNameResult = fuzzysort.single(normalizedQuery, b.obj.name);
+
+		const aHasNameMatch = aNameResult !== null;
+		const bHasNameMatch = bNameResult !== null;
+
+		if (aHasNameMatch && !bHasNameMatch) return -1;
+		if (!aHasNameMatch && bHasNameMatch) return 1;
+
+		if (aHasNameMatch && bHasNameMatch) {
+			return bNameResult.score - aNameResult.score;
+		}
+
+		return b.score - a.score;
+	});
+
 	for (const { element } of searchablePlugins) {
 		element.style.display = "none";
 	}
@@ -116,6 +123,29 @@ export function filterPlugins(query) {
 	}
 
 	updateSearchSubtext(query, visibleItems.length);
+}
+
+// --- UI Sync & Event Handlers ---
+
+function updateSearchState(value) {
+	searchState.currentValue = value;
+
+	for (const bar of [elements.searchBar, elements.fixedSearchBar]) {
+		if (bar) {
+			bar.value = value;
+			toggleClearButton(bar, value);
+		}
+	}
+
+	const url = new URL(window.location);
+	if (value) {
+		url.searchParams.set("q", value);
+	} else {
+		url.searchParams.delete("q");
+	}
+	window.history.replaceState({}, "", url);
+
+	handleFeaturedPluginVisibility(value);
 }
 
 function updateSearchSubtext(query, cardsOrCount) {
@@ -153,30 +183,33 @@ function handleFeaturedPluginVisibility(query) {
 	}
 }
 
+function debounce(func, wait) {
+	let timeout;
+	const debounced = (...args) => {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => func(...args), wait);
+	};
+	debounced.cancel = () => {
+		clearTimeout(timeout);
+	};
+	return debounced;
+}
+
 function addSearchFunctionality() {
 	const { searchBar, fixedSearchBar, clearButton, clearButtonFixed } = elements;
 
 	const handleSearchInput = (e) => {
 		const value = e.target.value;
-		searchState.currentValue = value;
 		searchState.wasCleared = false;
-		debouncedFilter(value);
-		toggleClearButton(e.target, value);
+		updateSearchState(value);
 
-		const otherBar = e.target === searchBar ? fixedSearchBar : searchBar;
-		if (otherBar) {
-			otherBar.value = value;
-			toggleClearButton(otherBar, value);
-		}
-		handleFeaturedPluginVisibility(value);
-
-		const url = new URL(window.location);
-		if (value) {
-			url.searchParams.set("q", value);
+		const isAdminPage = elements.container.id === "plugins-list";
+		if (value === "" && !isAdminPage) {
+			debouncedFilter.cancel();
+			window.renderPlugins();
 		} else {
-			url.searchParams.delete("q");
+			debouncedFilter(value);
 		}
-		window.history.replaceState({}, "", url);
 	};
 
 	for (const bar of [searchBar, fixedSearchBar]) {
@@ -186,23 +219,19 @@ function addSearchFunctionality() {
 	}
 
 	const clearSearch = (input) => {
-		searchState.currentValue = "";
 		searchState.wasCleared = true;
-		for (const bar of [searchBar, fixedSearchBar]) {
-			if (bar) {
-				bar.value = "";
-				toggleClearButton(bar, "");
-			}
+		updateSearchState("");
+
+		const isAdminPage = elements.container.id === "plugins-list";
+		if (!isAdminPage && window.renderPlugins) {
+			window.renderPlugins();
+		} else {
+			filterPlugins("");
 		}
-		filterPlugins("");
-		handleFeaturedPluginVisibility("");
+
 		if (input) {
 			input.focus();
 		}
-
-		const url = new URL(window.location);
-		url.searchParams.delete("q");
-		window.history.replaceState({}, "", url);
 	};
 
 	for (const { button, input } of [
@@ -248,45 +277,25 @@ function addSearchButtonEvent() {
 	});
 }
 
-// Detects whether the user has clicked on the fixed search bar
-const fixedSearchBar = document.getElementById("fixedSearchBar");
-if (fixedSearchBar) {
-	fixedSearchBar.addEventListener("focus", () => {
-		fixedSearchBar.dataset.isFocused = "true";
-	});
-
-	fixedSearchBar.addEventListener("blur", () => {
-		fixedSearchBar.dataset.isFocused = "false";
-	});
-}
+// --- Public Functions ---
 
 export const isFixedSearchFocused = () =>
-	document.getElementById("fixedSearchBar")?.dataset.isFocused === "true";
+	document.activeElement === elements.fixedSearchBar;
 
 export function initSearchFromURL() {
 	const urlParams = new URLSearchParams(window.location.search);
 	const searchQuery = urlParams.get("q");
 
 	if (searchQuery) {
-		const { searchBar, fixedSearchBar } = elements;
-		searchState.currentValue = searchQuery;
-
-		if (searchBar) {
-			searchBar.value = searchQuery;
-			toggleClearButton(searchBar, searchQuery);
-		}
-		if (fixedSearchBar) {
-			fixedSearchBar.value = searchQuery;
-			toggleClearButton(fixedSearchBar, searchQuery);
-		}
+		updateSearchState(searchQuery);
 		filterPlugins(searchQuery);
-		handleFeaturedPluginVisibility(searchQuery);
 	}
 }
 
 const debouncedFilter = debounce(filterPlugins, DEBOUNCE);
 
-// Initialize search
+// --- Init ---
+
 document.addEventListener("DOMContentLoaded", () => {
 	addSearchFunctionality();
 	addSearchButtonEvent();

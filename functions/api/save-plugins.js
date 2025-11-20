@@ -49,12 +49,15 @@ export async function onRequestPost(context) {
 				},
 				body: JSON.stringify({
 					message: "📝 Update plugins-data.json from Admin UI",
-					content: btoa(
-						String.fromCharCode.apply(
-							null,
-							new TextEncoder().encode(contentToPush),
-						),
-					),
+					content: (() => {
+						const encoder = new TextEncoder();
+						const utf8Bytes = encoder.encode(contentToPush);
+						let binaryString = "";
+						for (let i = 0; i < utf8Bytes.length; i++) {
+							binaryString += String.fromCharCode(utf8Bytes[i]);
+						}
+						return btoa(binaryString);
+					})(),
 					sha: currentSha,
 					branch: BRANCH,
 					committer: {
