@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="PluginsList/About" />
-    <meta property="og:description" content="Learn more about the plugins list, plugin status meanings, unproxied plugins, and more." />
+    <meta property="og:description"
+        content="Learn more about the plugins list, plugin status meanings, unproxied plugins, and more." />
     <meta property="og:image" content="https://i.imgur.com/HBaPrGl.png" />
     <meta property="og:image:width" content="630" />
     <meta property="og:image:height" content="630" />
@@ -14,11 +15,12 @@
     <meta property="og:type" content="website" />
 
     <title>About - Revenge Plugins</title>
-    <link rel="icon" type="image/svg" href="../assets/revenge-dark.svg">
+    <link rel="icon" type="image/svg" href="/assets/revenge-dark-christmas.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/Christmas/snow.css">
 </head>
 
 <body>
@@ -58,9 +60,11 @@
 
         <h2>Feedback and Suggestions</h2>
         <p>
-            If you see a plugin with an incorrect status or want to submit a new one (or something else), please open an issue on the GitHub repository.
+            If you see a plugin with an incorrect status or want to submit a new one (or something else), please open an
+            issue on the GitHub repository.
         </p>
-        <a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank" class="btn btn--primary">
+        <a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"
+            class="btn btn--primary">
             <span class="material-symbols-rounded">bug_report</span> Open an Issue
         </a>
 
@@ -69,15 +73,17 @@
         <p style="text-align: center;">Just use this page as a reference, and be mindful of what you install.</p>
     </div>
 
+    <!-- Dropdown menu -->
     <div class="menu-container">
         <button id="menuButton" class="menu-button btn btn--primary">
             <span class="material-symbols-rounded">menu</span> Menu
         </button>
         <div id="dropdownMenu" class="dropdown-menu">
             <ul>
-                <li><a href="../"><span class="material-symbols-rounded">home</span> Home</a></li>
-                <li><a href="./"><span class="material-symbols-rounded">info</span> About</a></li>
-                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span class="material-symbols-rounded">bug_report</span> Report</a></li>
+                <li><a href="/"><span class="material-symbols-rounded">home</span> Home</a></li>
+                <li><a href="/About/"><span class="material-symbols-rounded">info</span> About</a></li>
+                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span
+                            class="material-symbols-rounded">bug_report</span> Report</a></li>
             </ul>
         </div>
     </div>
@@ -87,7 +93,8 @@
         <span class="material-symbols-rounded">arrow_upward</span>
     </button>
 
-    <script type="module" src="../scripts/plugins.js"></script>
+    <script type="module" src="/scripts/shared.js"></script>
+    <script type="module" src="/Christmas/snow.js"></script>
 </body>
 
 </html>
