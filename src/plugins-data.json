@@ -1238,7 +1238,7 @@
         "authors": [
             "Kitomanari"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/spotifyShareCommands/",
         "warningMessage": ""
@@ -1365,10 +1365,10 @@
         "authors": [
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/catbox.moe/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/catbox.moe/",
-        "warningMessage": ""
+        "warningMessage": "Direct sending doesn’t work, you’ll need to enable either 'Copy link to clipboard' or 'Insert into the message'."
     },
     {
         "name": "FileContentPreview",
