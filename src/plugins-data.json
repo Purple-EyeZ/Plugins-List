@@ -1487,7 +1487,7 @@
     },
     {
         "name": "Antied Zero",
-        "description": "Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
+        "description": "[1.0.1] Keeps a temporary record of deleted messages and any edits until you reload the app. (Antied without settings, to avoid random crashes)",
         "authors": [
             "Angelw0lf"
         ],
@@ -1497,7 +1497,7 @@
         "warningMessage": "⚠️ Editing your own messages may include previous edit logs."
     },
     {
-        "name": "Radial Status v1.0.0",
+        "name": "Radial Status v1.0.1",
         "description": "Modify members presence indicator to be ring around their profile picture.",
         "authors": [
             "AngelW0lf"
