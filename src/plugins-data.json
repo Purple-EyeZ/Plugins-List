@@ -429,10 +429,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
-        "warningMessage": ""
+        "warningMessage": "Causes a crash when opening Discord settings."
     },
     {
         "name": "Twemoji Everywhere",
@@ -462,10 +462,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/plugin-browser/",
-        "warningMessage": ""
+        "warningMessage": "Causes a crash when opening Discord settings."
     },
     {
         "name": "Monet Theme",
@@ -1446,10 +1446,10 @@
         "authors": [
             "Win8.1VMUser"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
-        "warningMessage": ""
+        "warningMessage": "Causes a crash when opening Discord settings."
     },
     {
         "name": "Decor",
