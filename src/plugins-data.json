@@ -429,10 +429,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
-        "warningMessage": "Causes a crash when opening Discord settings."
+        "warningMessage": ""
     },
     {
         "name": "Twemoji Everywhere",
@@ -462,10 +462,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/plugin-browser/",
-        "warningMessage": "Causes a crash when opening Discord settings."
+        "warningMessage": ""
     },
     {
         "name": "Monet Theme",
