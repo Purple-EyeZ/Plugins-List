@@ -284,10 +284,10 @@
         "authors": [
             "John"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/HideCallButtons/",
-        "warningMessage": "Broken on 263+"
+        "warningMessage": ""
     },
     {
         "name": "NoBandwidthKick",
@@ -1527,6 +1527,51 @@
         "status": "working",
         "sourceUrl": "https://github.com/cristiandis/clipboardgifsend",
         "installUrl": "https://cristiandis.github.io/clipboardgifsend",
+        "warningMessage": ""
+    },
+    {
+        "name": "RemoveBanner",
+        "description": "Remove Server Banners completely.",
+        "authors": [
+            "Vaiskiainen"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/Vaiskiainen/testplugins/tree/master/plugins/removeBanner",
+        "installUrl": "https://vaiskiainen.github.io/testplugins/removeBanner/",
+        "warningMessage": ""
+    },
+    {
+        "name": "🎄 Christmas Counter",
+        "description": "Displays a countdown to Christmas every day.",
+        "authors": [
+            "Vaiskiainen"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/Vaiskiainen/testplugins/tree/master/plugins/christmasCounter",
+        "installUrl": "https://vaiskiainen.github.io/testplugins/christmasCounter/",
+        "warningMessage": ""
+    },
+    {
+        "name": "ReviewDB",
+        "description": "Display and post reviews on user profiles.",
+        "authors": [
+            "maisy",
+            "John"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/janisslsm/vdplugins",
+        "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
+        "warningMessage": ""
+    },
+    {
+        "name": "Better Eval",
+        "description": "Adds an Evaluate JavaScript page, gives a better experience then /eval.",
+        "authors": [
+            "tralwdwdd"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/tralwdwd/plugins",
+        "installUrl": "https://tralwdwd.github.io/plugins/bettereval",
         "warningMessage": ""
     }
 ]
