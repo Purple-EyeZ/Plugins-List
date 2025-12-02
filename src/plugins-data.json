@@ -206,10 +206,10 @@
         "authors": [
             "MSMA"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/FileSizeOnPicker/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 307+"
     },
     {
         "name": "Image search",
@@ -801,10 +801,10 @@
         "authors": [
             "MSMA"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/PlatformIndicators/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 307+"
     },
     {
         "name": "Picture Links",
@@ -1572,6 +1572,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/tralwdwd/plugins",
         "installUrl": "https://tralwdwd.github.io/plugins/bettereval",
+        "warningMessage": ""
+    },
+    {
+        "name": "Let it Snow",
+        "description": "Render Snowflakes on the screen",
+        "authors": [
+            "Bwlok"
+        ],
+        "status": "working",
+        "sourceUrl": "https://revenge.bwlok.dev/LetItSnow",
+        "installUrl": "https://revenge.bwlok.dev/LetItSnow",
         "warningMessage": ""
     }
 ]
