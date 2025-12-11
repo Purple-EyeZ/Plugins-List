@@ -1446,10 +1446,10 @@
         "authors": [
             "Win8.1VMUser"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
-        "warningMessage": "Causes a crash when opening Discord settings."
+        "warningMessage": ""
     },
     {
         "name": "Decor",
