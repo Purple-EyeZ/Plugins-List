@@ -195,10 +195,10 @@
         "authors": [
             "MSMA"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/NoCompression/",
-        "warningMessage": "Corrupts media playback and sending pics into files."
+        "warningMessage": ""
     },
     {
         "name": "FileSizeOnPicker",
@@ -801,10 +801,10 @@
         "authors": [
             "MSMA"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/PlatformIndicators/",
-        "warningMessage": "Broken on 307+"
+        "warningMessage": ""
     },
     {
         "name": "Picture Links",
