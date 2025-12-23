@@ -162,7 +162,10 @@ function rerender() {
 
 function onPluginUpdate(plugin, field, value) {
 	plugin[field] = value;
-	rerender();
+
+	if (field === "status") {
+		rerender();
+	}
 }
 
 function onPluginDelete(pluginToDelete) {

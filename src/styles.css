@@ -23,7 +23,7 @@
 	--color-focus-shadow: #7f828799;
 	--color-background-info-box: #0b0d0e;
 	--color-background-danger-light: #f443361a;
-    --color-background-success-light: #2db1321a;
+	--color-background-success-light: #2db1321a;
 
 	--font-body: "Noto Sans", sans-serif;
 	--font-heading: "Poppins", sans-serif;
@@ -465,6 +465,10 @@ h1 img {
 	border-radius: 0 0 8px 8px;
 }
 
+.logout {
+	color: var(--color-danger);
+}
+
 /* Back to Top button */
 .back-to-top {
 	position: fixed;
@@ -687,8 +691,8 @@ h1 img {
 	color: var(--color-text-primary);
 	margin: 0px 15px;
 	display: flex;
-    flex-direction: column;
-    max-height: 85vh;
+	flex-direction: column;
+	max-height: 85vh;
 }
 
 .popup-title {
@@ -699,8 +703,8 @@ h1 img {
 }
 
 .popup-main-content {
-    overflow-y: auto;
-    padding-right: 5px;
+	overflow-y: auto;
+	padding-right: 5px;
 }
 
 .popup-message {
@@ -835,80 +839,80 @@ h1 img {
 
 /* Review changes popup */
 .review-change-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background);
+	margin-bottom: 20px;
+	padding: 15px;
+	border: 1px solid var(--color-border);
+	background-color: var(--color-background);
 }
 
 .review-plugin-name {
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 10px;
+	margin-top: 0;
+	margin-bottom: 15px;
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 10px;
 }
 
 .field-change {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .field-change-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
 }
 
 .field-name {
-    font-weight: 500;
-    color: var(--color-text-secondary);
+	font-weight: 500;
+	color: var(--color-text-secondary);
 }
 
 .diff-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
 }
 
 .diff-view {
-    background-color: var(--color-background-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 0.9em;
-    white-space: pre-wrap;
-    word-break: break-word;
-    max-height: 150px;
-    overflow-y: auto;
+	background-color: var(--color-background-secondary);
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 0.9em;
+	white-space: pre-wrap;
+	word-break: break-word;
+	max-height: 150px;
+	overflow-y: auto;
 }
 
 .diff-view.old-value {
-    background-color: var(--color-background-danger-light);
-    position: relative;
+	background-color: var(--color-background-danger-light);
+	position: relative;
 }
 
 .diff-view.new-value {
-    background-color: var(--color-background-success-light);
-    position: relative;
+	background-color: var(--color-background-success-light);
+	position: relative;
 }
 
 .diff-view::before {
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    font-size: 0.8em;
-    font-weight: bold;
-    color: var(--color-text-tertiary);
-    background-color: var(--color-background);
-    padding: 0 5px;
+	position: absolute;
+	top: -10px;
+	left: 5px;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: var(--color-text-tertiary);
+	background-color: var(--color-background);
+	padding: 0 5px;
 }
 
 .diff-view.old-value::before {
-    content: "Before";
+	content: "Before";
 }
 
 .diff-view.new-value::before {
-    content: "After";
+	content: "After";
 }
 
 /* Featured Plugin Card */
