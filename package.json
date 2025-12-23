@@ -9,11 +9,11 @@
     "lint": "bunx biome check --write ./src ./functions"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.6",
-    "vite": "^7.2.4",
+    "@biomejs/biome": "^2.3.10",
+    "vite": "^7.3.0",
     "vite-plugin-html-minifier": "^1.0.5",
     "vite-plugin-static-copy": "^3.1.4",
-    "wrangler": "^4.49.1"
+    "wrangler": "^4.56.0"
   },
   "dependencies": {
     "fuzzysort": "^3.1.0"
