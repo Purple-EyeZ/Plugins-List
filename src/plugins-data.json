@@ -440,7 +440,7 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/twemoji-everywhere/",
         "warningMessage": ""
@@ -664,10 +664,10 @@
             "ryan",
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/shipwr3ckd/FPTE",
         "installUrl": "https://shipwr3ckd.github.io/FPTE/FakeProfileThemesAndEffects/",
-        "warningMessage": ""
+        "warningMessage": "Causes a crash when editing profile."
     },
     {
         "name": "HideMessages",
@@ -882,10 +882,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/themes-plus/",
-        "warningMessage": ""
+        "warningMessage": "Iconpacks don't work."
     },
     {
         "name": "Bluetooth Audio Fix",
@@ -1558,10 +1558,10 @@
             "maisy",
             "John"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
-        "warningMessage": ""
+        "warningMessage": "Broken on 309+"
     },
     {
         "name": "Better Eval",
