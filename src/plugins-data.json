@@ -849,10 +849,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/kiryu-facecam/",
-        "warningMessage": ""
+        "warningMessage": "May cause crashes when sending a message."
     },
     {
         "name": "NexxUtils",
