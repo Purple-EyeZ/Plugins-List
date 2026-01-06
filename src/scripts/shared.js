@@ -109,6 +109,27 @@ export function hidePopup() {
 	}
 }
 
+export function escapeHTML(str) {
+	if (typeof str !== "string") return "";
+	const escaped = str.replace(/[&<>"']/g, (match) => {
+		switch (match) {
+			case "&":
+				return "&amp;";
+			case "<":
+				return "&lt;";
+			case ">":
+				return "&gt;";
+			case '"':
+				return "&quot;";
+			case "'":
+				return "&#39;";
+			default:
+				return match;
+		}
+	});
+	return escaped.replace(/\n/g, "<br>");
+}
+
 // --- Feature Init ---
 
 function handleScroll() {

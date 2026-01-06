@@ -1,6 +1,6 @@
 {
   "name": "plugins-list",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,6 +16,7 @@
     "wrangler": "^4.56.0"
   },
   "dependencies": {
-    "fuzzysort": "^3.1.0"
+    "fuzzysort": "^3.1.0",
+    "lightgallery": "^2.9.0"
   }
 }

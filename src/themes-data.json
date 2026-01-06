@@ -1,0 +1,3188 @@
+[
+    {
+        "name": "Catalyst",
+        "description": "Looks like the Catalyst web browser",
+        "authors": [
+            "jdev082"
+        ],
+        "sourceUrl": "https://github.com/jdev082/vd-repo",
+        "installUrl": "https://jdev082.github.io/vd-repo/themes/catalyst.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Catalyst.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Catalyst1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Catalyst2.webp"
+        ],
+        "tags": [
+            "dark"
+        ]
+    },
+    {
+        "name": "Strawberry Cheesecake",
+        "description": "A theme using real cheesecake as main color and real strawberries as accent. Don't question it, just enjoy!",
+        "authors": [
+            "TraxTRL"
+        ],
+        "sourceUrl": "https://github.com/TraxTRL/discord-themes",
+        "installUrl": "https://raw.githubusercontent.com/TraxTRL/discord-themes/main/StrawberryCheesecake.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Strawberry_Cheesecake.webp"
+        ],
+        "tags": [
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Rogue",
+        "description": "a bad-ass looking Dark Grey & Red theme (DARK MODE REQUIRED)",
+        "authors": [
+            "Λrtful"
+        ],
+        "sourceUrl": "https://github.com/cyriotic3/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/cyriotic3/VendettaThemes/main/rogue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/roguePreview.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Purpl",
+        "description": "A purple theme based off my Material You™ color scheme",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Purpl.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Purpl.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Origins - Blue",
+        "description": "1 of 4, randomly selected colors from the members of Sound's world.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Origins_Blue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Origins_blue.webp"
+        ],
+        "tags": [
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Rogue+",
+        "description": "when dark grey isn't enough (AMOLED/Black version of Rogue, AMOLED MODE REQUIRED)",
+        "authors": [
+            "Λrtful"
+        ],
+        "sourceUrl": "https://github.com/cyriotic3/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/cyriotic3/VendettaThemes/main/rogueplus.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rogueplusPreview.webp"
+        ],
+        "tags": [
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Origins - Rose Red",
+        "description": "2 of 4, randomly picked colors from the members of Sound's World.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Origins_Rose_Red.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Origins_rose_red.webp"
+        ],
+        "tags": [
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Origins - Lemon Yellow",
+        "description": "3 of 4, randomly selected colors from the members of Sound's World.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Origins_Lemon_Yellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Origins_lemon_yellow.webp"
+        ],
+        "tags": [
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "LilyPichu",
+        "description": "A theme based on @Melonturtle_ stream design",
+        "authors": [
+            "Nyria"
+        ],
+        "sourceUrl": "https://github.com/nyri4/LilyPichu",
+        "installUrl": "https://nyri4.github.io/LilyPichu/vendetta/lilypichu.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/lilypichu.webp"
+        ],
+        "tags": [
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Midnight-Espresso",
+        "description": "Original theme made by kanned (karto) for AliucordKT, ported to Vendetta by Vodka Martini",
+        "authors": [
+            "komette",
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Midnight-Espresso.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Midnight_Espresso.webp"
+        ],
+        "tags": [
+            "dark",
+            "brown"
+        ]
+    },
+    {
+        "name": "Pebble",
+        "description": "A cozy theme",
+        "authors": [
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Pebble.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Pebble.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "OneColor",
+        "description": "A cool theme based on One Color.",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/OneColor/onecolor.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/onecolor.webp"
+        ],
+        "tags": [
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Purple Kitty",
+        "description": "A theme made by Vodka Martini",
+        "authors": [
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/PurpleKittyVd.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PurpleKittyVd.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Silver Sliver",
+        "description": "A theme based on Silver color :)",
+        "authors": [
+            "casha"
+        ],
+        "sourceUrl": "https://github.com/laser4/silver-sliver",
+        "installUrl": "https://raw.githubusercontent.com/laser4/silver-sliver/main/silversliver.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/silversliver.webp"
+        ],
+        "tags": [
+            "dark",
+            "grey"
+        ]
+    },
+    {
+        "name": "Orange Mountains",
+        "description": "A simple theme for Vendetta with an image of orange mountains. DARK MODE REQUIRED!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/OrangeMountains/orangemountains.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/orangemountains.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Krimson Scarlet",
+        "description": "1 of 10, randomly selected colors from the members of Sound's World.",
+        "authors": [
+            "LeNain"
+        ],
+        "sourceUrl": "https://github.com/laser4/Krimson-Scarlet",
+        "installUrl": "https://raw.githubusercontent.com/laser4/Krimson-Scarlet/main/krimson.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/krimson.webp"
+        ],
+        "tags": [
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Alicorn V2",
+        "description": "A purple, magic and cute theme made with <3",
+        "authors": [
+            "Mazeriio"
+        ],
+        "sourceUrl": "https://github.com/Mazetta/vd-themes",
+        "installUrl": "https://raw.githubusercontent.com/Mazetta/vd-themes/main/Alicorn-V2.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Alicorn_V2_Preview.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Amoled Orange Mountains",
+        "description": "A Amoled version of Orange Mountains theme. DARK MODE REQUIRED!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/AmoledOrangeMountains/amoled-orange-mountains.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/amoled-orange-mountains.webp"
+        ],
+        "tags": [
+            "background",
+            "amoled",
+            "orange"
+        ]
+    },
+    {
+        "name": "Vulcan",
+        "description": "Warning: hot!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/Vulcan/vulcan.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/vulcan.webp"
+        ],
+        "tags": [
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Katana",
+        "description": "A theme made by Vodka Martini",
+        "authors": [
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Katana.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Katana.webp"
+        ],
+        "tags": [
+            "background"
+        ]
+    },
+    {
+        "name": "MaroonSkies",
+        "description": "Maroon colored theme for Vendetta",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/MaroonSkies.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/MaroonSkies.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Purple Mountains",
+        "description": "A simple theme for Vendetta with an image of purple mountains. DARK MODE REQUIRED!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/PurpleMountains/purple-mountains.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/purple-mountains.webp"
+        ],
+        "tags": [
+            "background",
+            "amoled",
+            "blue"
+        ]
+    },
+    {
+        "name": "OrangeOLED",
+        "description": "Too many Orange!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/OrangeOLED/OrangeOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/OrangeOLED.webp"
+        ],
+        "tags": [
+            "background",
+            "amoled",
+            "orange"
+        ]
+    },
+    {
+        "name": "BlueySkies",
+        "description": "MaroonSkies, but blue.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/BlueySkies.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/BlueySkies.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Pixel City",
+        "description": "A theme of Pixel City animated background. DARK MODE REQUIRED!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/PixelCity/pixelcity.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/pixelcity.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "諸元 [Shōgen]",
+        "description": "A greyish theme with a Red Moon.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Sh%C5%8Dgen.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Shogen.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "grey",
+            "red"
+        ]
+    },
+    {
+        "name": "Pixel City Lite",
+        "description": "Lite version of the Pixel City theme, a non-animated version. DARK MODE REQUIRED!",
+        "authors": [
+            "Wizzy#0211"
+        ],
+        "sourceUrl": "https://github.com/Wizzy-TV/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/Wizzy-TV/VendettaThemes/main/PixelCityLite/pixelcity-lite.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/pixelcity-lite.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Dracula",
+        "description": "A simple theme following dracula's color scheme",
+        "authors": [
+            "FatDawlf"
+        ],
+        "sourceUrl": "https://github.com/Azakidev/dracula-aliucordRN",
+        "installUrl": "https://raw.githubusercontent.com/Azakidev/dracula-aliucordRN/vendetta/Dracula.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Dracula.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "VioletSkies",
+        "description": "Same thing, Same thing.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/VioletSkies.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/VioletSkies.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "RosieSkies",
+        "description": "The same, but Rosiefied™ :3",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/RosieSkies.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RosieSkies.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Whatsdetta",
+        "description": "Make Discord look like Whatsapp. Made for Aliucord by Lanney",
+        "authors": [
+            "squat"
+        ],
+        "sourceUrl": "https://github.com/squat9042/vendetta-themes",
+        "installUrl": "https://raw.githubusercontent.com/squat9042/vendetta-themes/main/Whatsdetta.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Whatsdetta.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Fade",
+        "description": "No idea what i should say about the theme",
+        "authors": [
+            "squat"
+        ],
+        "sourceUrl": "https://github.com/squat9042/vendetta-themes",
+        "installUrl": "https://raw.githubusercontent.com/squat9042/vendetta-themes/main/Fade.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Fade.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Tachiyomi Lavender",
+        "description": "A theme inspired by Tachiyomi's Lavender color scheme.",
+        "authors": [
+            "LuckFire"
+        ],
+        "sourceUrl": "https://github.com/luckfire/vendetta-themes",
+        "installUrl": "https://luckfire.github.io/vendetta-themes/src/themes/Tachiyomi-Lavender.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Tachiyomi_Lavender.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Gruv Yellow v3.3.4",
+        "description": "A gruvy yellow theme.",
+        "authors": [
+            "Taki_Shiwa"
+        ],
+        "sourceUrl": "https://github.com/TakiShiwa/Themes",
+        "installUrl": "https://raw.githubusercontent.com/TakiShiwa/Themes/main/GruvYellow/Vendetta/GruvYellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/GruvYellow.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "yellow"
+        ]
+    },
+    {
+        "name": "RozeQuartz",
+        "description": "mimimi",
+        "authors": [
+            "Matt"
+        ],
+        "sourceUrl": "https://github.com/Mateusussy210/explod",
+        "installUrl": "https://raw.githubusercontent.com/Mateusussy210/explod/main/Roze%20Quartz_poly.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RozeQuartz.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RozeQuartz1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RozeQuartz2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Wavy",
+        "description": "Pefect for AMOLED screens.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Wavy.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Wavy.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled"
+        ]
+    },
+    {
+        "name": "Vendetta Teal v1.2.3",
+        "description": "An Amoled theme based on Vendetta Teal color.",
+        "authors": [
+            "Taki_Shiwa"
+        ],
+        "sourceUrl": "https://github.com/TakiShiwa/Themes",
+        "installUrl": "https://raw.githubusercontent.com/TakiShiwa/Themes/main/VendettaTeal/Vendetta/AMOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Vendetta_Teal.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Ratio v1.1.3",
+        "description": "Embrace simplicity, cut distractions, and uncover what truly matters with a minimalistic theme.",
+        "authors": [
+            "Taki_Shiwa"
+        ],
+        "sourceUrl": "https://github.com/TakiShiwa/Themes",
+        "installUrl": "https://raw.githubusercontent.com/TakiShiwa/Themes/main/Ratio/Vendetta/Ratio.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ratio.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "WavyPink",
+        "description": "The same, but its pink :3",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/WavyPink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/WavyPink.webp"
+        ],
+        "tags": [
+            "background",
+            "amoled",
+            "pink"
+        ]
+    },
+    {
+        "name": "TheEveningSkies",
+        "description": "As if you're staring at the sunset.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/TheEveningSkies.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/TheEveningSkies.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Nord",
+        "description": "A theme based on Nord color palette, with a few additional shades, tints & tones",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/Nord/nord.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/nord_preview.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "grey"
+        ]
+    },
+    {
+        "name": "PurpDark V3",
+        "description": "Same theme but with background! - Purpdark",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/Purpdark/PurpDark_BG/Purpdark_v3.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Purpdark_v3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Sea Green",
+        "description": "Theme based on Sea Green color!",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/SeaGreen/SeaGreen.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/SeaGreen.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Medium Slate Blue",
+        "description": "Theme based on Medium Slate Blue color!",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/MediumSlateBlue/MediumSlateBlue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/MediumSlateBlue.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Red Feathers",
+        "description": "Theme based on Pixel's 7A wallpaper.",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/RedFeathers/redfeathers.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/redfeathers.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "PurpAMOLED",
+        "description": "AMOLED version of PurpDark",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/PurpAMOLED/PurpAMOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PurpAMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "purple"
+        ]
+    },
+    {
+        "name": "BlueVen",
+        "description": "Another theme with Blue color. :D",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/BlueVen/BlueVen.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/BlueVen.webp"
+        ],
+        "tags": [
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "PurpDark",
+        "description": "A theme based of my phone's wallpaper. Light mode supported.",
+        "authors": [
+            "@vorlie"
+        ],
+        "sourceUrl": "https://github.com/vorlie/VendettaThemes",
+        "installUrl": "https://raw.githubusercontent.com/vorlie/VendettaThemes/main/Purpdark/Purpdark_v2.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Purpdark_v2.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Vision Pro 2.0",
+        "description": "A theme made by Vodka Martini",
+        "authors": [
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme-Plus",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme-Plus/main/Vision%20pro%202.0.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Vision_Pro.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Midnight-Espresso Plus",
+        "description": "Original theme made by kanned (karto) for AliucordKT, ported to Vendetta by Vodka Martini",
+        "authors": [
+            "komette",
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme-Plus",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme-Plus/main/MidnightEspresso%20Plus.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Midnight_Espresso.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "brown"
+        ]
+    },
+    {
+        "name": "Midnight Plus",
+        "description": "Original theme made by refact0r for Better Discord, ported to RN by Vodka Martini",
+        "authors": [
+            "Vodka Martini"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme-Plus",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme-Plus/main/Midnight%20Plus.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Midnight_Theme.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark"
+        ]
+    },
+    {
+        "name": "Catty",
+        "description": "because cat :3.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Catty.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Catty.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "ClearVision v1.2.6",
+        "description": "Clear Vision paints serenity across the canvas of our Discord realm.",
+        "authors": [
+            "Taki_Shiwa"
+        ],
+        "sourceUrl": "https://github.com/TakiShiwa/Themes",
+        "installUrl": "https://raw.githubusercontent.com/TakiShiwa/Themes/main/ClearVision/Vendetta/ClearVision.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/ClearVision.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Scarlet Love v1.0.5 ",
+        "description": "Shades of Red, Shades of Love: Enter Scarlet's Embrace.",
+        "authors": [
+            "Taki_Shiwa"
+        ],
+        "sourceUrl": "https://github.com/TakiShiwa/Themes",
+        "installUrl": "https://raw.githubusercontent.com/TakiShiwa/Themes/main/ScarletLove/Vendetta/ScarletLove.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/ScarletLove.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Night Life (Default)",
+        "description": "Darker theme with purple accent and a beautiful background",
+        "authors": [
+            "S9Teen"
+        ],
+        "sourceUrl": "https://github.com/S9Teen/Themes",
+        "installUrl": "https://raw.githubusercontent.com/S9Teen/Themes/main/Night%20Life.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Night_Life.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Night_Life1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Night_Life2.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Discord's Blurple",
+        "description": "A theme based on Discord's accent color, Blurple.",
+        "authors": [
+            "Ari"
+        ],
+        "sourceUrl": "https://github.com/ArisonID/aris-silly-themes",
+        "installUrl": "https://raw.githubusercontent.com/ArisonID/aris-silly-themes/main/Discord'sBlurple.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Discord'sBlurple.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "TokyoNight",
+        "description": "’So just like that you’re fucking dead and gone’",
+        "authors": [
+            "@Olivia"
+        ],
+        "sourceUrl": "https://github.com/luzikii/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/luzikii/vendetta/main/tokyoNight.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/tokyoNight.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/tokyoNight1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark"
+        ]
+    },
+    {
+        "name": "p1x3ln1ghtz",
+        "description": "a theme based around my homescreen layout",
+        "authors": [
+            "G0R3C4T"
+        ],
+        "sourceUrl": "https://github.com/olobia/themes",
+        "installUrl": "https://raw.githubusercontent.com/olobia/themes/main/pixelout.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/pixelout.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/pixelout1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Cyberpunk HUD",
+        "description": "Theme built around Cyberpunk 2077 HUD",
+        "authors": [
+            "Alt"
+        ],
+        "sourceUrl": "https://github.com/olobia/iztejdziurywyskoczyeminem",
+        "installUrl": "https://raw.githubusercontent.com/olobia/iztejdziurywyskoczyeminem/main/cybpunk2077.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/cybpunk2077.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/cybpunk20771.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "yellow",
+            "cyan",
+            "red"
+        ]
+    },
+    {
+        "name": "Dark Vendetta",
+        "description": "A \"improved\" dark theme for Discord.\nOriginal theme by ignacio.\nRestored and maintained by Kitomanari.\nTested on 209.14 Discord version.\nLast updated: 30.12.2023.",
+        "authors": [
+            "ignacio",
+            "Kitomanari"
+        ],
+        "sourceUrl": "https://github.com/Kitomanari/vendetta-stuff",
+        "installUrl": "https://raw.githubusercontent.com/Kitomanari/vendetta-stuff/main/themes/dark-vendetta/theme.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Dark_Vendetta.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Dark_Vendetta1.webp"
+        ],
+        "tags": [
+            "dark"
+        ]
+    },
+    {
+        "name": "AnimeVision",
+        "description": "A Dark Blue theme for vendetta.",
+        "authors": [
+            "@sleepingfatcat"
+        ],
+        "sourceUrl": "https://github.com/denji6969/AnimeVision",
+        "installUrl": "https://raw.githubusercontent.com/denji6969/AnimeVision/main/AnimeVisionVendetta.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/AnimeVisionVendetta.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/AnimeVisionVendetta1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/AnimeVisionVendetta2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Material Discord Mobile",
+        "description": "Material you discord theme for mobile",
+        "authors": [
+            "Wilk22"
+        ],
+        "sourceUrl": "https://github.com/Wilk-22/Material-Discord-Mobile",
+        "installUrl": "https://raw.githubusercontent.com/Wilk-22/Material-Discord-Mobile/main/Material-Discord-Mobile.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Material-Discord-Mobile.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Material-Discord-Mobile1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Material-Discord-Mobile3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark"
+        ]
+    },
+    {
+        "name": "Gruvbackground",
+        "description": "Gruvbox theme based on Moodl's rosepine theme.",
+        "authors": [
+            "MMM"
+        ],
+        "sourceUrl": "https://github.com/1MMM10/Gruvdetta",
+        "installUrl": "https://raw.githubusercontent.com/1MMM10/Gruvdetta/main/gruvboxbg.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/gruvboxbg.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/gruvboxbg1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/gruvboxbg2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "pink",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Primrose",
+        "description": "Theme made by Myrayuo, inspired by my favorite colors.",
+        "authors": [
+            "myrayuo"
+        ],
+        "sourceUrl": "https://github.com/myrayuoo/Primrose",
+        "installUrl": "https://raw.githubusercontent.com/myrayuoo/Primrose/main/Primrose.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Primrose.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Primrose1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Cyberpunk 2077",
+        "description": "Theme built around Cyberpunk 2077 HUD",
+        "authors": [
+            "Shion"
+        ],
+        "sourceUrl": "https://github.com/luzikii/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/luzikii/vendetta/main/CP2077HUD.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/CP2077HUD.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/CP2077HUD1.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "yellow",
+            "cyan",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Blue",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/blue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Flamingo",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/flamingo.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Green",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/green.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Lavender",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/lavender.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Maroon",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/maroon.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Mauve",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/mauve.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Peach",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/peach.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Pink",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/pink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Red",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/red.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Rosewater",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/rosewater.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Sapphire",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/sapphire.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Sky",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/sky.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Teal",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/teal.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Catppuccin Frappé - Yellow",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/frappe/yellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/frappe.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Blue",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/blue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Flamingo",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/flamingo.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Green",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/green.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "green"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Lavender",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/lavender.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Maroon",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/maroon.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Mauve",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/mauve.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Peach",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/peach.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "orange"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Pink",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/pink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Red",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/red.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Rosewater",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/rosewater.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Sapphire",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/sapphire.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Sky",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/sky.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Teal",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/teal.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Catppuccin Latte - Yellow",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/latte/yellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/latte.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Blue",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/blue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Flamingo",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/flamingo.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Green",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/green.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Lavender",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/lavender.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Maroon",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/maroon.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Mauve",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/mauve.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Peach",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/peach.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Pink",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/pink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Red",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/red.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Rosewater",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/rosewater.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Sapphire",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/sapphire.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Sky",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/sky.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Teal",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/teal.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Catppuccin Macchiato - Yellow",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/macchiato/yellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/macchiato.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Blue",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/blue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Flamingo",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/flamingo.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Green",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/green.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Lavender",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/lavender.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Maroon",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/maroon.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Mauve",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/mauve.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Peach",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/peach.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Pink",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/pink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Red",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/red.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Rosewater",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/rosewater.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Sapphire",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/sapphire.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Sky",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/sky.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Teal",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/teal.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Catppuccin Mocha - Yellow",
+        "description": "Soothing pastel theme for the high-spirited!",
+        "authors": [
+            "Catppuccin"
+        ],
+        "sourceUrl": "https://github.com/catppuccin/vendetta",
+        "installUrl": "https://raw.githubusercontent.com/catppuccin/vendetta/refs/heads/main/themes/mocha/yellow.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/mocha.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "PurpleOLED",
+        "description": "Too many Purple!",
+        "authors": [
+            "Wizzy#0211",
+            "King_Cube"
+        ],
+        "sourceUrl": "https://github.com/kingofcube/vdthemes",
+        "installUrl": "https://raw.githubusercontent.com/kingofcube/vdthemes/main/PurpleOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PurpleOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled",
+            "purple"
+        ]
+    },
+    {
+        "name": "Maggie's Purple",
+        "description": "Theme for people who like the color purple (Version 3.0 for Vendetta/Revenge)",
+        "authors": [
+            "maggie"
+        ],
+        "sourceUrl": "https://github.com/maggster165/vendettathemes",
+        "installUrl": "https://raw.githubusercontent.com/maggster165/vendettathemes/main/maggiespurple.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/maggiespurple.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Sakura Tree v1.2",
+        "description": "Sakura In Autmn. (Dark Mode) (Themes+)",
+        "authors": [
+            ".Princeblueblood"
+        ],
+        "sourceUrl": "https://github.com/mysticentity/ThemeStrings",
+        "installUrl": "https://raw.githubusercontent.com/mysticentity/ThemeStrings/main/Sakura.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Sakura.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Sakura1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "pink"
+        ]
+    },
+    {
+        "name": "Spyro The Dragon v3",
+        "description": "Discord theme based on the color palette of Spyro the dragon. (Dark Mode) (Themes+) (NexxUtils)",
+        "authors": [
+            ".Princeblueblood"
+        ],
+        "sourceUrl": "https://github.com/mysticentity/ThemeStrings",
+        "installUrl": "https://raw.githubusercontent.com/mysticentity/ThemeStrings/main/spyro.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/spyro.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/spyro1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "purple",
+            "yellow"
+        ]
+    },
+    {
+        "name": "surDetta",
+        "description": "surCord ported to Vendetta",
+        "authors": [
+            "mcbuildMnemon",
+            "hamhimstudio",
+            "Luz"
+        ],
+        "sourceUrl": "https://github.com/q7tech/vendetta-theme",
+        "installUrl": "https://q7tech.github.io/vendetta-theme/surDetta.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/surDetta.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/surDetta1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/surDetta2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark"
+        ]
+    },
+    {
+        "name": "Ataraxia",
+        "description": "A state of serene calmness",
+        "authors": [
+            "ft.vodka"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Ataraxia.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ataraxia1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Orchid Love",
+        "description": "Theme made with love",
+        "authors": [
+            "Vodka"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Orchid.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Orchid.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Ukiyo",
+        "description": "Living in the moment",
+        "authors": [
+            "ft.vodka"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/EnmityTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/EnmityTheme/main/Ukiyo.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ukiyo_banner.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark"
+        ]
+    },
+    {
+        "name": "puhbuAMOLEDTEST",
+        "description": "puhrple AMOLEDTEST, Themes+ support; Midnight Theme recommended; V1.3b",
+        "authors": [
+            "puhbu"
+        ],
+        "sourceUrl": "https://github.com/puhboo/themes",
+        "installUrl": "https://raw.githubusercontent.com/puhboo/themes/refs/heads/main/puhbuAMOLEDTEST.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/puhbuAMOLEDTEST.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/puhbuAMOLEDTEST1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/puhbuAMOLEDTEST2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/puhbuAMOLEDTEST3.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/puhbuAMOLEDTEST4.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled",
+            "purple"
+        ]
+    },
+    {
+        "name": "It's Ourple!!",
+        "description": "me when i fuckin ourple",
+        "authors": [
+            "KKing"
+        ],
+        "sourceUrl": "https://github.com/KKingCodesForFun/Themes",
+        "installUrl": "https://raw.githubusercontent.com/KKingCodesForFun/Themes/main/Theme.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Its_Ourple!.webp"
+        ],
+        "tags": [
+            "background",
+            "amoled",
+            "purple"
+        ]
+    },
+    {
+        "name": "Papaya Rule - OP81",
+        "description": "Actual #1 in McLaren F1 Team.",
+        "authors": [
+            "PPFox :D"
+        ],
+        "sourceUrl": "https://github.com/Jakutm/RevengeF1",
+        "installUrl": "https://raw.githubusercontent.com/Jakutm/RevengeF1/refs/heads/main/Piastri/Piastri.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Piastri.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Piastri1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Piastri2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Eye Candy",
+        "description": "Bunny port of Hanibee's Eye Candy theme",
+        "authors": [
+            "Mudrhiod"
+        ],
+        "sourceUrl": "https://bunny.mudaranrhiod.xyz",
+        "installUrl": "https://bunny.mudaranrhiod.xyz/eyecandy.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "grey",
+            "yellow"
+        ]
+    },
+    {
+        "name": "F1 Legends - Michael Schumacher",
+        "description": "#KeepFightingMichael. WE won't forget.",
+        "authors": [
+            "PPFox (PlapPlapFox ;3)"
+        ],
+        "sourceUrl": "https://github.com/Jakutm/RevengeF1",
+        "installUrl": "https://raw.githubusercontent.com/Jakutm/RevengeF1/refs/heads/main/Legends/s.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/F1_Legends_Michael_Schumacher.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/F1_Legends_Michael_Schumacher1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/F1_Legends_Michael_Schumacher2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/F1_Legends_Michael_Schumacher3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Midnight Vencord",
+        "description": "Based on Midnight Vencord by refact0r.",
+        "authors": [
+            "kmmiio99o.dev"
+        ],
+        "sourceUrl": "https://github.com/kmmiio99o/discord-mobile-themes",
+        "installUrl": "https://raw.githubusercontent.com/kmmiio99o/discord-mobile-themes/refs/heads/main/midnight-vencord.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/midnight-vencord.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/midnight-vencord1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/midnight-vencord2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/midnight-vencord3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink",
+            "yellow"
+        ]
+    },
+    {
+        "name": "𐌌 blue dino",
+        "description": "Dark and blue gradients with dino wallpaper",
+        "authors": [
+            "𐌌risky"
+        ],
+        "sourceUrl": "https://github.com/Ulk518/Blue-black-dino",
+        "installUrl": "https://github.com/Ulk518/Blue-black-dino/raw/refs/heads/main/Blue&Black%20dino",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Black&Blue_Dino_Theme.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Black&Blue_Dino_Theme1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Black&Blue_Dino_Theme2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled",
+            "blue"
+        ]
+    },
+    {
+        "name": "Pure Black 1.6.2",
+        "description": "AMOLED black theme",
+        "authors": [
+            "breadcat0314"
+        ],
+        "sourceUrl": "https://github.com/breadcat0314/discord-themes",
+        "installUrl": "https://raw.githubusercontent.com/breadcat0314/discord-themes/refs/heads/main/AMOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Pure_Black_Theme.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Pure_Black_Theme1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Pure_Black_Theme2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled"
+        ]
+    },
+    {
+        "name": "Dark Blossom",
+        "description": "A beautiful dark blossom pink theme, made for people who love blossom but prefer a darker interface.",
+        "authors": [
+            "kmmiio99o.dev"
+        ],
+        "sourceUrl": "https://github.com/kmmiio99o/theme-marketplace",
+        "installUrl": "https://raw.githubusercontent.com/kmmiio99o/theme-marketplace/refs/heads/main/themes/approved/dark-blossom-1756299787345.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/dark-blossom.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/dark-blossom1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Light Blossom",
+        "description": "A beautiful light blossom pink theme, made for people who love blossom but prefer a brighter interface.",
+        "authors": [
+            "kmmiio99o.dev"
+        ],
+        "sourceUrl": "https://github.com/kmmiio99o/theme-marketplace",
+        "installUrl": "https://raw.githubusercontent.com/kmmiio99o/theme-marketplace/refs/heads/main/themes/approved/light-blossom-1756299765934.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/light-blossom.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/light-blossom1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Dos.Terminal",
+        "description": "Original theme made by Princeblueblood",
+        "authors": [
+            "Princeblueblood"
+        ],
+        "sourceUrl": "https://github.com/mysticentity/ThemeStrings",
+        "installUrl": "https://raw.githubusercontent.com/mysticentity/ThemeStrings/main/DosTerminal.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/DosTerminal.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/DosTerminal1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "green"
+        ]
+    },
+    {
+        "name": "Vision Pro",
+        "description": "A theme made by ft.vodka",
+        "authors": [
+            "ft.vodka"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/Vision.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Vision Pro.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Purple Galaxy",
+        "description": "A purple sky theme made by vodka",
+        "authors": [
+            "Vodka"
+        ],
+        "sourceUrl": "https://github.com/VodkaXMartini/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/VodkaXMartini/VendettaTheme/main/PurpleGalaxy.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PurpleGalaxy.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "purple"
+        ]
+    },
+    {
+        "name": "Galaxy",
+        "description": "My first attempt at figuring out theme creation. Credits: Felix Svetloozerskiy",
+        "authors": [
+            "Cookietsu",
+            "Felix Svetloozerskiy"
+        ],
+        "sourceUrl": "https://github.com/Cookietsu/VendettaTheme",
+        "installUrl": "https://raw.githubusercontent.com/Cookietsu/VendettaTheme/main/Galaxy.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Galaxy.webp"
+        ],
+        "tags": [
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "ClearVision v1.2.6",
+        "description": "Clear Vision paints serenity across the canvas of our Discord realm.",
+        "authors": [
+            "Taki_Shiwa, edited by Sunny"
+        ],
+        "sourceUrl": "https://github.com/jamlotrasoiaf/ThemesCorrected",
+        "installUrl": "https://raw.githubusercontent.com/jamlotrasoiaf/ThemesCorrected/refs/heads/main/ClearVision/Vendetta/ClearVision.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Clear_Vision.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Clear_Vision1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "Rosie Blue",
+        "description": "Blue rosie theme",
+        "authors": [
+            "Mudrhiod"
+        ],
+        "sourceUrl": "https://bunny.mudaranrhiod.xyz",
+        "installUrl": "https://bunny.mudaranrhiod.xyz/rosieblue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "YouBlue",
+        "description": "blue based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouBlue/YouBlue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You_themes_collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You_themes_collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You_themes_collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You_themes_collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "YouGreen",
+        "description": "green based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouGreen/YouGreen.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "YouRed",
+        "description": "red based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouRed/YouRed.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "YouGold",
+        "description": "gold based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouGold/YouGold.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "YouPurple",
+        "description": "purple based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouPurple/YouPurple.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "YouPink",
+        "description": "pink based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouPink/YouPink.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "YouGray",
+        "description": "gray based on material you :3",
+        "authors": [
+            "dor4a #avtvshutup"
+        ],
+        "sourceUrl": "https://github.com/dora727/doraa-pyoncordstuff",
+        "installUrl": "https://raw.githubusercontent.com/dora727/doraa-pyoncordstuff/refs/heads/master/Themes/YouGray/YouGray.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/You themes collections3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "grey"
+        ]
+    },
+    {
+        "name": "Deep Waters",
+        "description": "Experience blues & bubbles, inspired by the Wii Homebrew Channel, for a calming chat vibe.",
+        "authors": [
+            "Cyclone"
+        ],
+        "sourceUrl": "https://github.com/Gansing/discord-stuff",
+        "installUrl": "https://raw.githubusercontent.com/Gansing/discord-stuff/refs/heads/main/Deep-Waters.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Deep-Waters.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Deep-Waters1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "blue"
+        ]
+    },
+    {
+        "name": "Purple Serenity",
+        "description": "Purple Serenity blends bright pinks & dark purples for a relaxing, elegant atmosphere.",
+        "authors": [
+            "Cyclone"
+        ],
+        "sourceUrl": "https://github.com/Gansing/discord-stuff",
+        "installUrl": "https://raw.githubusercontent.com/Gansing/discord-stuff/refs/heads/main/Purple-Serenity.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Purple-Serenity.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "RosieDark",
+        "description": "same good old Rosie theme but dark :3 (Port of Enmity theme) Thanks Rosie<3",
+        "authors": [
+            "Rairof"
+        ],
+        "sourceUrl": "https://github.com/Rairof/Discord-Theme",
+        "installUrl": "https://raw.githubusercontent.com/Rairof/Discord-Theme/main/RosieDark.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RosieDark.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "RBW AMOLED",
+        "description": "AMOLED black base, using red, white & grey for everything else",
+        "authors": [
+            "im__turbo__"
+        ],
+        "sourceUrl": "https://github.com/DEAD1nsane/Turbo",
+        "installUrl": "https://raw.githubusercontent.com/DEAD1nsane/Turbo/refs/heads/main/Themes/DARK/RBW%20AMOLED.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RBW_AMOLED.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RBW_AMOLED1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/RBW_AMOLED2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "red"
+        ]
+    },
+    {
+        "name": "Darkened Amethyst",
+        "description": "A dark theme with purple accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Amethyst_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Amethyst.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Darkened Blood",
+        "description": "A dark theme with red accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Blood_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Blood.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Darkened Barbie™",
+        "description": "A dark theme with pink accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Barbie_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Barbie.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Darkened Basic",
+        "description": "A simple, darker theme.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Basic_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Basic.webp"
+        ],
+        "tags": [
+            "dark"
+        ]
+    },
+    {
+        "name": "Darkened Gold",
+        "description": "A dark theme with gold accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Gold_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Gold.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Darkened Ice",
+        "description": "A dark theme with cyan accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Ice_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Ice.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Darkened Acid",
+        "description": "A dark theme with lime accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Acid_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Acid.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "green"
+        ]
+    },
+    {
+        "name": "Darkened Blossom",
+        "description": "A dark theme with blossom pink accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Blossom_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Darkened_Blossom.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Darkened Amethyst (AMOLED)",
+        "description": "A dark theme with purple accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Amethyst_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Amethyst_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "purple"
+        ]
+    },
+    {
+        "name": "Darkened Blood (AMOLED)",
+        "description": "A dark theme with red accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Blood_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Blood_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "red"
+        ]
+    },
+    {
+        "name": "Darkened Barbie™ (AMOLED)",
+        "description": "A dark theme with pink accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Barbie_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Barbie_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "pink"
+        ]
+    },
+    {
+        "name": "Darkened Basic (AMOLED)",
+        "description": "A simple, darker theme.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Basic_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Basic_AMOLED.webp"
+        ],
+        "tags": [
+            "amoled"
+        ]
+    },
+    {
+        "name": "Darkened Gold (AMOLED)",
+        "description": "A dark theme with gold accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Gold_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Gold_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Darkened Ice (AMOLED)",
+        "description": "A dark theme with cyan accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Ice_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ice_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "cyan"
+        ]
+    },
+    {
+        "name": "Darkened Acid (AMOLED)",
+        "description": "A dark theme with lime accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Acid_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Acid_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "green"
+        ]
+    },
+    {
+        "name": "Darkened Blossom (AMOLED)",
+        "description": "A dark theme with blossom pink accents.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "sourceUrl": "https://github.com/Purple-EyeZ/Darkened-Collection",
+        "installUrl": "https://raw.githubusercontent.com/Purple-EyeZ/Darkened-Collection/refs/heads/main/minified_themes/Darkened_Blossom_AMOLED_min.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Blossom_AMOLED.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "amoled",
+            "pink"
+        ]
+    },
+    {
+        "name": "Glorious Sunset",
+        "description": "Gruvbox-based theme for Revenge.",
+        "authors": [
+            "myxi"
+        ],
+        "sourceUrl": "https://github.com/eeriemyxi/glorious-sunset",
+        "installUrl": "https://raw.githubusercontent.com/eeriemyxi/glorious-sunset/refs/heads/main/theme.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Glorious_Sunset.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Glorious_Sunset1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Glorious_Sunset2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Glorious_Sunset3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Aetheris BG",
+        "description": "A Comfy Dark Purple Theme",
+        "authors": [
+            "AsterionVT"
+        ],
+        "sourceUrl": "https://github.com/AsterionXeity/Aetheris",
+        "installUrl": "https://raw.githubusercontent.com/AsterionXeity/Aetheris/refs/heads/main/Aetheris-BG.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Aetheris.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Aetheris1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Aetheris2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Aetheris3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Dark Link Discord",
+        "description": "A theme made from discord files!",
+        "authors": [
+            "Nah"
+        ],
+        "sourceUrl": "https://github.com/n0t-a-username/revenge-themes",
+        "installUrl": "https://raw.githubusercontent.com/n0t-a-username/revenge-themes/refs/heads/main/DarkDiscord.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/DarkDiscord.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/DarkDiscord1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/DarkDiscord2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark"
+        ]
+    },
+    {
+        "name": "Rose Pine",
+        "description": "Something beautiful. All natural pine, faux fur and a bit of soho vibes for the classy minimalist.",
+        "authors": [
+            "Moodle"
+        ],
+        "sourceUrl": "https://github.com/rose-pine/discord-mobile",
+        "installUrl": "https://raw.githubusercontent.com/rose-pine/discord-mobile/main/rosepine.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosepinedawn.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Rose Pine moon",
+        "description": "Something beautiful. All natural pine, faux fur and a bit of soho vibes for the classy minimalist.",
+        "authors": [
+            "Moodle"
+        ],
+        "sourceUrl": "https://github.com/rose-pine/discord-mobile",
+        "installUrl": "https://raw.githubusercontent.com/rose-pine/discord-mobile/main/rosepinemoon.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosepinemoon.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "pink"
+        ]
+    },
+    {
+        "name": "Rose Pine Dawn",
+        "description": "All natural pine, faux fur and a bit of soho vibes for the classy minimalist.",
+        "authors": [
+            "Moodl"
+        ],
+        "sourceUrl": "https://github.com/rose-pine/discord-mobile",
+        "installUrl": "https://raw.githubusercontent.com/rose-pine/discord-mobile/main/rosepinedawn.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosepinedawn.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "light",
+            "pink"
+        ]
+    },
+    {
+        "name": "Nightshade",
+        "description": "Clean, midnight-purple aesthetic",
+        "authors": [
+            "Fizz"
+        ],
+        "sourceUrl": "https://github.com/fizzvrdev/themesforkettu",
+        "installUrl": "https://raw.githubusercontent.com/fizzvrdev/themesforkettu/refs/heads/main/Nightshade.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Nightshade.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Nightshade1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Nightshade2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Nightshade3.webp"
+        ],
+        "tags": [
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Pastel Blue",
+        "description": "A sleek clean blue theme designed for kettu",
+        "authors": [
+            "Fizz"
+        ],
+        "sourceUrl": "https://github.com/fizzvrdev/themesforkettu",
+        "installUrl": "https://raw.githubusercontent.com/fizzvrdev/themesforkettu/refs/heads/main/PastelBlue.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PastelBlue.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PastelBlue1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PastelBlue2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/PastelBlue3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "AMOLED anime theme",
+        "description": "AMOLED Rem theme",
+        "authors": [
+            "wiwiichan"
+        ],
+        "sourceUrl": "https://github.com/wiwiichan/AMOLED-anime-theme",
+        "installUrl": "https://raw.githubusercontent.com/wiwiichan/AMOLED-anime-theme/refs/heads/main/amoled-anime-theme.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/amoled-anime-theme.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled"
+        ]
+    },
+    {
+        "name": "Pyontheme",
+        "description": "Theme about Pyoncord (real and true)",
+        "authors": [
+            "LampDelivery"
+        ],
+        "sourceUrl": "https://github.com/LampDelivery/pyontheme",
+        "installUrl": "https://raw.githubusercontent.com/LampDelivery/pyontheme/refs/heads/main/pyontheme.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/pyontheme.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "blue"
+        ]
+    }
+]
