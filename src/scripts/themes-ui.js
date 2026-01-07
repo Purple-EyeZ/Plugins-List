@@ -84,6 +84,7 @@ function populateGallery(galleryContainer, theme) {
 		plugins: [lgZoom],
 		speed: 500,
 		download: false,
+		licenseKey: "5409-8413-784-5641",
 	});
 }
 
