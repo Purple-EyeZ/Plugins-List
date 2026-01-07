@@ -17,6 +17,13 @@ export default defineConfig({
 						return JSON.stringify(JSON.parse(content.toString()));
 					},
 				},
+				{
+					src: "themes-data.json",
+					dest: ".",
+					transform(content) {
+						return JSON.stringify(JSON.parse(content.toString()));
+					},
+				},
 			],
 		}),
 	],
@@ -26,6 +33,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "src/index.html"),
+				themes: resolve(__dirname, "src/Themes/index.html"),
 				about: resolve(__dirname, "src/About/index.html"),
 				admin: resolve(__dirname, "src/Admin/index.html"),
 			},

@@ -1,11 +1,5 @@
 import * as ui from "./plugins-ui.js";
-import {
-	filterPlugins,
-	initSearchFromURL,
-	invalidateSearchCache,
-	prepareSearchableData,
-	searchState,
-} from "./search.js";
+import { initSearch } from "./search.js";
 
 // --- State & DOM Elements ---
 
@@ -19,6 +13,18 @@ const featuredPluginContainer = document.getElementById(
 );
 const sortSelect = document.getElementById("sort-select");
 const showBrokenToggle = document.getElementById("show-broken");
+
+// --- Init Search ---
+const search = initSearch({
+	containerId: "plugins-container",
+	itemClass: "plugin-card",
+	searchKeys: ["name", "authors", "description"],
+	priorityKey: "name",
+	subtextMessage: (count) =>
+		`Found ${count} matching plugin${count === 1 ? "" : "s"}`,
+	renderFunction: rerender,
+	displayStyle: "flex",
+});
 
 // --- Data Logic ---
 
@@ -60,10 +66,9 @@ function analyzePluginChanges(currentPlugins) {
 
 // --- Render ---
 
-function rerender() {
+function rerender(isFromClear = false) {
 	if (!pluginsContainer) return;
 
-	invalidateSearchCache();
 	const { renderedPlugins, renderedElements } = ui.renderPlugins(
 		pluginsContainer,
 		allPlugins,
@@ -71,8 +76,11 @@ function rerender() {
 		showBroken,
 	);
 
-	prepareSearchableData(renderedPlugins, renderedElements);
-	filterPlugins(searchState.currentValue);
+	search.prepareSearchableData(renderedPlugins, renderedElements);
+
+	if (!isFromClear) {
+		search.filterItems(search.getCurrentValue());
+	}
 }
 
 // --- Initialization ---
@@ -93,7 +101,7 @@ async function init() {
 		ui.showChangesPopup(changes);
 
 		rerender();
-		initSearchFromURL();
+		search.initSearchFromURL();
 	} catch (error) {
 		console.error("Error loading plugins data:", error);
 		if (pluginsContainer) {
