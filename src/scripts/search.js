@@ -2,54 +2,13 @@ import fuzzysort from "fuzzysort";
 
 const DEBOUNCE = 150;
 
-// --- State & DOM Elements ---
-export const searchState = {
-	currentValue: "",
-	wasCleared: false,
-};
+let searchableItems = [];
+let config = {};
+let elements = {};
+const searchState = { currentValue: "" };
 
-const elements = {
-	searchBar: document.getElementById("search-bar"),
-	fixedSearchBar: document.getElementById("fixedSearchBar"),
-	clearButton: document.getElementById("clearSearch"),
-	clearButtonFixed: document.getElementById("clearFixedSearch"),
-	searchButton: document.getElementById("searchButton"),
-	container:
-		document.getElementById("plugins-container") ||
-		document.getElementById("plugins-list"),
-	featuredPluginContainer: document.getElementById("featured-plugin-container"),
-};
-
-// --- Search Data ---
-let searchablePlugins = [];
-
-/**
- * Builds the search cache from raw plugin data and DOM elements.
- * @param {Array<object>} pluginsData The raw array of plugin objects.
- * @param {Array<HTMLElement>} pluginElements The array of corresponding DOM elements.
- */
-export function prepareSearchableData(pluginsData, pluginElements) {
-	const elementMap = new Map(pluginElements.map((el, i) => [i, el]));
-
-	searchablePlugins = pluginsData.map((plugin, index) => {
-		return {
-			element: elementMap.get(index),
-			name: normalizeText(plugin.name),
-			description: normalizeText(plugin.description),
-			author: normalizeText(plugin.authors?.join(", ")),
-			warningMessage: normalizeText(plugin.warningMessage),
-		};
-	});
-}
-
-/**
- * Explicitly invalidates the search cache. Should be called before a rerender.
- */
-export function invalidateSearchCache() {
-	searchablePlugins = [];
-}
-
-// --- Search Logic ---
+export const isFixedSearchFocused = () =>
+	document.activeElement === elements.fixedSearchBar;
 
 function normalizeText(text) {
 	if (!text) return "";
@@ -62,74 +21,78 @@ function normalizeText(text) {
 		.trim();
 }
 
-export function filterPlugins(query) {
-	const isAdminPage = elements.container.id === "plugins-list";
-	const itemsSelector = isAdminPage ? "admin-plugin-item" : "plugin-card";
-	const allItemsInDom = Array.from(
-		elements.container.getElementsByClassName(itemsSelector),
-	);
+function prepareSearchableData(itemsData, itemElements) {
+	const elementMap = new Map(itemElements.map((el, i) => [i, el]));
 
+	searchableItems = itemsData.map((item, index) => {
+		const prepared = { element: elementMap.get(index) };
+		for (const key of config.searchKeys) {
+			const value = item[key];
+			prepared[key] = Array.isArray(value)
+				? normalizeText(value.join(" "))
+				: normalizeText(value);
+		}
+		return prepared;
+	});
+}
+
+function filterItems(query) {
+	const allItemsInDom = Array.from(
+		elements.container.getElementsByClassName(config.itemClass),
+	);
 	const normalizedQuery = normalizeText(query);
 
 	if (!normalizedQuery) {
-		for (const { element } of searchablePlugins) {
-			element.style.display = isAdminPage ? "block" : "flex";
-		}
-		if (isAdminPage) {
-			for (const item of allItemsInDom) {
-				elements.container.appendChild(item);
-			}
-		}
+		allItemsInDom.forEach((el) => {
+			el.style.display = config.displayStyle || "flex";
+		});
 		updateSearchSubtext("", allItemsInDom.length);
 		return;
 	}
 
-	const keys = isAdminPage
-		? ["name", "warningMessage"]
-		: ["name", "author", "description"];
-
-	const results = fuzzysort.go(normalizedQuery, searchablePlugins, {
-		keys: keys,
+	const results = fuzzysort.go(normalizedQuery, searchableItems, {
+		keys: config.searchKeys,
 	});
 
-	// Sort results: name matches first, then by score
+	const priorityKey = config.priorityKey || config.searchKeys[0];
 	results.sort((a, b) => {
-		const aNameResult = fuzzysort.single(normalizedQuery, a.obj.name);
-		const bNameResult = fuzzysort.single(normalizedQuery, b.obj.name);
+		const aPriorityResult = fuzzysort.single(
+			normalizedQuery,
+			a.obj[priorityKey],
+		);
+		const bPriorityResult = fuzzysort.single(
+			normalizedQuery,
+			b.obj[priorityKey],
+		);
 
-		const aHasNameMatch = aNameResult !== null;
-		const bHasNameMatch = bNameResult !== null;
+		const aHasPriorityMatch = aPriorityResult !== null;
+		const bHasPriorityMatch = bPriorityResult !== null;
 
-		if (aHasNameMatch && !bHasNameMatch) return -1;
-		if (!aHasNameMatch && bHasNameMatch) return 1;
-
-		if (aHasNameMatch && bHasNameMatch) {
-			return bNameResult.score - aNameResult.score;
+		if (aHasPriorityMatch && !bHasPriorityMatch) return -1;
+		if (!bHasPriorityMatch && aHasPriorityMatch) return 1;
+		if (aHasPriorityMatch && bHasPriorityMatch) {
+			return bPriorityResult.score - aPriorityResult.score;
 		}
-
 		return b.score - a.score;
 	});
 
-	for (const { element } of searchablePlugins) {
-		element.style.display = "none";
-	}
+	allItemsInDom.forEach((el) => {
+		el.style.display = "none";
+	});
 
-	const visibleItems = [];
+	const visibleElements = [];
 	for (const result of results) {
 		const { element } = result.obj;
-		element.style.display = isAdminPage ? "block" : "flex";
+		element.style.display = config.displayStyle || "flex";
 		elements.container.appendChild(element);
-		visibleItems.push(element);
+		visibleElements.push(element);
 	}
 
-	updateSearchSubtext(query, visibleItems.length);
+	updateSearchSubtext(query, visibleElements.length);
 }
-
-// --- UI Sync & Event Handlers ---
 
 function updateSearchState(value) {
 	searchState.currentValue = value;
-
 	for (const bar of [elements.searchBar, elements.fixedSearchBar]) {
 		if (bar) {
 			bar.value = value;
@@ -142,44 +105,102 @@ function updateSearchState(value) {
 		url.searchParams.set("q", value);
 	} else {
 		url.searchParams.delete("q");
+		updateSearchSubtext("", 0);
 	}
 	window.history.replaceState({}, "", url);
-
-	handleFeaturedPluginVisibility(value);
 }
 
-function updateSearchSubtext(query, cardsOrCount) {
-	const subtext = document.getElementById("searchSubtext");
-	if (!subtext) return;
-
+function updateSearchSubtext(query, count) {
+	if (!elements.subtext) return;
 	if (!query) {
-		subtext.textContent = "";
-		subtext.classList.remove("visible");
+		elements.subtext.textContent = "";
+		elements.subtext.classList.remove("visible");
 		return;
 	}
-
-	const count =
-		typeof cardsOrCount === "number"
-			? cardsOrCount
-			: cardsOrCount.filter((card) => card.style.display !== "none").length;
-
-	const message = `Found ${count} matching plugin${count === 1 ? "" : "s"}`;
-	subtext.textContent = message;
-	subtext.classList.add("visible");
+	elements.subtext.textContent = config.subtextMessage(count);
+	elements.subtext.classList.add("visible");
 }
 
-function handleFeaturedPluginVisibility(query) {
-	if (elements.featuredPluginContainer) {
-		const featuredCard = elements.featuredPluginContainer.querySelector(
-			".featured-plugin-card",
-		);
-		if (featuredCard) {
-			if (query && query.trim() !== "") {
-				if (featuredCard.classList.contains("expanded")) {
-					featuredCard.classList.remove("expanded");
-				}
-			}
+function toggleClearButton(inputElement, value) {
+	if (!inputElement) return;
+	const clearButton =
+		elements[
+			inputElement.id === "search-bar" ? "clearButton" : "clearButtonFixed"
+		];
+	if (!clearButton) return;
+
+	const shouldShow =
+		value.length > 0 &&
+		(inputElement.id !== "fixedSearchBar" ||
+			inputElement.classList.contains("show"));
+
+	clearButton.style.display = shouldShow ? "block" : "none";
+}
+
+const debouncedFilter = debounce(filterItems, DEBOUNCE);
+
+function addSearchFunctionality() {
+	const handleSearchInput = (e) => {
+		const value = e.target.value;
+		updateSearchState(value);
+
+		if (value === "") {
+			debouncedFilter.cancel();
+			config.renderFunction(true);
+		} else {
+			debouncedFilter(value);
 		}
+	};
+
+	for (const bar of [elements.searchBar, elements.fixedSearchBar]) {
+		if (bar) {
+			bar.addEventListener("input", handleSearchInput);
+		}
+	}
+
+	const clearSearch = (input) => {
+		updateSearchState("");
+		config.renderFunction(true);
+		if (input) {
+			input.focus();
+		}
+	};
+
+	for (const { button, input } of [
+		{ button: elements.clearButton, input: elements.searchBar },
+		{ button: elements.clearButtonFixed, input: elements.fixedSearchBar },
+	]) {
+		if (button) {
+			button.addEventListener("click", () => clearSearch(input));
+		}
+	}
+}
+
+function addFixedSearchButtonEvents() {
+	const { searchButton, fixedSearchBar, clearButtonFixed } = elements;
+	if (!searchButton || !fixedSearchBar) return;
+
+	searchButton.addEventListener("click", () => {
+		const isHidden = !fixedSearchBar.classList.contains("show");
+		fixedSearchBar.classList.toggle("hidden", !isHidden);
+		fixedSearchBar.classList.toggle("show", isHidden);
+
+		if (isHidden) {
+			fixedSearchBar.focus();
+			if (clearButtonFixed)
+				toggleClearButton(fixedSearchBar, fixedSearchBar.value);
+		} else {
+			if (clearButtonFixed) clearButtonFixed.style.display = "none";
+		}
+	});
+}
+
+function initSearchFromURL() {
+	const urlParams = new URLSearchParams(window.location.search);
+	const searchQuery = urlParams.get("q");
+	if (searchQuery) {
+		updateSearchState(searchQuery);
+		filterItems(searchQuery);
 	}
 }
 
@@ -195,108 +216,30 @@ function debounce(func, wait) {
 	return debounced;
 }
 
-function addSearchFunctionality() {
-	const { searchBar, fixedSearchBar, clearButton, clearButtonFixed } = elements;
+// --- Public API ---
 
-	const handleSearchInput = (e) => {
-		const value = e.target.value;
-		searchState.wasCleared = false;
-		updateSearchState(value);
-
-		const isAdminPage = elements.container.id === "plugins-list";
-		if (value === "" && !isAdminPage) {
-			debouncedFilter.cancel();
-			window.renderPlugins();
-		} else {
-			debouncedFilter(value);
-		}
+export function initSearch(userConfig) {
+	config = userConfig;
+	elements = {
+		searchBar: document.getElementById("search-bar"),
+		fixedSearchBar: document.getElementById("fixedSearchBar"),
+		clearButton: document.getElementById("clearSearch"),
+		clearButtonFixed: document.getElementById("clearFixedSearch"),
+		searchButton: document.getElementById("searchButton"),
+		container: document.getElementById(config.containerId),
+		subtext: document.getElementById("searchSubtext"),
 	};
 
-	for (const bar of [searchBar, fixedSearchBar]) {
-		if (bar) {
-			bar.addEventListener("input", handleSearchInput);
-		}
-	}
-
-	const clearSearch = (input) => {
-		searchState.wasCleared = true;
-		updateSearchState("");
-
-		const isAdminPage = elements.container.id === "plugins-list";
-		if (!isAdminPage && window.renderPlugins) {
-			window.renderPlugins();
-		} else {
-			filterPlugins("");
-		}
-
-		if (input) {
-			input.focus();
-		}
-	};
-
-	for (const { button, input } of [
-		{ button: clearButton, input: searchBar },
-		{ button: clearButtonFixed, input: fixedSearchBar },
-	]) {
-		if (button) {
-			button.addEventListener("click", () => clearSearch(input));
-		}
-	}
-}
-
-function toggleClearButton(inputElement, value) {
-	const clearButton =
-		elements[
-			inputElement.id === "search-bar" ? "clearButton" : "clearButtonFixed"
-		];
-	if (!clearButton) return;
-
-	const shouldShow =
-		value.length > 0 &&
-		(inputElement.id !== "fixedSearchBar" ||
-			inputElement.classList.contains("show"));
-
-	clearButton.style.display = shouldShow ? "block" : "none";
-}
-
-function addSearchButtonEvent() {
-	const { searchButton, fixedSearchBar, clearButtonFixed } = elements;
-
-	searchButton?.addEventListener("click", () => {
-		const isHidden = fixedSearchBar.classList.contains("hidden");
-		fixedSearchBar.classList.toggle("hidden", !isHidden);
-		fixedSearchBar.classList.toggle("show", isHidden);
-
-		if (isHidden) {
-			fixedSearchBar.focus();
-			clearButtonFixed.style.display =
-				fixedSearchBar.value.length > 0 ? "block" : "none";
-		} else {
-			clearButtonFixed.style.display = "none";
-		}
-	});
-}
-
-// --- Public Functions ---
-
-export const isFixedSearchFocused = () =>
-	document.activeElement === elements.fixedSearchBar;
-
-export function initSearchFromURL() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const searchQuery = urlParams.get("q");
-
-	if (searchQuery) {
-		updateSearchState(searchQuery);
-		filterPlugins(searchQuery);
-	}
-}
-
-const debouncedFilter = debounce(filterPlugins, DEBOUNCE);
-
-// --- Init ---
-
-document.addEventListener("DOMContentLoaded", () => {
 	addSearchFunctionality();
-	addSearchButtonEvent();
-});
+	addFixedSearchButtonEvents();
+
+	return {
+		prepareSearchableData,
+		filterItems: (query) => {
+			updateSearchState(query);
+			filterItems(query);
+		},
+		initSearchFromURL,
+		getCurrentValue: () => searchState.currentValue,
+	};
+}

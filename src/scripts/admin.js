@@ -1,12 +1,6 @@
 import * as api from "./admin-api.js";
 import * as ui from "./admin-ui.js";
-import {
-	filterPlugins,
-	initSearchFromURL,
-	invalidateSearchCache,
-	prepareSearchableData,
-	searchState,
-} from "./search.js";
+import { initSearch } from "./search.js";
 import { hidePopup, showToast } from "./shared.js";
 
 // --- State & DOM Elements ---
@@ -31,6 +25,18 @@ const counterElements = {
 	warning: document.getElementById("warning-count"),
 	broken: document.getElementById("broken-count"),
 };
+
+// --- Init Search ---
+const search = initSearch({
+	containerId: "plugins-list",
+	itemClass: "admin-plugin-item",
+	searchKeys: ["name", "authors", "description", "warningMessage"],
+	priorityKey: "name",
+	subtextMessage: (count) =>
+		`Found ${count} matching plugin${count === 1 ? "" : "s"}`,
+	renderFunction: rerender,
+	displayStyle: "block",
+});
 
 // --- Utils ---
 
@@ -128,8 +134,7 @@ function generateSourceUrl(installUrl) {
 
 // --- Render Function ---
 
-function rerender() {
-	invalidateSearchCache();
+function rerender(isFromClear = false) {
 	const { renderedPlugins, renderedElements } = ui.renderPluginsList(
 		pluginsList,
 		plugins,
@@ -140,7 +145,7 @@ function rerender() {
 			onPluginEdit,
 		},
 	);
-	prepareSearchableData(renderedPlugins, renderedElements);
+	search.prepareSearchableData(renderedPlugins, renderedElements);
 
 	const counts = {
 		total: plugins.length,
@@ -155,7 +160,10 @@ function rerender() {
 		counterElements.broken,
 		counts,
 	);
-	filterPlugins(searchState.currentValue);
+
+	if (!isFromClear) {
+		search.filterItems(search.getCurrentValue());
+	}
 }
 
 // --- UI Event Handlers ---
@@ -293,7 +301,7 @@ async function init() {
 		plugins = JSON.parse(JSON.stringify(originalPlugins));
 		filterButtons.all.classList.add("active");
 		rerender();
-		initSearchFromURL();
+		search.initSearchFromURL();
 	} catch (error) {
 		showToast(`Error loading plugins: ${error.message}`);
 	}
