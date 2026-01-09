@@ -162,7 +162,7 @@
         "authors": [
             "meqativ :3"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/meqativ/dumsane",
         "installUrl": "https://meqativ.github.io/dumsane/GetToken/",
         "warningMessage": ""
@@ -1558,10 +1558,10 @@
             "maisy",
             "John"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
-        "warningMessage": "Broken on 309+"
+        "warningMessage": ""
     },
     {
         "name": "Better Eval",
