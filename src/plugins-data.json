@@ -732,10 +732,10 @@
             "The Sun",
             "Purple_Ξye™"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/QuickDelete/",
-        "warningMessage": "It automatically accepts all confirmation alerts."
+        "warningMessage": ""
     },
     {
         "name": "BetterBetterChatGestures",
