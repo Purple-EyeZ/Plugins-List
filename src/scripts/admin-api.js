@@ -46,7 +46,7 @@ export async function fetchPlugins() {
  */
 export async function savePlugins(plugins) {
 	const jsonString = JSON.stringify(plugins, null, 4);
-	const response = await fetch("/api/save-plugins", {
+	const response = await fetch("/api/admin/save-plugins", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
