@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Plugin Source Tracker" />
+    <meta property="og:description" content="View automated diffs of plugin source code changes." />
+    <meta property="og:image" content="https://i.imgur.com/HBaPrGl.png" />
+    <meta property="og:image:width" content="630" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://plugins-list.pages.dev/Tracker/" />
+    <meta property="og:type" content="website" />
+
+    <title>Plugin Source Tracker</title>
+    <link rel="icon" type="image/svg" href="/assets/revenge-dark-christmas.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="/Christmas/snow.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/diff2html@3.4.22/bundles/css/diff2html.min.css">
+</head>
+
+<body>
+    <!-- Page Header -->
+    <h1>
+        <img src="/assets/revenge-dark-christmas.png" alt="Logo">
+        Source Tracker
+    </h1>
+
+    <div class="title-subtext">
+        Automated monitoring of minified source code changes.<br>
+        This tool provides transparency but does not guarantee absolute security.<br>
+        (Testing in prod)
+    </div>
+
+    <!-- Menu Button -->
+    <div class="menu-container">
+        <button id="menuButton" class="menu-button btn btn--primary">
+            <span class="material-symbols-rounded">menu</span> Menu
+        </button>
+        <div id="dropdownMenu" class="dropdown-menu">
+            <ul>
+                <li><a href="/"><span class="material-symbols-rounded">home</span> Home</a></li>
+                <li><a href="/Tracker/"><span class="material-symbols-rounded">track_changes</span> Tracker</a></li>
+                <li><a href="/About/"><span class="material-symbols-rounded">info</span> About</a></li>
+                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span
+                            class="material-symbols-rounded">bug_report</span> Report</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tracker Content -->
+    <div style="max-width: 1000px; margin: 0 auto;">
+
+        <div id="loader" class="loading">
+            <span class="material-symbols-rounded spin">sync</span> Loading history...
+        </div>
+
+        <div id="diffs-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/diff2html@3.4.22/bundles/js/diff2html-ui.min.js"></script>
+    <script src="https://unpkg.com/prettier@2.8.8/standalone.js"></script>
+    <script src="https://unpkg.com/prettier@2.8.8/parser-babel.js"></script>
+
+    <script type="module" src="/scripts/tracker.js"></script>
+    <script type="module" src="/scripts/shared.js"></script>
+    <script type="module" src="/Christmas/snow.js"></script>
+</body>
+
+</html>

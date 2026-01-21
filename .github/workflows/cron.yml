@@ -1,0 +1,15 @@
+name: Check Plugin Updates
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-cloudflare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloudflare Endpoint
+        run: |
+          curl -X POST https://plugins-list.pages.dev/api/trigger-update \
+          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"

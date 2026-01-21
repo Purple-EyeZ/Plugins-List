@@ -34,6 +34,7 @@ export default defineConfig({
 			input: {
 				main: resolve(__dirname, "src/index.html"),
 				themes: resolve(__dirname, "src/Themes/index.html"),
+				tracker: resolve(__dirname, "src/Tracker/index.html"),
 				about: resolve(__dirname, "src/About/index.html"),
 				admin: resolve(__dirname, "src/Admin/index.html"),
 			},
