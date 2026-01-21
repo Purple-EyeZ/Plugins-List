@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/complexity/noImportantStyles: shutup */
 :root {
 	--color-primary: #4a00e0;
 	--color-primary-hover: #8e2de2;
@@ -1366,4 +1367,107 @@ html.lg-on {
 	margin-top: 20px;
 	border-top: 1px solid var(--color-primary);
 	opacity: 0.6;
+}
+
+/* Tracker */
+.diff-card {
+	background-color: var(--color-background-surface);
+	border-radius: var(--radius-card);
+	margin-bottom: 30px;
+	overflow: hidden;
+	border: 1px solid var(--color-border);
+	position: relative;
+    z-index: 0;
+}
+
+.diff-header {
+	padding: 15px 20px;
+	background-color: var(--color-background-surface-hover);
+	border-bottom: 1px solid var(--color-border);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.diff-plugin-name {
+	font-family: var(--font-heading);
+	font-size: 1.14rem;
+	font-weight: 600;
+	color: var(--color-white);
+}
+
+.diff-date {
+	color: var(--color-text-secondary);
+	font-size: 0.9rem;
+	background-color: var(--color-background-input);
+	padding: 4px 10px;
+	border-radius: var(--radius-button);
+}
+
+.diff-content {
+	background-color: #1e1e1e;
+}
+
+.d2h-file-header {
+    display: none !important;
+}
+
+.d2h-wrapper, 
+.d2h-file-wrapper {
+    background-color: transparent !important;
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+.d2h-code-linenumber {
+    background-color: #222428 !important;
+    border-color: #2f3136 !important;
+    color: #5d6067 !important;
+	cursor: default !important;
+}
+
+.d2h-code-side-line, 
+.d2h-code-line {
+    background-color: #1a1b1e !important;
+    color: #e0e0e0 !important;
+}
+
+.d2h-code-line-ctn {
+    color: #dadada !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-size: 0.85rem !important;
+}
+
+.d2h-ins {
+    background-color: #1f3123  !important;
+}
+
+.d2h-code-line ins, 
+.d2h-code-line ins .d2h-code-line-ctn {
+    background-color: transparent !important;
+    border: none !important;
+    color: #4edc54 !important;
+    text-decoration: none !important;
+}
+
+.d2h-del {
+    background-color: #392123 !important;
+}
+
+.d2h-code-line del, 
+.d2h-code-line del .d2h-code-line-ctn {
+    background-color: transparent !important;
+    border: none !important;
+    color: #ff6b6b !important;
+    text-decoration: none !important;
+    opacity: 0.7;
+}
+
+.d2h-emptyplaceholder {
+    background-color: #151519 !important;
+    border-color: #2f3136 !important;
+}
+
+.d2h-code-linerow-info {
+    display: none !important;
 }
