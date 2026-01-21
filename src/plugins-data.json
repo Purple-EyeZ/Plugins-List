@@ -1606,5 +1606,16 @@
         "sourceUrl": "https://github.com/il1ll/RevengePlugins",
         "installUrl": "https://il1ll.github.io/RevengePlugins/HypeSquadSwitcher/",
         "warningMessage": ""
+    },
+    {
+        "name": "Override User Avatars",
+        "description": "Allows you to set a custom profile picture for any Discord user.",
+        "authors": [
+            "Furretar"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/furretar/Override-User-Avatars-Revenge-Plugin",
+        "installUrl": "https://furretar.github.io/Override-User-Avatars-Revenge-Plugin/Override-User-Avatars",
+        "warningMessage": ""
     }
 ]
