@@ -11,11 +11,36 @@ export async function onRequestPost(context) {
 	);
 	const plugins = await pluginsResp.json();
 
+	const BATCH_SIZE = 20;
+
+	let startIndex = 0;
+	const storedIndex = await env.PLUGIN_TRACKER.get("batch_index");
+	if (storedIndex) {
+		startIndex = parseInt(storedIndex, 10);
+		if (Number.isNaN(startIndex)) startIndex = 0;
+	}
+
+	const endIndex = startIndex + BATCH_SIZE;
+
+	const pluginsToProcess = plugins.slice(startIndex, endIndex);
+
+	let nextIndex = endIndex;
+	if (nextIndex >= plugins.length) {
+		nextIndex = 0;
+	}
+	await env.PLUGIN_TRACKER.put("batch_index", nextIndex.toString());
+
 	const updates = [];
+	const failedManifests = [];
+	const failedCode = [];
+	let successCount = 0;
 	const logDate = new Date().toISOString();
 
-	for (const plugin of plugins) {
-		if (!plugin.installUrl) continue;
+	for (const plugin of pluginsToProcess) {
+		if (!plugin.installUrl) {
+			console.log(`Skipping ${plugin.name} (no installUrl)`);
+			continue;
+		}
 
 		try {
 			let baseUrl = plugin.installUrl;
@@ -26,6 +51,7 @@ export async function onRequestPost(context) {
 
 			if (!manifestResp.ok) {
 				console.log(`No manifest for ${plugin.name}`);
+				failedManifests.push(plugin.name);
 				continue;
 			}
 
@@ -35,7 +61,10 @@ export async function onRequestPost(context) {
 			const jsUrl = `${baseUrl}${mainFile}`;
 
 			const codeResp = await fetch(`${jsUrl}?t=${Date.now()}`);
-			if (!codeResp.ok) continue;
+			if (!codeResp.ok) {
+				failedCode.push(plugin.name);
+				continue;
+			}
 
 			const currentCode = await codeResp.text();
 
@@ -60,12 +89,26 @@ export async function onRequestPost(context) {
 
 				updates.push(plugin.name);
 			}
+			successCount++;
 		} catch (err) {
 			console.error(`Error on ${plugin.name}:`, err);
 		}
 	}
 
-	return new Response(JSON.stringify({ success: true, updated: updates }), {
-		headers: { "Content-Type": "application/json" },
-	});
+	return new Response(
+		JSON.stringify({
+			success: true,
+			batchStart: startIndex,
+			batchEnd: endIndex,
+			nextBatchStart: nextIndex,
+			processedInBatch: successCount,
+			updated: updates,
+			failedManifests: failedManifests,
+			failedCode: failedCode,
+			totalPluginsInList: plugins.length,
+		}),
+		{
+			headers: { "Content-Type": "application/json" },
+		},
+	);
 }
