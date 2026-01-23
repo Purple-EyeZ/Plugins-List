@@ -151,7 +151,7 @@
         "authors": [
             "Fiery"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/fierdetta/text-replace",
         "installUrl": "https://fierdetta.github.io/text-replace/",
         "warningMessage": ""
@@ -1376,10 +1376,10 @@
         "authors": [
             "fres"
         ],
-        "status": "warning",
+        "status": "broken",
         "sourceUrl": "https://github.com/fres621/revenge-plugs",
         "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
-        "warningMessage": "Opening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
+        "warningMessage": "(Currently broken)\n\nOpening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
     },
     {
         "name": "Rich Presence",
