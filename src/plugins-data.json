@@ -786,9 +786,10 @@
         "name": "Dislate Lite",
         "description": "Translates text into a desired language.",
         "authors": [
-            "Acquite <3",
-            "sapphire :>",
-            "Rico040 ;)"
+            "Acquite",
+            "sapphire",
+            "Rico040",
+            "chrysoljq"
         ],
         "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
@@ -1337,7 +1338,7 @@
     },
     {
         "name": "Plugins List",
-        "description": "A modified version of Nexpid's plugin browser that uses https://plugins-list.pages.dev as source.",
+        "description": "Browse plugins & themes from https://plugins-list.pages.dev/ - Fork of Nexpid's Plugin Browser",
         "authors": [
             "nexpid",
             "Purple_Ξye™"
