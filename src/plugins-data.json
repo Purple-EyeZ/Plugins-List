@@ -5,7 +5,7 @@
         "authors": [
             "Kyza"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/kyza/vendetta-plugins",
         "installUrl": "https://kyza.github.io/vendetta-plugins/written-numbers/",
         "warningMessage": ""
@@ -19,7 +19,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/WolfPlugs/vendetta-plugins",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/petpet/",
-        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "Osu! Stats",
@@ -27,7 +27,7 @@
         "authors": [
             "Wolfkid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/WolfPlugs/vendetta-plugins",
         "installUrl": "https://plugins.obamabot.me/vendetta-plugins/osu/",
         "warningMessage": ""
@@ -73,7 +73,7 @@
         "authors": [
             "sapphire"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/aeongdesu/vdplugins",
         "installUrl": "https://aeongdesu.github.io/vdplugins/UtilCommands/",
         "warningMessage": ""
@@ -162,7 +162,7 @@
         "authors": [
             "meqativ :3"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/meqativ/dumsane",
         "installUrl": "https://meqativ.github.io/dumsane/GetToken/",
         "warningMessage": ""
@@ -410,7 +410,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/aeongdesu/vdplugins",
         "installUrl": "https://aeongdesu.github.io/vdplugins/FirstMessage/",
-        "warningMessage": ""
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "AltMediaPicker",
@@ -689,7 +689,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/mugman174/vendetta-plugins",
         "installUrl": "https://mugman174.github.io/vendetta-plugins/sysinfo/",
-        "warningMessage": ""
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "HideAppButton",
@@ -732,10 +732,10 @@
             "The Sun",
             "Purple_Ξye™"
         ],
-        "status": "warning",
+        "status": "working",
         "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/QuickDelete/",
-        "warningMessage": "It automatically accepts all confirmation alerts."
+        "warningMessage": ""
     },
     {
         "name": "BetterBetterChatGestures",
@@ -1040,10 +1040,10 @@
         "authors": [
             "nikosszzz"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nikosszzz/vd-plugins",
         "installUrl": "https://vd-plugins.github.io/proxy/nikosszzz.github.io/vd-plugins/friendInvites/",
-        "warningMessage": ""
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "CatFacts",
@@ -1054,7 +1054,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/jdev082/vd-repo2",
         "installUrl": "https://vd-plugins.github.io/proxy/jdev082.github.io/vd-repo2/CatFacts/",
-        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+"
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "LoveFemboys",
@@ -1219,7 +1219,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/addonList/",
-        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+ (ephemeral messages still work)"
+        "warningMessage": "Basically all plugins that send messages using slash commands are broken in 294+ (ephemeral messages still work)\n\nUse the Commands plugin instead."
     },
     {
         "name": "uwuify",
@@ -1241,7 +1241,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/kitomanari/vendetta-stuff",
         "installUrl": "https://vd-plugins.github.io/proxy/kitomanari.github.io/vendetta-stuff/spotifyShareCommands/",
-        "warningMessage": ""
+        "warningMessage": "Use the Commands plugin instead."
     },
     {
         "name": "BetterChatGestures",
@@ -1558,10 +1558,10 @@
             "maisy",
             "John"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
-        "warningMessage": "Broken on 309+"
+        "warningMessage": ""
     },
     {
         "name": "Better Eval",
