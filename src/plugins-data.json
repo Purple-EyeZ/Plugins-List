@@ -151,7 +151,7 @@
         "authors": [
             "Fiery"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/fierdetta/text-replace",
         "installUrl": "https://fierdetta.github.io/text-replace/",
         "warningMessage": ""
@@ -786,9 +786,10 @@
         "name": "Dislate Lite",
         "description": "Translates text into a desired language.",
         "authors": [
-            "Acquite <3",
-            "sapphire :>",
-            "Rico040 ;)"
+            "Acquite",
+            "sapphire",
+            "Rico040",
+            "chrysoljq"
         ],
         "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
@@ -1337,7 +1338,7 @@
     },
     {
         "name": "Plugins List",
-        "description": "A modified version of Nexpid's plugin browser that uses https://plugins-list.pages.dev as source.",
+        "description": "Browse plugins & themes from https://plugins-list.pages.dev/ - Fork of Nexpid's Plugin Browser",
         "authors": [
             "nexpid",
             "Purple_Ξye™"
@@ -1376,10 +1377,10 @@
         "authors": [
             "fres"
         ],
-        "status": "warning",
+        "status": "broken",
         "sourceUrl": "https://github.com/fres621/revenge-plugs",
         "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
-        "warningMessage": "Opening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
+        "warningMessage": "(Currently broken)\n\nOpening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
     },
     {
         "name": "Rich Presence",
