@@ -1618,5 +1618,16 @@
         "sourceUrl": "https://github.com/furretar/Override-User-Avatars-Revenge-Plugin",
         "installUrl": "https://furretar.github.io/Override-User-Avatars-Revenge-Plugin/Override-User-Avatars",
         "warningMessage": ""
+    },
+    {
+        "name": "GifRoulette",
+        "description": "Tempt fate and send a gif.",
+        "authors": [
+            "btmc727"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/otkusteyler/GifRoulette",
+        "installUrl": "https://otkusteyler.github.io/GifRoulette/",
+        "warningMessage": ""
     }
 ]
