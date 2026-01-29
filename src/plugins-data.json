@@ -251,10 +251,10 @@
             "Dziurwa",
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/customVoiceMessages/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/customVoiceMessages/",
-        "warningMessage": ""
+        "warningMessage": "Only works on mobile, it'll be shown as a file on PC."
     },
     {
         "name": "No Embed Copy",
