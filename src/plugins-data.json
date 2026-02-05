@@ -184,10 +184,10 @@
         "authors": [
             "redstonekasi"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/redstonekasi/vendetta-plugins",
         "installUrl": "https://redstonekasi.github.io/vendetta-plugins/realmoji/",
-        "warningMessage": ""
+        "warningMessage": "Doesn’t work with animated emojis (they’ll be static)."
     },
     {
         "name": "NoCompression",
