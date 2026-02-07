@@ -1629,5 +1629,16 @@
         "sourceUrl": "https://github.com/otkusteyler/GifRoulette",
         "installUrl": "https://otkusteyler.github.io/GifRoulette/",
         "warningMessage": ""
+    },
+    {
+        "name": "Animal Commands",
+        "description": "Adds multiple animal image commands.",
+        "authors": [
+            "Vaiskiainen"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/Vaiskiainen/testplugins/tree/master/plugins/animalCommands",
+        "installUrl": "https://vaiskiainen.github.io/testplugins/animalCommands/",
+        "warningMessage": ""
     }
 ]
