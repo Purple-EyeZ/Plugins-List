@@ -1651,5 +1651,16 @@
         "sourceUrl": "https://github.com/theunrealzaka/FavouriteAnything",
         "installUrl": "https://theunrealzaka.github.io/FavouriteAnything/favouriteanything",
         "warningMessage": ""
+    },
+    {
+        "name": "🇺🇸 GTA VI Countdown",
+        "description": "Counting down until you reach heaven.",
+        "authors": [
+            "Purple_Ξye™"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
+        "installUrl": "https://purple-eyez.github.io/RevengePlugins/GTAVICountdown",
+        "warningMessage": ""
     }
 ]
