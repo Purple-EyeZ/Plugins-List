@@ -1640,5 +1640,16 @@
         "sourceUrl": "https://github.com/Vaiskiainen/testplugins/tree/master/plugins/animalCommands",
         "installUrl": "https://vaiskiainen.github.io/testplugins/animalCommands/",
         "warningMessage": ""
+    },
+    {
+        "name": "FavouriteAnything",
+        "description": "Favourite any image or video, not just GIFs! Adds the ⭐ favourite button to all media in the image viewer.",
+        "authors": [
+            "TheUnrealZaka"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/theunrealzaka/FavouriteAnything",
+        "installUrl": "https://theunrealzaka.github.io/FavouriteAnything/favouriteanything",
+        "warningMessage": ""
     }
 ]
