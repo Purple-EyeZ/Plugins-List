@@ -146,17 +146,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Text Replace",
-        "description": "Generic text replacement plugin",
-        "authors": [
-            "Fiery"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/fierdetta/text-replace",
-        "installUrl": "https://fierdetta.github.io/text-replace/",
-        "warningMessage": ""
-    },
-    {
         "name": "TokenUtils",
         "description": "Adds the /token commands",
         "authors": [
@@ -1377,10 +1366,10 @@
         "authors": [
             "fres"
         ],
-        "status": "broken",
+        "status": "warning",
         "sourceUrl": "https://github.com/fres621/revenge-plugs",
         "installUrl": "https://fres621.github.io/revenge-plugs/FileContentPreview/",
-        "warningMessage": "(Currently broken)\n\nOpening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
+        "warningMessage": "Opening a preview in a thread may not work if you previously opened one in a channel. You'll need to restart the app."
     },
     {
         "name": "Rich Presence",
@@ -1661,6 +1650,29 @@
         "status": "working",
         "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/GTAVICountdown",
+        "warningMessage": ""
+    },
+    {
+        "name": "Jump To Top",
+        "description": "Adds a button to jump to the first message in a chat. The opposite of jump to present.",
+        "authors": [
+            "tralwdwdd"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/tralwdwd/plugins",
+        "installUrl": "https://tralwdwd.github.io/plugins/JumpToTop",
+        "warningMessage": ""
+    },
+    {
+        "name": "Text Replace",
+        "description": "Generic text replacement plugin",
+        "authors": [
+            "Fiery",
+            "Purple_Ξye™"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
+        "installUrl": "https://purple-eyez.github.io/RevengePlugins/TextReplace",
         "warningMessage": ""
     }
 ]
