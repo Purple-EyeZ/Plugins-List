@@ -1662,5 +1662,16 @@
         "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/GTAVICountdown",
         "warningMessage": ""
+    },
+    {
+        "name": "Jump To Top",
+        "description": "Adds a button to jump to the first message in a chat. The opposite of jump to present.",
+        "authors": [
+            "tralwdwdd"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/tralwdwd/plugins",
+        "installUrl": "https://tralwdwd.github.io/plugins/JumpToTop",
+        "warningMessage": ""
     }
 ]
