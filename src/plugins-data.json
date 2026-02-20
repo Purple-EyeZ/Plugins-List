@@ -1625,7 +1625,7 @@
         "authors": [
             "Vaiskiainen"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/Vaiskiainen/testplugins/tree/master/plugins/animalCommands",
         "installUrl": "https://vaiskiainen.github.io/testplugins/animalCommands/",
         "warningMessage": ""
