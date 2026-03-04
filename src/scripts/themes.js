@@ -83,8 +83,8 @@ async function init() {
 		allThemes = await response.json();
 
 		initFilters();
-		rerender();
 		search.initSearchFromURL();
+		rerender();
 	} catch (error) {
 		console.error("Error loading themes data:", error);
 		if (themesContainer) {
