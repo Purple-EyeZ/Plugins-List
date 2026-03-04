@@ -69,7 +69,7 @@ function filterItems(query) {
 		const bHasPriorityMatch = bPriorityResult !== null;
 
 		if (aHasPriorityMatch && !bHasPriorityMatch) return -1;
-		if (!bHasPriorityMatch && aHasPriorityMatch) return 1;
+		if (!aHasPriorityMatch && bHasPriorityMatch) return 1;
 		if (aHasPriorityMatch && bHasPriorityMatch) {
 			return bPriorityResult.score - aPriorityResult.score;
 		}
