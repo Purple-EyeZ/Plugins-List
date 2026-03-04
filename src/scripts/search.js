@@ -239,6 +239,9 @@ export function initSearch(userConfig) {
 			updateSearchState(query);
 			filterItems(query);
 		},
+		applyCurrentFilter: () => {
+			filterItems(searchState.currentValue);
+		},
 		initSearchFromURL,
 		getCurrentValue: () => searchState.currentValue,
 	};

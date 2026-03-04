@@ -162,7 +162,7 @@ function rerender(isFromClear = false) {
 	);
 
 	if (!isFromClear) {
-		search.filterItems(search.getCurrentValue());
+		search.applyCurrentFilter();
 	}
 }
 
@@ -300,8 +300,8 @@ async function init() {
 		originalPlugins = await api.fetchPlugins();
 		plugins = JSON.parse(JSON.stringify(originalPlugins));
 		filterButtons.all.classList.add("active");
-		rerender();
 		search.initSearchFromURL();
+		rerender();
 	} catch (error) {
 		showToast(`Error loading plugins: ${error.message}`);
 	}

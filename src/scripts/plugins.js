@@ -79,7 +79,7 @@ function rerender(isFromClear = false) {
 	search.prepareSearchableData(renderedPlugins, renderedElements);
 
 	if (!isFromClear) {
-		search.filterItems(search.getCurrentValue());
+		search.applyCurrentFilter();
 	}
 }
 
@@ -100,8 +100,8 @@ async function init() {
 		const changes = analyzePluginChanges(allPlugins);
 		ui.showChangesPopup(changes);
 
-		rerender();
 		search.initSearchFromURL();
+		rerender();
 	} catch (error) {
 		console.error("Error loading plugins data:", error);
 		if (pluginsContainer) {
