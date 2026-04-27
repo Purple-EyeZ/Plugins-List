@@ -407,10 +407,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 325+"
     },
     {
         "name": "Twemoji Everywhere",
