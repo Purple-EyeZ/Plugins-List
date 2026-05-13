@@ -552,10 +552,10 @@
             "maisy",
             "シグマ siguma"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/shipwr3ckd/revengeplugin/tree/master/plugins/AnonymousFileNames/",
         "installUrl": "https://shipwr3ckd.github.io/revengeplugin/AnonymousFileNames/",
-        "warningMessage": ""
+        "warningMessage": "Prevents sending files in slash commands."
     },
     {
         "name": "Experiments",
