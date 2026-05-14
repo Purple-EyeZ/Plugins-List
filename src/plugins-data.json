@@ -805,10 +805,10 @@
             "pylix",
             "aliernfrog"
         ],
-        "status": "working",
+        "status": "warning",
         "sourceUrl": "https://github.com/aliernfrog/vd-plugins",
         "installUrl": "https://aliernfrog.github.io/vd-plugins/Stealmoji/",
-        "warningMessage": ""
+        "warningMessage": "May cause crashes when viewing reactions."
     },
     {
         "name": "UserBG",
