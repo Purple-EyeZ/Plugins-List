@@ -407,10 +407,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
-        "warningMessage": ""
+        "warningMessage": "Crashes when opening the app settings on 329+"
     },
     {
         "name": "Twemoji Everywhere",
@@ -1425,10 +1425,10 @@
         "authors": [
             "Win8.1VMUser"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
-        "warningMessage": ""
+        "warningMessage": "Crashes when opening the app settings on 329+"
     },
     {
         "name": "Decor",
