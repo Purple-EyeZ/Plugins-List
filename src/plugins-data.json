@@ -1537,10 +1537,10 @@
             "maisy",
             "John"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
-        "warningMessage": ""
+        "warningMessage": "Broken on 330+"
     },
     {
         "name": "Better Eval",
@@ -1674,6 +1674,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/purple-eyez/RevengePlugins",
         "installUrl": "https://purple-eyez.github.io/RevengePlugins/Realmoji",
+        "warningMessage": ""
+    },
+    {
+        "name": "BypassPinPrompt",
+        "description": "Bypass the pin prompt when using the pin functions port from Equicord.",
+        "authors": [
+            "btmc727"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/otkusteyler/BypassPinPrompt",
+        "installUrl": "https://otkusteyler.github.io/BypassPinPrompt/",
         "warningMessage": ""
     }
 ]
