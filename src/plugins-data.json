@@ -1537,10 +1537,10 @@
             "maisy",
             "John"
         ],
-        "status": "broken",
+        "status": "warning",
         "sourceUrl": "https://github.com/janisslsm/vdplugins",
         "installUrl": "https://janisslsm.github.io/vdplugins/ReviewDB",
-        "warningMessage": "Broken on 330+"
+        "warningMessage": "Server reviews crash."
     },
     {
         "name": "Better Eval",
