@@ -1425,10 +1425,10 @@
         "authors": [
             "Win8.1VMUser"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/apexteampl/Apex-Plugins",
         "installUrl": "https://apexteampl.github.io/Apex-Plugins/MoreAlts/",
-        "warningMessage": "Crashes when opening the app settings on 329+"
+        "warningMessage": ""
     },
     {
         "name": "Decor",
