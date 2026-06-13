@@ -1686,5 +1686,60 @@
         "sourceUrl": "https://github.com/otkusteyler/BypassPinPrompt",
         "installUrl": "https://otkusteyler.github.io/BypassPinPrompt/",
         "warningMessage": ""
+    },
+    {
+        "name": "GuildLurk",
+        "description": "Join guilds without appearing in member list",
+        "authors": [
+            "fshin"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/fshinz/Revenge-Plugins",
+        "installUrl": "https://fshinz.github.io/Revenge-Plugins/GuildLurk",
+        "warningMessage": ""
+    },
+    {
+        "name": "InfoCommands",
+        "description": "commands to Get user, server, and invite information",
+        "authors": [
+            "fshin"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/fshinz/Revenge-Plugins",
+        "installUrl": "https://fshinz.github.io/Revenge-Plugins/InfoCommands",
+        "warningMessage": ""
+    },
+    {
+        "name": "ValidUser",
+        "description": "Fixes unresolved user mentions like @unknown-user to a normal clickable mention.",
+        "authors": [
+            "fshin"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/fshinz/Revenge-Plugins",
+        "installUrl": "https://fshinz.github.io/Revenge-Plugins/ValidUser",
+        "warningMessage": ""
+    },
+    {
+        "name": "SilentDelete",
+        "description": "Silently deletes a message to bypass vencord message loggers.",
+        "authors": [
+            "snipermaster226"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/snipermaster226/Silentdeletee",
+        "installUrl": "https://snipermaster226.github.io/Silentdeletee/",
+        "warningMessage": ""
+    },
+    {
+        "name": "UwUify",
+        "description": "Lets you UwUify text. As a filter on all your messages or through the /uwuify command",
+        "authors": [
+            "meqativ :3"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/meqativ/dumsane",
+        "installUrl": "https://meqativ.github.io/dumsane/UwUify",
+        "warningMessage": ""
     }
 ]
