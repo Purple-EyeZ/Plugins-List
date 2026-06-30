@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite build && wrangler pages dev dist",
     "build": "vite build",
     "preview": "vite build && vite preview",
     "lint": "bunx biome check --write ./src ./functions"
