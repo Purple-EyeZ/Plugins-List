@@ -27,7 +27,7 @@ const formatCode = (code) => {
  */
 function renderDiffEntry(entry) {
 	const card = document.createElement("div");
-	card.className = "diff-card";
+	card.className = "diff-card collapsed";
 
 	const date = new Date(entry.date).toLocaleString([], {
 		year: "numeric",
@@ -39,12 +39,22 @@ function renderDiffEntry(entry) {
 
 	card.innerHTML = `
         <div class="diff-header">
-            <span class="diff-plugin-name">${entry.pluginName}</span>
-            <span class="diff-date">${date}</span>
+            <div>
+                <span class="diff-plugin-name">${entry.pluginName}</span>
+                <span class="diff-date">${date}</span>
+            </div>
+            <span class="material-symbols-rounded expand-icon">expand_more</span>
         </div>
-        <div class="diff-content" id="diff-content-${Date.parse(entry.date)}"></div>
+        <div class="diff-content"></div>
     `;
 	container.appendChild(card);
+
+	const header = card.querySelector(".diff-header");
+	const targetElement = card.querySelector(".diff-content");
+
+	header.addEventListener("click", () => {
+		card.classList.toggle("collapsed");
+	});
 
 	setTimeout(() => {
 		const oldPretty = formatCode(entry.oldCode);
@@ -57,13 +67,13 @@ function renderDiffEntry(entry) {
 			newPretty,
 		);
 
-		const targetElement = card.querySelector(".diff-content");
 		const ui = new Diff2HtmlUI(targetElement, patch, {
 			drawFileList: false,
 			matching: "lines",
 			outputFormat: "line-by-line",
 			colorScheme: "dark",
 		});
+
 		ui.draw();
 	}, 10);
 }

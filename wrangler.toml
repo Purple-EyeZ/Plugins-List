@@ -1,0 +1,6 @@
+name = "plugins-list"
+pages_build_output_dir = "dist"
+
+[[kv_namespaces]]
+binding = "PLUGIN_TRACKER"
+id = "11aa34ffc1b246ac83510be03727430d"
