@@ -26,6 +26,18 @@ const formatCode = (code) => {
  * @param {Object} entry - The history entry including oldCode and newCode.
  */
 function renderDiffEntry(entry) {
+	const rawDiffs = Diff.diffChars(entry.oldCode, entry.newCode);
+
+	const hasSignificantChange = rawDiffs.some(
+		(part) =>
+			(part.added || part.removed) &&
+			part.value.replace(/\s+/g, "").length >= 3,
+	);
+
+	if (!hasSignificantChange) {
+		return false;
+	}
+
 	const card = document.createElement("div");
 	card.className = "diff-card";
 
@@ -66,6 +78,8 @@ function renderDiffEntry(entry) {
 		});
 		ui.draw();
 	}, 10);
+
+	return true;
 }
 
 /**
@@ -84,22 +98,32 @@ async function loadDiffs() {
 		loader.style.display = "none";
 
 		if (!history || history.length === 0) {
-			container.innerHTML = `
-                <div class="no-results-message" style="display:flex; flex-direction:column; align-items:center;">
-                    <span class="material-symbols-rounded" style="font-size: 3rem; margin-bottom: 10px;">check_circle</span>
-                    <p>No changes detected recently.</p>
-                </div>
-            `;
+			showNoResults();
 			return;
 		}
 
+		let displayedCount = 0;
 		for (const entry of history) {
-			renderDiffEntry(entry);
+			const isRendered = renderDiffEntry(entry);
+			if (isRendered) displayedCount++;
+		}
+
+		if (displayedCount === 0) {
+			showNoResults();
 		}
 	} catch (e) {
 		console.error(e);
 		loader.innerHTML = `<span style="color: var(--color-danger);">Error loading tracker history.</span>`;
 	}
+}
+
+function showNoResults() {
+	container.innerHTML = `
+        <div class="no-results-message" style="display:flex; flex-direction:column; align-items:center;">
+            <span class="material-symbols-rounded" style="font-size: 3rem; margin-bottom: 10px;">check_circle</span>
+            <p>No significant changes detected recently.</p>
+        </div>
+    `;
 }
 
 document.addEventListener("DOMContentLoaded", loadDiffs);
