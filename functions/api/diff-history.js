@@ -1,12 +1,12 @@
 export async function onRequest(context) {
 	const { env } = context;
 
-	const list = await env.PLUGIN_TRACKER.list({ prefix: "diff:", limit: 20 });
+	const list = await env.PLUGIN_TRACKER.list({ prefix: "diff:" });
+
+	const recentKeys = list.keys.slice(-20).reverse();
 
 	const history = await Promise.all(
-		list.keys
-			.reverse()
-			.map((key) => env.PLUGIN_TRACKER.get(key.name, { type: "json" })),
+		recentKeys.map((key) => env.PLUGIN_TRACKER.get(key.name, { type: "json" })),
 	);
 
 	const validHistory = history.filter((item) => item !== null);
