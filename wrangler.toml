@@ -1,6 +1,10 @@
 name = "plugins-list"
 pages_build_output_dir = "dist"
 
+[vars]
+GITHUB_REPO = "Purple-EyeZ/Plugins-List"
+GITHUB_USER = "Purple-EyeZ"
+
 [[kv_namespaces]]
 binding = "PLUGIN_TRACKER"
 id = "11aa34ffc1b246ac83510be03727430d"
