@@ -1179,17 +1179,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Chatbox Avatar",
-        "description": "Quickly view your profile from the chatbox.",
-        "authors": [
-            "Cynosphere"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
-        "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ChatboxAvatar/",
-        "warningMessage": ""
-    },
-    {
         "name": "Addon List",
         "description": "Adds commands for showing off your plugin and theme list.",
         "authors": [
