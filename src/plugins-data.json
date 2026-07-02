@@ -1611,7 +1611,7 @@
     },
     {
         "name": "FavouriteAnything",
-        "description": "Favourite any image or video, not just GIFs! Adds the ⭐ favourite button to all media in the image viewer.",
+        "description": "Favourite any image or video, not just GIFs! Adds the favourite button to all media in the image viewer.",
         "authors": [
             "TheUnrealZaka"
         ],
