@@ -184,10 +184,10 @@
         "authors": [
             "MSMA"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/martinz64/vendetta-plugins",
         "installUrl": "https://martinz64.github.io/vendetta-plugins/FileSizeOnPicker/",
-        "warningMessage": "Broken on 307+"
+        "warningMessage": ""
     },
     {
         "name": "Image search",
@@ -1083,12 +1083,13 @@
         "name": "🗿",
         "description": "🗿",
         "authors": [
-            "Cynosphere"
+            "Cynosphere",
+            "kmmiio99o"
         ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
-        "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/Moyai/",
-        "warningMessage": ""
+        "status": "warning",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins/tree/main/plugins/Moyai",
+        "installUrl": "https://rksv.kmmiio99o.dev/Moyai",
+        "warningMessage": "- The plugin WON'T work if you use DND mode on your phone.\n- The plugin might stop working if you use any type of message loggers."
     },
     {
         "name": "Tablet Mode",
@@ -1176,17 +1177,6 @@
         "status": "broken",
         "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/vendetta.nexpid.xyz/hide-servers/",
-        "warningMessage": ""
-    },
-    {
-        "name": "Chatbox Avatar",
-        "description": "Quickly view your profile from the chatbox.",
-        "authors": [
-            "Cynosphere"
-        ],
-        "status": "broken",
-        "sourceUrl": "https://github.com/cynosphere/VendettaPlugins",
-        "installUrl": "https://vd-plugins.github.io/proxy/cynosphere.github.io/VendettaPlugins/ChatboxAvatar/",
         "warningMessage": ""
     },
     {
@@ -1621,7 +1611,7 @@
     },
     {
         "name": "FavouriteAnything",
-        "description": "Favourite any image or video, not just GIFs! Adds the ⭐ favourite button to all media in the image viewer.",
+        "description": "Favourite any image or video, not just GIFs! Adds the favourite button to all media in the image viewer.",
         "authors": [
             "TheUnrealZaka"
         ],
@@ -1740,6 +1730,18 @@
         "status": "working",
         "sourceUrl": "https://github.com/meqativ/dumsane",
         "installUrl": "https://meqativ.github.io/dumsane/UwUify",
+        "warningMessage": ""
+    },
+    {
+        "name": "Chatbox Avatar",
+        "description": "Quickly view your profile from the chatbox.",
+        "authors": [
+            "Cynosphere",
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins/tree/main/plugins/ChatboxAvatar",
+        "installUrl": "https://rksv.kmmiio99o.dev/ChatboxAvatar",
         "warningMessage": ""
     }
 ]
