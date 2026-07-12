@@ -1463,7 +1463,7 @@
         "status": "warning",
         "sourceUrl": "https://github.com/angelix1/MP",
         "installUrl": "https://angelix1.github.io/MP/angel/antiedzero/",
-        "warningMessage": "⚠️ Editing your own messages may include previous edit logs."
+        "warningMessage": "⚠️ Editing your own messages may include previous edit logs.\n\n⚠️ May still cause random crashes."
     },
     {
         "name": "Radial Status v1.0.1",
@@ -1742,6 +1742,61 @@
         "status": "working",
         "sourceUrl": "https://github.com/kmmiio99o/vd-plugins/tree/main/plugins/ChatboxAvatar",
         "installUrl": "https://rksv.kmmiio99o.dev/ChatboxAvatar",
+        "warningMessage": ""
+    },
+    {
+        "name": "Piratifier",
+        "description": "Turns all yer messages into pirate speak! Uses the monkeyness.com API by default, with a powerful on-device fallback. Supports /piratify command.",
+        "authors": [
+            "mineogo"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/mineogo/revenge-stuff",
+        "installUrl": "https://mineogo.github.io/revenge-stuff/piratifier/",
+        "warningMessage": ""
+    },
+    {
+        "name": "BetterCommandPopout",
+        "description": "Adds options to copy command mention and ID in the command popout.",
+        "authors": [
+            "aliernfrog"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/aliernfrog/vd-plugins",
+        "installUrl": "https://aliernfrog.github.io/vd-plugins/BetterCommandPopout/",
+        "warningMessage": ""
+    },
+    {
+        "name": "Next Translator",
+        "description": "Translates text into a desired language.",
+        "authors": [
+            "Rugved"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/rugved-danej/discord-plugins",
+        "installUrl": "https://raw.githubusercontent.com/rugved-danej/discord-plugins/main/dist/next-translator/",
+        "warningMessage": ""
+    },
+    {
+        "name": "PermissionViewer",
+        "description": "View the permissions a user or channel has, and the roles of a server",
+        "authors": [
+            "Livie"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/lvwmwm/vendettian-plugins",
+        "installUrl": "https://lvwmwm.github.io/vendettian-plugins/permissionviewer/",
+        "warningMessage": ""
+    },
+    {
+        "name": "BringBackTenor",
+        "description": "Revive the dead tenor gif search",
+        "authors": [
+            "Livie"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/lvwmwm/vendettian-plugins",
+        "installUrl": "https://lvwmwm.github.io/vendettian-plugins/BringBackTenor/",
         "warningMessage": ""
     }
 ]
