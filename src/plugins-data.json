@@ -1798,5 +1798,16 @@
         "sourceUrl": "https://github.com/lvwmwm/vendettian-plugins",
         "installUrl": "https://lvwmwm.github.io/vendettian-plugins/BringBackTenor/",
         "warningMessage": ""
+    },
+    {
+        "name": "StreamQuality",
+        "description": "Unlock Nitro-quality streaming without Nitro",
+        "authors": [
+            "Livie"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/lvwmwm/vendettian-plugins",
+        "installUrl": "https://lvwmwm.github.io/vendettian-plugins/streamquality/",
+        "warningMessage": ""
     }
 ]
