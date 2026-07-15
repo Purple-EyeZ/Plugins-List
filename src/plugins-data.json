@@ -407,10 +407,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/cloud-sync/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 337+"
     },
     {
         "name": "Twemoji Everywhere",
@@ -440,10 +440,10 @@
         "authors": [
             "nexpid"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/nexpid/BunnyPlugins/tree/main/src/plugins",
         "installUrl": "https://revenge.nexpid.xyz/plugin-browser/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 337+"
     },
     {
         "name": "Monet Theme",
@@ -769,10 +769,10 @@
             "Rico040",
             "chrysoljq"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/dislate/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 337+"
     },
     {
         "name": "PlatformIndicators",
@@ -1772,10 +1772,10 @@
         "authors": [
             "Rugved"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rugved-danej/discord-plugins",
         "installUrl": "https://raw.githubusercontent.com/rugved-danej/discord-plugins/main/dist/next-translator/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 337+"
     },
     {
         "name": "PermissionViewer",
