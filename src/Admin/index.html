@@ -55,8 +55,15 @@
     <!-- =================================================================== -->
     <h1>
         <img src="/assets/revenge-dark.svg" alt="Logo">
-        Plugins Admin Panel
+        Admin Panel
     </h1>
+
+    <nav class="main-nav">
+        <ul>
+            <li class="active" id="tab-plugins"><a href="#" data-target="plugins">Plugins</a></li>
+            <li id="tab-themes"><a href="#" data-target="themes">Themes</a></li>
+        </ul>
+    </nav>
 
     <div class="search-container">
         <div class="search-bar-wrapper">
@@ -69,42 +76,75 @@
     <!-- =================================================================== -->
     <!-- Admin Controls Panel                                                -->
     <!-- =================================================================== -->
-    <div class="admin-controls">
-        <div class="card add-plugin-form-container">
-            <h2>Add New Plugin</h2>
-            <form id="add-plugin-form">
-                <div class="form-group">
-                    <label for="new-plugin-url">Plugin URL:</label>
-                    <input type="text" id="new-plugin-url" class="form-control" required
-                        placeholder="https://example.com/plugin/">
-                </div>
-                <button type="submit" class="btn btn--primary admin-button">Add Plugin</button>
-            </form>
+    <div id="plugins-section">
+        <div class="admin-controls">
+            <div class="card add-plugin-form-container">
+                <h2>Add New Plugin</h2>
+                <form id="add-plugin-form">
+                    <div class="form-group">
+                        <label for="new-plugin-url">Plugin URL:</label>
+                        <input type="text" id="new-plugin-url" class="form-control" required
+                            placeholder="https://example.com/plugin/">
+                    </div>
+                    <button type="submit" class="btn btn--primary admin-button">Add Plugin</button>
+                </form>
+            </div>
+
+            <div class="admin-actions">
+                <button id="save-plugins-changes" class="btn btn--primary save-changes">Save Plugins Changes</button>
+                <button id="filter-broken" class="btn btn--secondary admin-button">Show Only Broken</button>
+                <button id="filter-warning" class="btn btn--secondary admin-button">Show Only Warning</button>
+                <button id="filter-all" class="btn btn--secondary admin-button">Show All</button>
+                <button id="check-plugins" class="btn btn--secondary">
+                    <span class="material-symbols-rounded">refresh</span> Update Manifests
+                </button>
+            </div>
         </div>
 
-        <div class="admin-actions">
-            <button id="save-changes" class="btn btn--primary">Save Changes</button>
-            <button id="filter-broken" class="btn btn--secondary admin-button">Show Only Broken</button>
-            <button id="filter-warning" class="btn btn--secondary admin-button">Show Only Warning</button>
-            <button id="filter-all" class="btn btn--secondary admin-button">Show All</button>
-            <button id="check-plugins" class="btn btn--secondary">
-                <span class="material-symbols-rounded">refresh</span> Update Manifests
-            </button>
+        <div class="plugins-count">
+            <span id="total-count">0</span> plugins total |
+            <span id="working-count">0</span> working |
+            <span id="warning-count">0</span> warning |
+            <span id="broken-count">0</span> broken
+        </div>
+
+        <div id="plugins-list" class="admin-plugins-list">
+            <div class="loading">Loading plugins...</div>
         </div>
     </div>
 
     <!-- =================================================================== -->
-    <!-- Plugins List Section                                                -->
+    <!-- Themes List Section                                                 -->
     <!-- =================================================================== -->
-    <div class="plugins-count">
-        <span id="total-count">0</span> plugins total |
-        <span id="working-count">0</span> working |
-        <span id="warning-count">0</span> warning |
-        <span id="broken-count">0</span> broken
-    </div>
+    <div id="themes-section" style="display: none;">
+        <div class="admin-controls">
+            <div class="card add-plugin-form-container">
+                <h2>Add New Theme</h2>
+                <form id="add-theme-form">
+                    <div class="form-group">
+                        <label for="new-theme-url">Theme URL:</label>
+                        <input type="text" id="new-theme-url" class="form-control" required
+                            placeholder="https://raw.../theme.json">
+                    </div>
+                    <button type="submit" class="btn btn--primary admin-button">Add Theme</button>
+                </form>
+            </div>
 
-    <div id="plugins-list" class="admin-plugins-list">
-        <div class="loading">Loading plugins...</div>
+            <div class="admin-actions">
+                <button id="save-themes-changes" class="btn btn--primary save-changes">Save Themes Changes</button>
+                <button id="check-themes" class="btn btn--secondary">
+                    <span class="material-symbols-rounded">refresh</span> Update Manifests
+                </button>
+            </div>
+        </div>
+
+        <div class="plugins-count" style="margin-top: 10px;">
+            <span id="themes-total-count">0</span> themes total
+        </div>
+
+        <div id="themes-list" class="admin-plugins-list">
+            <div class="loading">Loading themes...</div>
+        </div>
     </div>
 
     <!-- =================================================================== -->
@@ -130,6 +170,24 @@
             <div class="plugin-action-buttons">
                 <button class="btn btn--danger admin-button delete-plugin">Delete</button>
                 <button class="btn btn--secondary admin-button edit-plugin">
+                    <span class="material-symbols-rounded">edit</span> Edit Details
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template for an admin theme card -->
+    <template id="admin-theme-template">
+        <div class="card admin-theme-item">
+            <div class="plugin-info">
+                <span class="plugin-info-label">Name:</span>
+                <span class="theme-name"></span>
+                <span class="plugin-info-label">Authors:</span>
+                <span class="theme-authors"></span>
+            </div>
+            <div class="plugin-action-buttons">
+                <button class="btn btn--danger admin-button delete-theme">Delete</button>
+                <button class="btn btn--secondary admin-button edit-theme">
                     <span class="material-symbols-rounded">edit</span> Edit Details
                 </button>
             </div>
