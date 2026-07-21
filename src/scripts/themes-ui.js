@@ -61,7 +61,7 @@ function populateGallery(galleryContainer, theme) {
 			imageEl.loading = "lazy";
 
 			imageEl.onload = () => {
-				galleryContainer.style.backgroundImage = `url(${imageEl.src})`;
+				galleryContainer.style.backgroundImage = `url("${imageEl.src}")`;
 				const containerAspectRatio = 16 / 9;
 				const imageAspectRatio = imageEl.naturalWidth / imageEl.naturalHeight;
 				imageEl.style.objectFit =
