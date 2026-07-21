@@ -1,0 +1,51 @@
+name: Add a new theme
+description: Suggest a new theme to be added to the list.
+title: "[Theme Request]: "
+labels:
+  - new-theme
+assignees:
+  - Purple-EyeZ
+body:
+  - type: input
+    id: theme-name
+    attributes:
+      label: Theme Name
+      description: The name of the theme you want to add.
+      placeholder: "Example: Midnight Red"
+    validations:
+      required: true
+
+  - type: input
+    id: theme-install-url
+    attributes:
+      label: Theme Install URL
+      description: Provide the installation link.
+      placeholder: "https://raw.githubusercontent.com/Author/Repo/main/theme.json"
+    validations:
+      required: true
+
+  - type: input
+    id: theme-source-url
+    attributes:
+      label: Theme Source URL
+      description: Provide the link to the source code repository (optional).
+      placeholder: "https://github.com/Author/Repository"
+    validations:
+      required: false
+
+  - type: textarea
+    id: theme-screenshots
+    attributes:
+      label: Screenshots
+      description: Please provide at least one screenshot of the theme (3-4 screenshots are better). You can simply copy-paste or drag & drop images into this box.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Select to confirm you've filled all fields correctly.
+      options:
+        - label: I have provided all the requested information, including at least one screenshot.
+          required: true
