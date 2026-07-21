@@ -5,14 +5,23 @@ import { hidePopup, showToast } from "./shared.js";
 
 // --- State & DOM Elements ---
 
+let currentTab = "plugins";
+let pendingFiles = [];
+
 let plugins = [];
 let originalPlugins = [];
 let currentFilter = "all";
 
+let themes = [];
+let originalThemes = [];
+
+const pluginsSection = document.getElementById("plugins-section");
+const themesSection = document.getElementById("themes-section");
+
 const pluginsList = document.getElementById("plugins-list");
 const addPluginForm = document.getElementById("add-plugin-form");
 const newPluginUrlInput = document.getElementById("new-plugin-url");
-const saveChangesButton = document.getElementById("save-changes");
+const savePluginsButton = document.getElementById("save-plugins-changes");
 const checkPluginsButton = document.getElementById("check-plugins");
 const filterButtons = {
 	all: document.getElementById("filter-all"),
@@ -26,16 +35,77 @@ const counterElements = {
 	broken: document.getElementById("broken-count"),
 };
 
+const themesList = document.getElementById("themes-list");
+const addThemeForm = document.getElementById("add-theme-form");
+const newThemeUrlInput = document.getElementById("new-theme-url");
+const saveThemesButton = document.getElementById("save-themes-changes");
+const checkThemesButton = document.getElementById("check-themes");
+const themesTotalCount = document.getElementById("themes-total-count");
+
+const tabPlugins = document.getElementById("tab-plugins");
+const tabThemes = document.getElementById("tab-themes");
+
 // --- Init Search ---
-const search = initSearch({
+let search = initSearch({
 	containerId: "plugins-list",
 	itemClass: "admin-plugin-item",
 	searchKeys: ["name", "authors", "description", "warningMessage"],
 	priorityKey: "name",
 	subtextMessage: (count) =>
 		`Found ${count} matching plugin${count === 1 ? "" : "s"}`,
-	renderFunction: rerender,
+	renderFunction: rerenderPlugins,
 	displayStyle: "block",
+});
+
+function updateSearchConfig() {
+	if (currentTab === "plugins") {
+		search = initSearch({
+			containerId: "plugins-list",
+			itemClass: "admin-plugin-item",
+			searchKeys: ["name", "authors", "description", "warningMessage"],
+			priorityKey: "name",
+			subtextMessage: (count) =>
+				`Found ${count} matching plugin${count === 1 ? "" : "s"}`,
+			renderFunction: rerenderPlugins,
+			displayStyle: "block",
+		});
+		rerenderPlugins();
+	} else if (currentTab === "themes") {
+		search = initSearch({
+			containerId: "themes-list",
+			itemClass: "admin-theme-item",
+			searchKeys: ["name", "authors", "description", "tags"],
+			priorityKey: "name",
+			subtextMessage: (count) =>
+				`Found ${count} matching theme${count === 1 ? "" : "s"}`,
+			renderFunction: rerenderThemes,
+			displayStyle: "block",
+		});
+		rerenderThemes();
+	}
+}
+
+// --- Tabs Logic ---
+tabPlugins.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (currentTab === "plugins") return;
+	currentTab = "plugins";
+	tabPlugins.classList.add("active");
+	tabThemes.classList.remove("active");
+	pluginsSection.style.display = "block";
+	themesSection.style.display = "none";
+	updateSearchConfig();
+});
+
+tabThemes.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (currentTab === "themes") return;
+	currentTab = "themes";
+	tabThemes.classList.add("active");
+	tabPlugins.classList.remove("active");
+	pluginsSection.style.display = "none";
+	themesSection.style.display = "block";
+	updateSearchConfig();
 });
 
 // --- Utils ---
@@ -132,9 +202,9 @@ function generateSourceUrl(installUrl) {
 	return installUrl;
 }
 
-// --- Render Function ---
+// --- Render Functions ---
 
-function rerender(isFromClear = false) {
+function rerenderPlugins(isFromClear = false) {
 	const { renderedPlugins, renderedElements } = ui.renderPluginsList(
 		pluginsList,
 		plugins,
@@ -145,7 +215,10 @@ function rerender(isFromClear = false) {
 			onPluginEdit,
 		},
 	);
-	search.prepareSearchableData(renderedPlugins, renderedElements);
+
+	if (currentTab === "plugins") {
+		search.prepareSearchableData(renderedPlugins, renderedElements);
+	}
 
 	const counts = {
 		total: plugins.length,
@@ -161,7 +234,28 @@ function rerender(isFromClear = false) {
 		counts,
 	);
 
-	if (!isFromClear) {
+	if (!isFromClear && currentTab === "plugins") {
+		search.applyCurrentFilter();
+	}
+}
+
+function rerenderThemes(isFromClear = false) {
+	const { renderedThemes, renderedElements } = ui.renderThemesList(
+		themesList,
+		themes,
+		{
+			onThemeDelete,
+			onThemeEdit,
+		},
+	);
+
+	if (currentTab === "themes") {
+		search.prepareSearchableData(renderedThemes, renderedElements);
+	}
+
+	themesTotalCount.textContent = themes.length;
+
+	if (!isFromClear && currentTab === "themes") {
 		search.applyCurrentFilter();
 	}
 }
@@ -172,14 +266,14 @@ function onPluginUpdate(plugin, field, value) {
 	plugin[field] = value;
 
 	if (field === "status") {
-		rerender();
+		rerenderPlugins();
 	}
 }
 
 function onPluginDelete(pluginToDelete) {
 	if (confirm(`Delete plugin "${pluginToDelete.name}"?`)) {
 		plugins = plugins.filter((p) => p !== pluginToDelete);
-		rerender();
+		rerenderPlugins();
 	}
 }
 
@@ -190,21 +284,119 @@ function onPluginEdit(plugin) {
 			field,
 			generateSourceUrl,
 		);
-		if (success) rerender();
+		if (success) rerenderPlugins();
 		return success;
 	};
 
-	ui.showPluginDetailsPopup(
+	ui.showDetailsPopup(
 		plugin,
 		(updatedPlugin) => {
 			const index = plugins.indexOf(plugin);
 			if (index !== -1) {
 				plugins[index] = { ...plugins[index], ...updatedPlugin };
 			}
-			rerender();
+			rerenderPlugins();
 			showToast("Plugin details updated!");
 		},
 		refetchHandler,
+		false,
+	);
+}
+
+function onThemeImageUpload(theme, file) {
+	if (!file) return;
+
+	const reader = new FileReader();
+	reader.onload = (event) => {
+		const base64Content = event.target.result.split(",")[1];
+		const filePath = `src/assets/Themes_preview/${file.name.replace(/\s+/g, "_")}`;
+
+		theme.images.push(
+			`https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/${filePath}`,
+		);
+
+		pendingFiles.push({
+			path: filePath,
+			content: base64Content,
+			encoding: "base64",
+		});
+
+		rerenderThemes();
+		showToast("Image preview added locally! Will be uploaded on save.");
+	};
+	reader.readAsDataURL(file);
+}
+
+function onThemeDelete(themeToDelete) {
+	if (confirm(`Delete theme "${themeToDelete.name}"?`)) {
+		themes = themes.filter((t) => t !== themeToDelete);
+		rerenderThemes();
+	}
+}
+
+function onThemeEdit(theme) {
+	const refetchHandler = async (themeToRefetch, field) => {
+		try {
+			if (field === "sourceUrl") {
+				themeToRefetch.sourceUrl = generateSourceUrl(themeToRefetch.installUrl);
+				return true;
+			}
+			const response = await fetch(themeToRefetch.installUrl);
+			if (!response.ok) return false;
+			const manifest = await response.json();
+
+			switch (field) {
+				case "name":
+					themeToRefetch.name = manifest.name;
+					break;
+				case "description":
+					themeToRefetch.description = manifest.description;
+					break;
+				case "authors":
+					themeToRefetch.authors = manifest.authors?.map(
+						(author) => author.name,
+					) || ["Unknown"];
+					break;
+				default:
+					return false;
+			}
+			return true;
+		} catch (_error) {
+			return false;
+		}
+	};
+
+	ui.showDetailsPopup(
+		theme,
+		(updatedTheme) => {
+			const processedImages = [];
+			updatedTheme.images.forEach((img) => {
+				if (typeof img === "string") {
+					processedImages.push(img);
+				} else if (img.isNew) {
+					const filePath = `src/assets/Themes_preview/${img.name.replace(/\s+/g, "_")}`;
+					processedImages.push(
+						`https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/${filePath}`,
+					);
+
+					pendingFiles.push({
+						path: filePath,
+						content: img.base64,
+						encoding: "base64",
+					});
+				}
+			});
+			updatedTheme.images = processedImages;
+
+			const index = themes.indexOf(theme);
+			if (index !== -1) {
+				themes[index] = { ...themes[index], ...updatedTheme };
+			}
+			rerenderThemes();
+			showToast("Theme details updated!");
+		},
+		refetchHandler,
+		true,
 	);
 }
 
@@ -218,7 +410,7 @@ addPluginForm.addEventListener("submit", async (e) => {
 	try {
 		const newPlugin = await api.createPluginFromUrl(url, generateSourceUrl);
 		plugins.push(newPlugin);
-		rerender();
+		rerenderPlugins();
 		newPluginUrlInput.value = "";
 		showToast("Plugin added successfully!");
 	} catch (error) {
@@ -226,15 +418,36 @@ addPluginForm.addEventListener("submit", async (e) => {
 	}
 });
 
-saveChangesButton.addEventListener("click", async () => {
+addThemeForm.addEventListener("submit", async (e) => {
+	e.preventDefault();
+	const url = newThemeUrlInput.value.trim();
+	if (!url) return;
+
+	try {
+		const newTheme = await api.createThemeFromUrl(url, generateSourceUrl);
+		themes.push(newTheme);
+		rerenderThemes();
+		newThemeUrlInput.value = "";
+		showToast("Theme added successfully!");
+	} catch (error) {
+		showToast(`Error adding theme: ${error.message}`);
+	}
+});
+
+savePluginsButton.addEventListener("click", async () => {
 	const changes = generateChanges(originalPlugins, plugins);
 	const hasChanges =
 		changes.added.length > 0 ||
 		changes.deleted.length > 0 ||
 		changes.modified.length > 0;
 
-	if (!hasChanges) {
-		showToast("No changes to save.");
+	const themePreviewPrefix = "src/assets/Themes_preview/";
+	const pluginPendingFiles = pendingFiles.filter(
+		(f) => !f.path.startsWith(themePreviewPrefix),
+	);
+
+	if (!hasChanges && pluginPendingFiles.length === 0) {
+		showToast("No plugins changes to save.");
 		return;
 	}
 
@@ -244,9 +457,23 @@ saveChangesButton.addEventListener("click", async () => {
 			currentChanges,
 			async () => {
 				try {
-					const result = await api.savePlugins(plugins);
+					const filesToCommit = [
+						...pluginPendingFiles,
+						{
+							path: "src/plugins-data.json",
+							content: JSON.stringify(plugins, null, 4),
+							encoding: "utf-8",
+						},
+					];
+					const result = await api.commitFiles(
+						"📝 Update plugins from Admin UI",
+						filesToCommit,
+					);
 					showToast(result.message || "Changes saved successfully!");
 					originalPlugins = JSON.parse(JSON.stringify(plugins));
+					pendingFiles = pendingFiles.filter((f) =>
+						f.path.startsWith(themePreviewPrefix),
+					);
 				} catch (error) {
 					showToast(`Error saving changes: ${error.message}`);
 				}
@@ -259,12 +486,78 @@ saveChangesButton.addEventListener("click", async () => {
 
 				if (pluginToUpdate && originalPlugin) {
 					pluginToUpdate[field] = originalPlugin[field];
-					rerender();
+					rerenderPlugins();
 					hidePopup();
 					showReview();
 					showToast(`Reverted change for ${pluginToUpdate.name}'s ${field}.`);
 				}
 			},
+			"Plugins",
+		);
+	};
+
+	showReview();
+});
+
+saveThemesButton.addEventListener("click", async () => {
+	const changes = generateChanges(originalThemes, themes);
+	const hasChanges =
+		changes.added.length > 0 ||
+		changes.deleted.length > 0 ||
+		changes.modified.length > 0;
+
+	const themePreviewPrefix = "src/assets/Themes_preview/";
+	const themePendingFiles = pendingFiles.filter((f) =>
+		f.path.startsWith(themePreviewPrefix),
+	);
+
+	if (!hasChanges && themePendingFiles.length === 0) {
+		showToast("No themes changes to save.");
+		return;
+	}
+
+	const showReview = () => {
+		const currentChanges = generateChanges(originalThemes, themes);
+		ui.showChangesReviewPopup(
+			currentChanges,
+			async () => {
+				try {
+					const filesToCommit = [
+						...themePendingFiles,
+						{
+							path: "src/themes-data.json",
+							content: JSON.stringify(themes, null, 4),
+							encoding: "utf-8",
+						},
+					];
+					const result = await api.commitFiles(
+						"🎨 Update themes from Admin UI",
+						filesToCommit,
+					);
+					showToast(result.message || "Changes saved successfully!");
+					originalThemes = JSON.parse(JSON.stringify(themes));
+					pendingFiles = pendingFiles.filter(
+						(f) => !f.path.startsWith(themePreviewPrefix),
+					);
+				} catch (error) {
+					showToast(`Error saving changes: ${error.message}`);
+				}
+			},
+			(installUrl, field) => {
+				const originalTheme = originalThemes.find(
+					(p) => p.installUrl === installUrl,
+				);
+				const themeToUpdate = themes.find((p) => p.installUrl === installUrl);
+
+				if (themeToUpdate && originalTheme) {
+					themeToUpdate[field] = originalTheme[field];
+					rerenderThemes();
+					hidePopup();
+					showReview();
+					showToast(`Reverted change for ${themeToUpdate.name}'s ${field}.`);
+				}
+			},
+			"Themes",
 		);
 	};
 
@@ -278,8 +571,20 @@ checkPluginsButton.addEventListener("click", async () => {
 	console.log(`✅ Successfully updated: ${updatedCount} plugins`);
 	console.log(`❌ Failed to update: ${failedCount} plugins`);
 	console.groupEnd();
-	rerender();
+	rerenderPlugins();
 	showToast(`Updated ${updatedCount} plugins (${failedCount} failed)`);
+});
+
+checkThemesButton.addEventListener("click", async () => {
+	console.group("Updating theme manifests...");
+	const { updatedCount, failedCount } =
+		await api.updateAllThemesManifests(themes);
+	console.log("\nUpdate summary:");
+	console.log(`✅ Successfully updated: ${updatedCount} themes`);
+	console.log(`❌ Failed to update: ${failedCount} themes`);
+	console.groupEnd();
+	rerenderThemes();
+	showToast(`Updated ${updatedCount} themes (${failedCount} failed)`);
 });
 
 Object.entries(filterButtons).forEach(([filterName, button]) => {
@@ -289,7 +594,7 @@ Object.entries(filterButtons).forEach(([filterName, button]) => {
 			btn.classList.remove("active");
 		});
 		button.classList.add("active");
-		rerender();
+		rerenderPlugins();
 	});
 });
 
@@ -297,13 +602,22 @@ Object.entries(filterButtons).forEach(([filterName, button]) => {
 
 async function init() {
 	try {
-		originalPlugins = await api.fetchPlugins();
+		const [loadedPlugins, loadedThemes] = await Promise.all([
+			api.fetchPlugins(),
+			api.fetchThemes(),
+		]);
+		originalPlugins = loadedPlugins;
 		plugins = JSON.parse(JSON.stringify(originalPlugins));
+
+		originalThemes = loadedThemes;
+		themes = JSON.parse(JSON.stringify(originalThemes));
+
 		filterButtons.all.classList.add("active");
 		search.initSearchFromURL();
-		rerender();
+		rerenderPlugins();
+		rerenderThemes();
 	} catch (error) {
-		showToast(`Error loading plugins: ${error.message}`);
+		showToast(`Error loading data: ${error.message}`);
 	}
 }
 

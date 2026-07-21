@@ -217,6 +217,7 @@ function debounce(func, wait) {
 }
 
 // --- Public API ---
+let isInitialized = false;
 
 export function initSearch(userConfig) {
 	config = userConfig;
@@ -230,8 +231,11 @@ export function initSearch(userConfig) {
 		subtext: document.getElementById("searchSubtext"),
 	};
 
-	addSearchFunctionality();
-	addFixedSearchButtonEvents();
+	if (!isInitialized) {
+		addSearchFunctionality();
+		addFixedSearchButtonEvents();
+		isInitialized = true;
+	}
 
 	return {
 		prepareSearchableData,
