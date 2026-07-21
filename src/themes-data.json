@@ -3184,5 +3184,23 @@
             "dark",
             "blue"
         ]
+    },
+    {
+        "name": "AMOLED anime theme (Ram version)",
+        "description": "AMOLED Ram version",
+        "authors": [
+            "UMR_Chan"
+        ],
+        "sourceUrl": "https://github.com/UMR-Chan/Amoled-Anime-theme-Ram-From-Re-zero-",
+        "installUrl": "https://raw.githubusercontent.com/UMR-Chan/Amoled-Anime-theme-Ram-From-Re-zero-/refs/heads/main/Theme%20Amoled%20Ram%20versi%C3%B3n%20by%20UMR_Chan.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/AMOLED_anime_theme_(Ram_versión)1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/AMOLED_anime_theme_(Ram_versión)2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "amoled"
+        ]
     }
 ]
