@@ -2,7 +2,7 @@ name: Add a new theme
 description: Suggest a new theme to be added to the list.
 title: "[Theme Request]: "
 labels:
-  - new-theme
+  - New Theme
 assignees:
   - Purple-EyeZ
 body:
