@@ -3186,5 +3186,210 @@
             "background",
             "amoled"
         ]
+    },
+    {
+        "name": "Cinder & Flame",
+        "description": "Deep teal-black Cinder meets warm coral Flame. Dark and warm.",
+        "authors": [
+            "Ace"
+        ],
+        "sourceUrl": "https://github.com/Tachyon-os/Tachy_Themes",
+        "installUrl": "https://raw.githubusercontent.com/Tachyon-os/Tachy_Themes/main/cinder-flame.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Cinder_&_Flame_1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Cinder_&_Flame_2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "orange"
+        ]
+    },
+    {
+        "name": "Gray_one",
+        "description": "A Gray minimalist theme, a recolor inspired by Rosie Blue made by Mudrhiod",
+        "authors": [
+            "mudrhiod",
+            "Ace"
+        ],
+        "sourceUrl": "https://github.com/Tachyon-os/Tachy_Themes",
+        "installUrl": "https://raw.githubusercontent.com/Tachyon-os/Tachy_Themes/refs/heads/main/Gray_one.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Gray_one.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "dark",
+            "grey"
+        ]
+    },
+    {
+        "name": "rainForest",
+        "description": "Rain/Kettu reimagining of everforest by myumichi",
+        "authors": [
+            "soapkid"
+        ],
+        "sourceUrl": "https://github.com/soap-kid/rainForest",
+        "installUrl": "https://raw.githubusercontent.com/soap-kid/rainForest/refs/heads/main/rainForest.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rainForest_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rainForest_1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "background",
+            "green"
+        ]
+    },
+    {
+        "name": "Sõmnum",
+        "description": "Zzzzzzzzzz",
+        "authors": [
+            "Machi"
+        ],
+        "sourceUrl": "https://github.com/WagooMachine/Themes",
+        "installUrl": "https://raw.githubusercontent.com/WagooMachine/Themes/refs/heads/main/Somnum.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Sõmnum_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Sõmnum.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "purple"
+        ]
+    },
+    {
+        "name": "Noctra",
+        "description": "i mog y'all",
+        "authors": [
+            "Noctra"
+        ],
+        "sourceUrl": "https://github.com/backroomsa3-a11y/Mythemesssss",
+        "installUrl": "https://raw.githubusercontent.com/backroomsa3-a11y/Mythemesssss/refs/heads/main/E.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Noctra_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Noctra_1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Noctra_3.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "grey"
+        ]
+    },
+    {
+        "name": "Emma Veil",
+        "description": "kotteri",
+        "authors": [
+            "VeilFan"
+        ],
+        "sourceUrl": "https://github.com/backroomsa3-a11y/Mythemesssss",
+        "installUrl": "https://raw.githubusercontent.com/backroomsa3-a11y/Mythemesssss/refs/heads/main/Emma.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Emma_Veil_3.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Emma_Veil_1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Emma_Veil_2.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Snowy Rain",
+        "description": "snowy aesthetic silly chilly background",
+        "authors": [
+            "Noctra"
+        ],
+        "sourceUrl": "https://github.com/backroomsa3-a11y/Mythemesssss",
+        "installUrl": "https://raw.githubusercontent.com/backroomsa3-a11y/Mythemesssss/refs/heads/main/Snowman.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Snowy_Rain_4.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Snowy_Rain_1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Snowy_Rain_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Snowy_Rain_3.webp"
+        ],
+        "tags": [
+            "background",
+            "Themes Plus",
+            "grey"
+        ]
+    },
+    {
+        "name": "Coffee ♨ Theme",
+        "description": "A cozy warm coffee/brown theme on pure black background",
+        "authors": [
+            "𝐑𝐢𝐬𝐤"
+        ],
+        "sourceUrl": "https://github.com/0nlyrisk/Coffee-Theme",
+        "installUrl": "https://raw.githubusercontent.com/0nlyrisk/Coffee-Theme/refs/heads/main/Coffee%20%E2%99%A8%20Theme",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Coffee_♨_Theme_1.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Coffee_♨_Theme_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Coffee_♨_Theme_3.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Coffee_♨_Theme_4.webp"
+        ],
+        "tags": [
+            "background",
+            "Themes Plus",
+            "dark",
+            "brown"
+        ]
+    },
+    {
+        "name": "Red Cherries 🍒 theme",
+        "description": "A Comfy Cherry theme with deep, richly saturated cherry-red accents on pure black background",
+        "authors": [
+            "⁷𐌌❟❛❟𝐑𝐢𝐬𝐤"
+        ],
+        "sourceUrl": "https://github.com/0nlyrisk/Red-cherries-theme",
+        "installUrl": "https://raw.githubusercontent.com/0nlyrisk/Red-cherries-theme/refs/heads/main/Red%20cherries%20%F0%9F%8D%92%20theme",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Red_Cherries_🍒_them_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Red_Cherries_🍒_them_1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "red"
+        ]
+    },
+    {
+        "name": "Ocean",
+        "description": "Ocean Themed",
+        "authors": [
+            "fh7k"
+        ],
+        "sourceUrl": "https://github.com/corpsecrown/Themes",
+        "installUrl": "https://raw.githubusercontent.com/corpsecrown/Themes/refs/heads/main/Nautiq.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ocean_2.webp",
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Ocean_1.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "dark",
+            "blue"
+        ]
+    },
+    {
+        "name": "MatchaGreen",
+        "description": "A Comfy Matcha Green theme based on Aetheris",
+        "authors": [
+            "MatchaGreen"
+        ],
+        "sourceUrl": "https://github.com/misss13/MatchaGreen",
+        "installUrl": "https://raw.githubusercontent.com/misss13/MatchaGreen/refs/heads/main/MatchaGreen.json",
+        "images": [
+            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/MatchaGreen.webp"
+        ],
+        "tags": [
+            "Themes Plus",
+            "green"
+        ]
     }
 ]
