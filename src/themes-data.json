@@ -447,22 +447,6 @@
         ]
     },
     {
-        "name": "Dracula",
-        "description": "A simple theme following dracula's color scheme",
-        "authors": [
-            "FatDawlf"
-        ],
-        "sourceUrl": "https://github.com/Azakidev/dracula-aliucordRN",
-        "installUrl": "https://raw.githubusercontent.com/Azakidev/dracula-aliucordRN/vendetta/Dracula.json",
-        "images": [
-            "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Dracula.webp"
-        ],
-        "tags": [
-            "dark",
-            "purple"
-        ]
-    },
-    {
         "name": "VioletSkies",
         "description": "Same thing, Same thing.",
         "authors": [
@@ -2275,8 +2259,8 @@
         "authors": [
             "Mudrhiod"
         ],
-        "sourceUrl": "https://bunny.mudaranrhiod.xyz",
-        "installUrl": "https://bunny.mudaranrhiod.xyz/eyecandy.json",
+        "sourceUrl": "https://bunny.mudrhiod.me/eyecandy.json",
+        "installUrl": "https://bunny.mudrhiod.me/eyecandy.json",
         "images": [
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy.webp",
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/eyecandy1.webp",
@@ -2338,8 +2322,8 @@
         "authors": [
             "𐌌risky"
         ],
-        "sourceUrl": "https://github.com/Ulk518/Blue-black-dino",
-        "installUrl": "https://github.com/Ulk518/Blue-black-dino/raw/refs/heads/main/Blue&Black%20dino",
+        "sourceUrl": "https://github.com/0nlyrisk/Blue-black-dino",
+        "installUrl": "https://raw.githubusercontent.com/0nlyrisk/Blue-black-dino/refs/heads/main/Blue%26Black%20dino",
         "images": [
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Black&Blue_Dino_Theme.webp",
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/Black&Blue_Dino_Theme1.webp",
@@ -2353,8 +2337,8 @@
         ]
     },
     {
-        "name": "Pure Black 1.6.2",
-        "description": "AMOLED black theme",
+        "name": "Pure Black",
+        "description": "Midnight Theme, turned up to 11",
         "authors": [
             "breadcat0314"
         ],
@@ -2502,8 +2486,8 @@
         "authors": [
             "Mudrhiod"
         ],
-        "sourceUrl": "https://bunny.mudaranrhiod.xyz",
-        "installUrl": "https://bunny.mudaranrhiod.xyz/rosieblue.json",
+        "sourceUrl": "https://bunny.mudrhiod.me/rosieblue.json",
+        "installUrl": "https://bunny.mudrhiod.me/rosieblue.json",
         "images": [
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue.webp",
             "https://raw.githubusercontent.com/Purple-EyeZ/Plugins-List/refs/heads/dev/src/assets/Themes_preview/rosieblue1.webp",
@@ -3041,10 +3025,10 @@
         ]
     },
     {
-        "name": "Dark Link Discord",
-        "description": "A theme made from discord files!",
+        "name": "Dark Link Theme",
+        "description": "A theme made from discord files",
         "authors": [
-            "Nah"
+            "Merb"
         ],
         "sourceUrl": "https://github.com/n0t-a-username/revenge-themes",
         "installUrl": "https://raw.githubusercontent.com/n0t-a-username/revenge-themes/refs/heads/main/DarkDiscord.json",
