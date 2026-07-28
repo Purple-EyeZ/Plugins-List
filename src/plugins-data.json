@@ -1853,5 +1853,16 @@
         "sourceUrl": "https://rksv.kmmiio99o.dev/ServerDrawer",
         "installUrl": "https://rksv.kmmiio99o.dev/ServerDrawer",
         "warningMessage": ""
+    },
+    {
+        "name": "SearchActionSheet",
+        "description": "Makes search results open the action sheet on long press.",
+        "authors": [
+            "tralwdwdd"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/tralwdwd/plugins",
+        "installUrl": "https://tralwdwd.github.io/plugins/SearchActionSheet",
+        "warningMessage": ""
     }
 ]
