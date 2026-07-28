@@ -792,10 +792,10 @@
             "redstonekasi",
             "Rico040"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/picture-links/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 339+"
     },
     {
         "name": "Stealmoji",
