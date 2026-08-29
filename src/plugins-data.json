@@ -792,10 +792,10 @@
             "redstonekasi",
             "Rico040"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/picture-links/",
-        "warningMessage": ""
+        "warningMessage": "Broken on 339+"
     },
     {
         "name": "Stealmoji",
@@ -1764,17 +1764,6 @@
         "status": "working",
         "sourceUrl": "https://github.com/aliernfrog/vd-plugins",
         "installUrl": "https://aliernfrog.github.io/vd-plugins/BetterCommandPopout/",
-        "warningMessage": ""
-    },
-    {
-        "name": "Next Translator",
-        "description": "Translates text into a desired language.",
-        "authors": [
-            "Rugved"
-        ],
-        "status": "working",
-        "sourceUrl": "https://github.com/rugved-danej/discord-plugins",
-        "installUrl": "https://raw.githubusercontent.com/rugved-danej/discord-plugins/main/dist/next-translator/",
         "warningMessage": ""
     },
     {
