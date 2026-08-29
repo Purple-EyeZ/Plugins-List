@@ -1767,17 +1767,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Next Translator",
-        "description": "Translates text into a desired language.",
-        "authors": [
-            "Rugved"
-        ],
-        "status": "working",
-        "sourceUrl": "https://github.com/rugved-danej/discord-plugins",
-        "installUrl": "https://raw.githubusercontent.com/rugved-danej/discord-plugins/main/dist/next-translator/",
-        "warningMessage": ""
-    },
-    {
         "name": "PermissionViewer",
         "description": "View the permissions a user or channel has, and the roles of a server",
         "authors": [
