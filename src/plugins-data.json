@@ -725,7 +725,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/mystravil/vendetta-plugins",
         "installUrl": "https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/",
-        "warningMessage": "Broken on 295+"
+        "warningMessage": "Broken on 295+\n\nUse Geastures+ instead."
     },
     {
         "name": "Better Chat Buttons",
@@ -1221,7 +1221,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/better-chat-gestures/releases/latest/download/",
-        "warningMessage": ""
+        "warningMessage": "Use Geastures+ instead."
     },
     {
         "name": "PronounDB",
@@ -1852,6 +1852,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/tralwdwd/plugins",
         "installUrl": "https://tralwdwd.github.io/plugins/SearchActionSheet",
+        "warningMessage": ""
+    },
+    {
+        "name": "Geastures+",
+        "description": "Tap tap a message to reply/edit, or tap tap tap a message to delete it.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins/tree/main/plugins/GeasturesPlus",
+        "installUrl": "https://rksv.kmmiio99o.dev/GeasturesPlus",
         "warningMessage": ""
     }
 ]
