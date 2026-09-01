@@ -769,10 +769,10 @@
             "Rico040",
             "chrysoljq"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/dislate/",
-        "warningMessage": "Broken on 337+"
+        "warningMessage": ""
     },
     {
         "name": "PlatformIndicators",
@@ -1427,7 +1427,7 @@
             "Fiery",
             "Bwlok"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/Decor",
         "installUrl": "https://bwlok.github.io/revenge-plugins/Decor",
         "warningMessage": ""
