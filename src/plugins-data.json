@@ -725,7 +725,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/mystravil/vendetta-plugins",
         "installUrl": "https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/",
-        "warningMessage": "Broken on 295+"
+        "warningMessage": "Broken on 295+\n\nUse Geastures+ instead."
     },
     {
         "name": "Better Chat Buttons",
@@ -769,10 +769,10 @@
             "Rico040",
             "chrysoljq"
         ],
-        "status": "broken",
+        "status": "working",
         "sourceUrl": "https://github.com/rico040/bunny-plugins",
         "installUrl": "https://rico040.github.io/bunny-plugins/dislate/",
-        "warningMessage": "Broken on 337+"
+        "warningMessage": ""
     },
     {
         "name": "PlatformIndicators",
@@ -1221,7 +1221,7 @@
         "status": "broken",
         "sourceUrl": "https://github.com/vd-plugins/proxy",
         "installUrl": "https://vd-plugins.github.io/proxy/github.com/acquitelol/better-chat-gestures/releases/latest/download/",
-        "warningMessage": ""
+        "warningMessage": "Use Geastures+ instead."
     },
     {
         "name": "PronounDB",
@@ -1427,7 +1427,7 @@
             "Fiery",
             "Bwlok"
         ],
-        "status": "working",
+        "status": "broken",
         "sourceUrl": "https://github.com/bwlok/revenge-plugins/tree/master/plugins/Decor",
         "installUrl": "https://bwlok.github.io/revenge-plugins/Decor",
         "warningMessage": ""
@@ -1767,17 +1767,6 @@
         "warningMessage": ""
     },
     {
-        "name": "Next Translator",
-        "description": "Translates text into a desired language.",
-        "authors": [
-            "Rugved"
-        ],
-        "status": "working",
-        "sourceUrl": "https://github.com/rugved-danej/discord-plugins",
-        "installUrl": "https://raw.githubusercontent.com/rugved-danej/discord-plugins/main/dist/next-translator/",
-        "warningMessage": ""
-    },
-    {
         "name": "PermissionViewer",
         "description": "View the permissions a user or channel has, and the roles of a server",
         "authors": [
@@ -1863,6 +1852,17 @@
         "status": "working",
         "sourceUrl": "https://github.com/tralwdwd/plugins",
         "installUrl": "https://tralwdwd.github.io/plugins/SearchActionSheet",
+        "warningMessage": ""
+    },
+    {
+        "name": "Geastures+",
+        "description": "Tap tap a message to reply/edit, or tap tap tap a message to delete it.",
+        "authors": [
+            "kmmiio99o"
+        ],
+        "status": "working",
+        "sourceUrl": "https://github.com/kmmiio99o/vd-plugins/tree/main/plugins/GeasturesPlus",
+        "installUrl": "https://rksv.kmmiio99o.dev/GeasturesPlus",
         "warningMessage": ""
     }
 ]
