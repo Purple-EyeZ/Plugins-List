@@ -2,6 +2,7 @@ name = "plugins-list"
 pages_build_output_dir = "dist"
 
 [vars]
+BUN_VERSION = "1.4.0"
 GITHUB_REPO = "Purple-EyeZ/Plugins-List"
 GITHUB_USER = "Purple-EyeZ"
 
