@@ -423,7 +423,9 @@ h1 img {
 }
 
 .main-nav ul {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
 	list-style: none;
 	margin: 0;
 	padding: 5px;
@@ -433,13 +435,14 @@ h1 img {
 }
 
 .main-nav li a {
-	padding: 8px 20px;
+	padding: 7px 20px;
 	text-decoration: none;
 	color: var(--color-text-secondary);
 	border-radius: var(--radius-button);
 	font-weight: 500;
 	transition: all 0.2s ease-in-out;
 	display: block;
+	text-align: center;
 }
 
 .main-nav li.active a {
