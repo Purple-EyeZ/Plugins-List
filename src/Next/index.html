@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="An updated list of third-party plugin repositories for Revenge Next.">
+
+    <meta property="og:title" content="Revenge Next Plugins" />
+    <meta property="og:description"
+        content="An updated list of third-party plugin repositories for Revenge Next." />
+    <meta property="og:image" content="https://i.imgur.com/HBaPrGl.png" />
+    <meta property="og:image:width" content="630" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://plugins-list.pages.dev/Next/" />
+    <meta property="og:type" content="website" />
+
+    <title>Revenge Next Plugins</title>
+    <link rel="icon" type="image/svg" href="/assets/revenge-favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Fixed Top Banner -->
+    <div class="fixed-banner" id="fixedBanner">
+        <button id="searchButton" class="search-button">
+            <i class="material-symbols-rounded">search</i>
+        </button>
+        <input type="text" id="fixedSearchBar" class="form-control search-bar hidden" placeholder="Search repos or plugins...">
+        <button type="button" id="clearFixedSearch" class="clear-button" style="display: none;">&times;</button>
+    </div>
+
+    <!-- Page Header -->
+    <h1>
+        <img src="/assets/revenge-dark.svg" alt="Logo">
+        Revenge Next Plugins
+    </h1>
+
+    <div class="title-subtext">
+        Third-party plugin repositories for Revenge Next. You are responsible for what you install. <a
+            href="/About/">See more</a>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">Plugins</a></li>
+            <li><a href="/Themes/">Themes</a></li>
+            <li class="active"><a href="/Next/">Next</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Search Bar -->
+    <div class="search-container">
+        <div class="search-bar-wrapper">
+            <input type="text" id="search-bar" class="form-control search-bar" placeholder="Search repos or plugins...">
+            <button type="button" id="clearSearch" class="clear-button" style="display: none;">&times;</button>
+        </div>
+        <div id="searchSubtext" class="search-subtext"></div>
+    </div>
+
+    <!-- Warning Card -->
+    <div class="warning-card">
+        <div class="warning-card-header">
+            <span class="material-symbols-rounded warning-card-icon">warning</span>
+            <span>Warning: Unreviewed Plugins</span>
+        </div>
+        <p class="warning-card-text">
+            Plugins in third-party repositories are not reviewed or verified. You are responsible for what you install. If you find a malicious plugin, please <a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank" rel="noopener noreferrer">report it here</a>.
+        </p>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu-container">
+        <button id="menuButton" class="menu-button btn btn--primary">
+            <span class="material-symbols-rounded">menu</span> Menu
+        </button>
+        <div id="dropdownMenu" class="dropdown-menu">
+            <ul>
+                <li><a href="/"><span class="material-symbols-rounded">home</span> Home</a></li>
+                <li><a href="/Next/"><span class="material-symbols-rounded">extension</span> Next Plugins</a></li>
+                <li><a href="/Tracker/"><span class="material-symbols-rounded">track_changes</span> Tracker</a></li>
+                <li><a href="/About/"><span class="material-symbols-rounded">info</span> About</a></li>
+                <li><a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank"><span
+                            class="material-symbols-rounded">bug_report</span> Report</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Repos Container -->
+    <main id="repos-container">
+        <div class="loading" id="repos-loading">
+            <span class="material-symbols-rounded spin">sync</span> Loading repositories...
+        </div>
+    </main>
+
+    <!-- UI Templates & Utility Elements -->
+    <div id="toast"></div>
+
+    <!-- Template for a repo card -->
+    <template id="repo-card-template">
+        <section class="card repo-card">
+            <div class="repo-header">
+                <div class="repo-info">
+                    <div class="repo-title-wrapper">
+                        <h2 class="repo-name card__title"></h2>
+                        <span class="repo-count-badge"></span>
+                    </div>
+                    <div class="repo-description card__description"></div>
+                </div>
+                <div class="plugin-buttons repo-buttons">
+                    <button class="btn btn--secondary repo-source-button">Source Code</button>
+                    <button class="btn btn--primary repo-copy-button">Copy Link</button>
+                </div>
+            </div>
+            <div class="repo-plugins-container"></div>
+        </section>
+    </template>
+
+    <!-- Template for a single plugin card inside a repo -->
+    <template id="repo-plugin-card-template">
+        <div class="card plugin-card repo-plugin-card">
+            <div class="plugin-header">
+                <h3 class="plugin-name card__title"></h3>
+                <div class="plugin-badges">
+                    <span class="plugin-version-badge"></span>
+                    <span class="discord-version-badge" style="display: none;"></span>
+                </div>
+            </div>
+            <div class="plugin-author card__author"></div>
+            <div class="plugin-description card__description"></div>
+        </div>
+    </template>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopButton" class="btn btn--primary back-to-top">
+        <span class="material-symbols-rounded">arrow_upward</span>
+    </button>
+
+    <script type="module" src="/scripts/next-plugins.js"></script>
+</body>
+
+</html>
