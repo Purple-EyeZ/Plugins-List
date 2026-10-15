@@ -10,7 +10,7 @@ const searchState = { currentValue: "" };
 export const isFixedSearchFocused = () =>
 	document.activeElement === elements.fixedSearchBar;
 
-function normalizeText(text) {
+export function normalizeText(text) {
 	if (!text) return "";
 	return text
 		.toLowerCase()
@@ -137,7 +137,15 @@ function toggleClearButton(inputElement, value) {
 	clearButton.style.display = shouldShow ? "block" : "none";
 }
 
-const debouncedFilter = debounce(filterItems, DEBOUNCE);
+function runFilter(query) {
+	if (typeof config.filterFunction === "function") {
+		config.filterFunction(query);
+	} else {
+		filterItems(query);
+	}
+}
+
+const debouncedFilter = debounce(runFilter, DEBOUNCE);
 
 function addSearchFunctionality() {
 	const handleSearchInput = (e) => {
@@ -146,7 +154,9 @@ function addSearchFunctionality() {
 
 		if (value === "") {
 			debouncedFilter.cancel();
-			config.renderFunction(true);
+			if (typeof config.renderFunction === "function") {
+				config.renderFunction(true);
+			}
 		} else {
 			debouncedFilter(value);
 		}
@@ -160,7 +170,9 @@ function addSearchFunctionality() {
 
 	const clearSearch = (input) => {
 		updateSearchState("");
-		config.renderFunction(true);
+		if (typeof config.renderFunction === "function") {
+			config.renderFunction(true);
+		}
 		if (input) {
 			input.focus();
 		}
@@ -200,7 +212,7 @@ function initSearchFromURL() {
 	const searchQuery = urlParams.get("q");
 	if (searchQuery) {
 		updateSearchState(searchQuery);
-		filterItems(searchQuery);
+		runFilter(searchQuery);
 	}
 }
 
@@ -227,7 +239,9 @@ export function initSearch(userConfig) {
 		clearButton: document.getElementById("clearSearch"),
 		clearButtonFixed: document.getElementById("clearFixedSearch"),
 		searchButton: document.getElementById("searchButton"),
-		container: document.getElementById(config.containerId),
+		container: config.containerId
+			? document.getElementById(config.containerId)
+			: null,
 		subtext: document.getElementById("searchSubtext"),
 	};
 
@@ -241,12 +255,22 @@ export function initSearch(userConfig) {
 		prepareSearchableData,
 		filterItems: (query) => {
 			updateSearchState(query);
-			filterItems(query);
+			runFilter(query);
 		},
 		applyCurrentFilter: () => {
-			filterItems(searchState.currentValue);
+			runFilter(searchState.currentValue);
 		},
 		initSearchFromURL,
 		getCurrentValue: () => searchState.currentValue,
+		updateSubtext: (message) => {
+			if (!elements.subtext) return;
+			if (!message) {
+				elements.subtext.textContent = "";
+				elements.subtext.classList.remove("visible");
+				return;
+			}
+			elements.subtext.textContent = message;
+			elements.subtext.classList.add("visible");
+		},
 	};
 }

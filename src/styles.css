@@ -6,6 +6,7 @@
 	--color-secondary-hover: #38393b;
 	--color-background-page: #06020a;
 	--color-background-surface: #151519;
+	--color-background-surface-alt: #1f1e25;
 	--color-background-surface-hover: #212325;
 	--color-background-input: #17191a;
 	--color-text-primary: #e0e0e0;
@@ -15,6 +16,7 @@
 	--color-success-hover: #249428;
 	--color-warning: #ff9800;
 	--color-danger: #f44336;
+	--color-danger-dark: #730707;
 	--color-danger-hover: #d32f2f;
 	--color-white: #fff;
 	--color-toast-background: #121314c2;
@@ -215,6 +217,17 @@ h1 {
 
 h1 img {
 	height: 40px;
+}
+
+@media (max-width: 480px) {
+	h1 {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	h1 img {
+		height: 60px;
+	}
 }
 
 /* Search bar */
@@ -564,6 +577,7 @@ h1 img {
 		transform: translateX(-50%) translateY(-75px);
 		opacity: 0;
 	}
+
 	to {
 		transform: translateX(-50%) translateY(0);
 		opacity: 1;
@@ -1135,13 +1149,14 @@ html.lg-on {
 	content: "After";
 }
 
-/* Featured Plugin Card */
+/* Featured Plugin Card & Warning Card */
 #featured-plugin-container {
 	margin-bottom: 25px;
 	width: 100%;
 }
 
-.featured-plugin-card {
+.featured-plugin-card,
+.warning-card {
 	--card-border-radius: 18px;
 	--card-glow-expansion: 6px;
 	--card-glow-blur: 15px;
@@ -1159,10 +1174,25 @@ html.lg-on {
 	padding: 15px 20px;
 	position: relative;
 	box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
+}
+
+.featured-plugin-card {
 	cursor: pointer;
 }
 
-.featured-plugin-card::after {
+.warning-card {
+	--card-gradient: linear-gradient(
+		120deg,
+		var(--color-danger),
+		var(--color-danger-dark),
+		var(--color-danger)
+	);
+	margin-bottom: 25px;
+	width: 100%;
+}
+
+.featured-plugin-card::after,
+.warning-card::after {
 	content: "";
 	position: absolute;
 	top: calc(-1 * var(--card-glow-expansion));
@@ -1180,7 +1210,8 @@ html.lg-on {
 	pointer-events: none;
 }
 
-.featured-plugin-card::before {
+.featured-plugin-card::before,
+.warning-card::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -1206,17 +1237,52 @@ html.lg-on {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 150% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
 }
 
-.featured-plugin-card > * {
+.featured-plugin-card > *,
+.warning-card > * {
 	position: relative;
 	z-index: 2;
+}
+
+.warning-card-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--color-danger);
+	font-weight: 600;
+	font-size: 1.1rem;
+	margin-bottom: 6px;
+}
+
+.warning-card-icon {
+	font-size: 1.4rem;
+}
+
+.warning-card-text {
+	margin: 0;
+	color: var(--color-text-secondary);
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.warning-card-text a {
+	color: var(--color-white);
+	text-decoration: underline;
+	font-weight: 600;
+	transition: color 0.2s;
+}
+
+.warning-card-text a:hover {
+	color: var(--color-danger);
 }
 
 .featured-plugin-header {
@@ -1322,12 +1388,15 @@ html.lg-on {
 			0 0 4px rgb(178 16 241 / 50%),
 			0 2px 15px rgb(110 13 221 / 57%);
 	}
+
 	.btn--secondary:hover {
 		background-color: var(--color-secondary-hover);
 	}
+
 	.btn--danger:hover {
 		background-color: var(--color-danger-hover);
 	}
+
 	.btn--success:hover {
 		background-color: var(--color-success-hover);
 	}
@@ -1367,6 +1436,119 @@ html.lg-on {
 	margin-top: 20px;
 	border-top: 1px solid var(--color-primary);
 	opacity: 0.6;
+}
+
+/* Next Plugins Page */
+#repos-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.repo-card {
+	padding: 24px;
+}
+
+.repo-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.repo-info {
+	flex: 1 1 250px;
+	min-width: 0;
+}
+
+.repo-title-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 8px;
+	min-width: 0;
+}
+
+.repo-name {
+	font-size: 1.6rem;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	min-width: 0;
+}
+
+.repo-count-badge,
+.plugin-version-badge,
+.discord-version-badge {
+	padding: 3px 10px;
+	border-radius: var(--radius-button);
+	font-size: 0.8rem;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.repo-count-badge {
+	background-color: var(--color-secondary);
+	color: var(--color-text-primary);
+	border: 1px solid var(--color-border);
+}
+
+.repo-buttons {
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.repo-plugins-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	gap: 16px;
+	margin-top: 15px;
+}
+
+.repo-plugin-card {
+	background-color: var(--color-background-surface-alt);
+	border: 1px solid var(--color-border);
+	padding: 16px;
+}
+
+.plugin-buttons.repo-buttons {
+	margin-top: 0;
+}
+
+.plugin-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.plugin-version-badge {
+	background-color: var(--color-secondary);
+	color: var(--color-text-secondary);
+}
+
+.discord-version-badge {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+/* Mobile Styles for Repo Cards */
+@media (max-width: 768px) {
+	.repo-card .repo-description {
+		margin-bottom: 0;
+	}
+
+	.repo-buttons {
+		width: 100%;
+	}
+
+	.repo-buttons .btn {
+		flex: 1;
+	}
 }
 
 /* Tracker */
