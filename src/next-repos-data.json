@@ -43,5 +43,17 @@
 	{
 		"url": "https://plugins.obamabot.me/revenge-plugins",
 		"sourceUrl": "https://github.com/WolfPlugs/revenge-plugins"
+	},
+	{
+		"url": "https://accentaro.github.io/revenge-plugins/",
+		"sourceUrl": "https://github.com/Accentaro/revenge-plugins"
+	},
+	{
+		"url": "https://otkusteyler.github.io/Revenge-Next-Plugins/",
+		"sourceUrl": "https://github.com/OTKUSteyler/Revenge-Next-Plugins"
+	},
+	{
+		"url": "https://raw.githubusercontent.com/MarkLong0467/Next-NEFViewing/gh-pages",
+		"sourceUrl": "https://github.com/MarkLong0467/Next-NEFViewing"
 	}
 ]
