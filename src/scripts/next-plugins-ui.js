@@ -39,7 +39,7 @@ export function parseRepoPlugins(rawPlugins) {
 	});
 }
 
-function createPluginCard(plugin) {
+function createPluginCard(plugin, isDuplicate = false) {
 	const template = document.getElementById("repo-plugin-card-template");
 	if (!template) return null;
 
@@ -51,6 +51,16 @@ function createPluginCard(plugin) {
 	card.querySelector(".plugin-name").textContent = plugin.name;
 	card.querySelector(".plugin-author").textContent = `By: ${plugin.author}`;
 	card.querySelector(".plugin-description").textContent = plugin.description;
+
+	const duplicateBadge = card.querySelector(".plugin-duplicate-badge");
+	if (duplicateBadge) {
+		if (isDuplicate) {
+			duplicateBadge.style.display = "inline-flex";
+			duplicateBadge.title = "Included in the official repository";
+		} else {
+			duplicateBadge.remove();
+		}
+	}
 
 	const versionBadge = card.querySelector(".plugin-version-badge");
 	if (versionBadge && plugin.version) {
@@ -70,7 +80,7 @@ function createPluginCard(plugin) {
 	return card;
 }
 
-export function createRepoCard(repo) {
+export function createRepoCard(repo, officialPluginIds = new Set()) {
 	const template = document.getElementById("repo-card-template");
 	if (!template) return null;
 
@@ -85,7 +95,12 @@ export function createRepoCard(repo) {
 
 	const countBadge = card.querySelector(".repo-count-badge");
 	if (countBadge) {
-		countBadge.textContent = `${plugins.length} plugin${plugins.length === 1 ? "" : "s"}`;
+		const duplicates = plugins.filter(
+			(p) => !repo.official && officialPluginIds.has(p.id),
+		).length;
+		const dupText =
+			!repo.official && duplicates > 0 ? ` (${duplicates} built-in)` : "";
+		countBadge.textContent = `${plugins.length} plugin${plugins.length === 1 ? "" : "s"}${dupText}`;
 	}
 
 	const descEl = card.querySelector(".repo-description");
@@ -99,10 +114,19 @@ export function createRepoCard(repo) {
 
 	const copyBtn = card.querySelector(".repo-copy-button");
 	if (copyBtn) {
-		copyBtn.addEventListener("click", () => {
-			copyToClipboard(repo.url);
-			showToast(`Link for ${repoName} copied to clipboard!`);
-		});
+		if (repo.official) {
+			const badge = document.createElement("span");
+			badge.className = "repo-builtin-badge";
+			badge.innerHTML =
+				'<span class="material-symbols-rounded">check</span>Built-in';
+			badge.title = "Included by default in Revenge Next";
+			copyBtn.replaceWith(badge);
+		} else {
+			copyBtn.addEventListener("click", () => {
+				copyToClipboard(repo.url);
+				showToast(`Link for ${repoName} copied to clipboard!`);
+			});
+		}
 	}
 
 	const sourceBtn = card.querySelector(".repo-source-button");
@@ -119,6 +143,16 @@ export function createRepoCard(repo) {
 	const pluginsContainer = card.querySelector(".repo-plugins-container");
 	const pluginElements = [];
 
+	let emptyNotice = null;
+	if (!repo.official) {
+		emptyNotice = document.createElement("div");
+		emptyNotice.className = "card__author repo-empty-notice";
+		emptyNotice.style.display = "none";
+		emptyNotice.textContent =
+			"All plugins from this repo are in the official repository.";
+		pluginsContainer.appendChild(emptyNotice);
+	}
+
 	if (repo.error) {
 		const errDiv = document.createElement("div");
 		errDiv.className = "error-message";
@@ -131,33 +165,70 @@ export function createRepoCard(repo) {
 		pluginsContainer.appendChild(emptyDiv);
 	} else {
 		for (const plugin of plugins) {
-			const pluginCard = createPluginCard(plugin);
+			const isDuplicate = !repo.official && officialPluginIds.has(plugin.id);
+			const pluginCard = createPluginCard(plugin, isDuplicate);
 			if (pluginCard) {
 				pluginsContainer.appendChild(pluginCard);
-				pluginElements.push({ plugin, element: pluginCard });
+				pluginElements.push({ plugin, element: pluginCard, isDuplicate });
 			}
 		}
 	}
 
 	return {
 		element: card,
+		pluginsContainer,
 		repo,
 		plugins,
 		pluginElements,
+		emptyNotice,
 	};
 }
 
-export function renderRepos(container, repos) {
+function createSectionDivider(title) {
+	const divider = document.createElement("div");
+	divider.className = "repo-section-divider";
+	const heading = document.createElement("h2");
+	heading.textContent = title;
+	divider.appendChild(heading);
+	return divider;
+}
+
+export function renderRepos(container, repos, officialPluginIds = new Set()) {
 	container.innerHTML = "";
 	const renderedRepos = [];
 
-	for (const repo of repos) {
-		const rendered = createRepoCard(repo);
-		if (rendered) {
-			container.appendChild(rendered.element);
-			renderedRepos.push(rendered);
+	const officialRepos = repos.filter((r) => r.official);
+	const thirdPartyRepos = repos.filter((r) => !r.official);
+
+	let officialDivider = null;
+	if (officialRepos.length > 0) {
+		officialDivider = createSectionDivider("Official Repository");
+		container.appendChild(officialDivider);
+		for (const repo of officialRepos) {
+			const rendered = createRepoCard(repo, officialPluginIds);
+			if (rendered) {
+				container.appendChild(rendered.element);
+				renderedRepos.push(rendered);
+			}
 		}
 	}
 
-	return renderedRepos;
+	let thirdPartyDivider = null;
+	if (thirdPartyRepos.length > 0) {
+		thirdPartyDivider = createSectionDivider("Third-Party Repositories");
+		container.appendChild(thirdPartyDivider);
+		for (const repo of thirdPartyRepos) {
+			const rendered = createRepoCard(repo, officialPluginIds);
+			if (rendered) {
+				container.appendChild(rendered.element);
+				renderedRepos.push(rendered);
+			}
+		}
+	}
+
+	return {
+		renderedRepos,
+		officialDivider,
+		thirdPartyDivider,
+	};
 }

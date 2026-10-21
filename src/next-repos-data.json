@@ -1,5 +1,10 @@
 [
 	{
+		"url": "https://revenge-mod.github.io/revenge-community-plugins",
+		"sourceUrl": "https://github.com/revenge-mod/revenge-community-plugins",
+		"official": true
+	},
+	{
 		"url": "https://rvp.palmdevs.me/",
 		"sourceUrl": "https://github.com/PalmDevs/revenge-next-plugins"
 	},
@@ -38,5 +43,17 @@
 	{
 		"url": "https://plugins.obamabot.me/revenge-plugins",
 		"sourceUrl": "https://github.com/WolfPlugs/revenge-plugins"
+	},
+	{
+		"url": "https://accentaro.github.io/revenge-plugins/",
+		"sourceUrl": "https://github.com/Accentaro/revenge-plugins"
+	},
+	{
+		"url": "https://otkusteyler.github.io/Revenge-Next-Plugins/",
+		"sourceUrl": "https://github.com/OTKUSteyler/Revenge-Next-Plugins"
+	},
+	{
+		"url": "https://raw.githubusercontent.com/MarkLong0467/Next-NEFViewing/gh-pages",
+		"sourceUrl": "https://github.com/MarkLong0467/Next-NEFViewing"
 	}
 ]

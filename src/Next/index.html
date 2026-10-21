@@ -41,7 +41,7 @@
     </h1>
 
     <div class="title-subtext">
-        Third-party plugin repositories for Revenge Next. You are responsible for what you install. <a
+        Official and third-party plugin repositories for Revenge Next. You are responsible for what you install. <a
             href="/About/">See more</a>
     </div>
 
@@ -70,8 +70,16 @@
             <span>Warning: Unreviewed Plugins</span>
         </div>
         <p class="warning-card-text">
-            Plugins in third-party repositories are not reviewed or verified. You are responsible for what you install. If you find a malicious plugin, please <a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank" rel="noopener noreferrer">report it here</a>.
+            The official repository is trusted and maintained by Revenge and its contributors. Plugins in third-party repositories are not reviewed or verified. You are responsible for what you install. If you find a malicious plugin, please <a href="https://github.com/Purple-EyeZ/Plugins-List/issues/new/choose" target="_blank" rel="noopener noreferrer">report it here</a>.
         </p>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+        <div class="toggle-container">
+            <input type="checkbox" id="hide-builtin-plugins" checked>
+            <label for="hide-builtin-plugins">Hide built-in plugins</label>
+        </div>
     </div>
 
     <!-- Menu -->
@@ -127,6 +135,7 @@
             <div class="plugin-header">
                 <h3 class="plugin-name card__title"></h3>
                 <div class="plugin-badges">
+                    <span class="plugin-duplicate-badge" style="display: none;">Built-in</span>
                     <span class="plugin-version-badge"></span>
                     <span class="discord-version-badge" style="display: none;"></span>
                 </div>
