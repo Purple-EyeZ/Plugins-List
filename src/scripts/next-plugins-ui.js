@@ -176,6 +176,7 @@ export function createRepoCard(repo, officialPluginIds = new Set()) {
 
 	return {
 		element: card,
+		pluginsContainer,
 		repo,
 		plugins,
 		pluginElements,

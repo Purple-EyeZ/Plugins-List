@@ -21,41 +21,22 @@ export function normalizeText(text) {
 		.trim();
 }
 
-function prepareSearchableData(itemsData, itemElements) {
-	const elementMap = new Map(itemElements.map((el, i) => [i, el]));
-
-	searchableItems = itemsData.map((item, index) => {
-		const prepared = { element: elementMap.get(index) };
-		for (const key of config.searchKeys) {
-			const value = item[key];
-			prepared[key] = Array.isArray(value)
-				? normalizeText(value.join(" "))
-				: normalizeText(value);
-		}
-		return prepared;
-	});
+export function createSearchableItem(item, keys, extra = {}) {
+	const prepared = { ...extra };
+	for (const key of keys) {
+		const value = item ? item[key] : "";
+		prepared[key] = Array.isArray(value)
+			? normalizeText(value.join(" "))
+			: normalizeText(value);
+	}
+	return prepared;
 }
 
-function filterItems(query) {
-	const allItemsInDom = Array.from(
-		elements.container.getElementsByClassName(config.itemClass),
-	);
+export function sortSearchResults(results, query, priorityKey) {
+	if (!priorityKey || !query || !results || results.length === 0)
+		return results;
 	const normalizedQuery = normalizeText(query);
-
-	if (!normalizedQuery) {
-		allItemsInDom.forEach((el) => {
-			el.style.display = config.displayStyle || "flex";
-		});
-		updateSearchSubtext("", allItemsInDom.length);
-		return;
-	}
-
-	const results = fuzzysort.go(normalizedQuery, searchableItems, {
-		keys: config.searchKeys,
-	});
-
-	const priorityKey = config.priorityKey || config.searchKeys[0];
-	results.sort((a, b) => {
+	return results.sort((a, b) => {
 		const aPriorityResult = fuzzysort.single(
 			normalizedQuery,
 			a.obj[priorityKey],
@@ -74,6 +55,60 @@ function filterItems(query) {
 			return bPriorityResult.score - aPriorityResult.score;
 		}
 		return b.score - a.score;
+	});
+}
+
+export function fuzzySearch(query, targets, options = {}) {
+	const normalizedQuery = normalizeText(query);
+	if (!normalizedQuery || !targets || targets.length === 0) return [];
+
+	const { keys, priorityKey, threshold } = options;
+	const fuzzysortOptions = {};
+	if (keys) fuzzysortOptions.keys = keys;
+	if (threshold !== undefined) fuzzysortOptions.threshold = threshold;
+
+	const results = fuzzysort.go(normalizedQuery, targets, fuzzysortOptions);
+
+	if (priorityKey) {
+		sortSearchResults(results, normalizedQuery, priorityKey);
+	}
+
+	return results;
+}
+
+export function fuzzyMatch(query, target) {
+	if (!query || !target) return null;
+	return fuzzysort.single(normalizeText(query), normalizeText(target));
+}
+
+function prepareSearchableData(itemsData, itemElements) {
+	const elementMap = new Map(itemElements.map((el, i) => [i, el]));
+
+	searchableItems = itemsData.map((item, index) =>
+		createSearchableItem(item, config.searchKeys, {
+			element: elementMap.get(index),
+		}),
+	);
+}
+
+function filterItems(query) {
+	const allItemsInDom = Array.from(
+		elements.container.getElementsByClassName(config.itemClass),
+	);
+	const normalizedQuery = normalizeText(query);
+
+	if (!normalizedQuery) {
+		allItemsInDom.forEach((el) => {
+			el.style.display = config.displayStyle || "flex";
+		});
+		updateSearchSubtext("", allItemsInDom.length);
+		return;
+	}
+
+	const results = fuzzySearch(normalizedQuery, searchableItems, {
+		keys: config.searchKeys,
+		priorityKey: config.priorityKey || config.searchKeys[0],
+		threshold: config.threshold,
 	});
 
 	allItemsInDom.forEach((el) => {

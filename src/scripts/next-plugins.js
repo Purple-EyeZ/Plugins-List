@@ -1,13 +1,17 @@
-import fuzzysort from "fuzzysort";
 import * as ui from "./next-plugins-ui.js";
-import { initSearch, normalizeText } from "./search.js";
+import {
+	createSearchableItem,
+	fuzzyMatch,
+	fuzzySearch,
+	initSearch,
+	normalizeText,
+} from "./search.js";
 import "./shared.js";
 
 const reposContainer = document.getElementById("repos-container");
-const hideDuplicatesToggle = document.getElementById(
-	"hide-builtin-plugins",
-);
+const hideDuplicatesToggle = document.getElementById("hide-builtin-plugins");
 let renderedRepoItems = [];
+let searchablePlugins = [];
 let officialDivider = null;
 let thirdPartyDivider = null;
 let hideDuplicates = hideDuplicatesToggle ? hideDuplicatesToggle.checked : true;
@@ -61,16 +65,56 @@ function updateRepoCounts() {
 }
 
 function resetFilter() {
+	if (officialDivider) {
+		officialDivider.style.display = "";
+		reposContainer.appendChild(officialDivider);
+	}
 	for (const item of renderedRepoItems) {
-		item.element.style.display = "";
-		for (const p of item.pluginElements) {
-			p.element.style.display = hideDuplicates && p.isDuplicate ? "none" : "";
+		if (item.repo.official) {
+			item.element.style.display = "";
+			reposContainer.appendChild(item.element);
+			for (const p of item.pluginElements) {
+				item.pluginsContainer.appendChild(p.element);
+				p.element.style.display = hideDuplicates && p.isDuplicate ? "none" : "";
+			}
 		}
 	}
-	if (officialDivider) officialDivider.style.display = "";
-	if (thirdPartyDivider) thirdPartyDivider.style.display = "";
+
+	if (thirdPartyDivider) {
+		thirdPartyDivider.style.display = "";
+		reposContainer.appendChild(thirdPartyDivider);
+	}
+	for (const item of renderedRepoItems) {
+		if (!item.repo.official) {
+			item.element.style.display = "";
+			reposContainer.appendChild(item.element);
+			for (const p of item.pluginElements) {
+				item.pluginsContainer.appendChild(p.element);
+				p.element.style.display = hideDuplicates && p.isDuplicate ? "none" : "";
+			}
+		}
+	}
+
 	updateRepoCounts();
 	search.updateSubtext("");
+}
+
+function buildSearchablePlugins() {
+	searchablePlugins = [];
+	for (const item of renderedRepoItems) {
+		item.normalizedName = normalizeText(item.repo.data?.name || "");
+		item.normalizedDesc = normalizeText(item.repo.data?.description || "");
+		for (const p of item.pluginElements) {
+			searchablePlugins.push(
+				createSearchableItem(p.plugin, ["name", "author", "description"], {
+					repoItem: item,
+					pluginElement: p.element,
+					isDuplicate: p.isDuplicate,
+					repoName: item.normalizedName,
+				}),
+			);
+		}
+	}
 }
 
 function filterReposAndPlugins(query) {
@@ -81,23 +125,13 @@ function filterReposAndPlugins(query) {
 		return;
 	}
 
-	const pluginEntries = [];
-	for (const item of renderedRepoItems) {
-		for (const p of item.pluginElements) {
-			if (hideDuplicates && p.isDuplicate) continue;
-			pluginEntries.push({
-				repoItem: item,
-				pluginElement: p.element,
-				name: normalizeText(p.plugin.name),
-				author: normalizeText(p.plugin.author),
-				description: normalizeText(p.plugin.description),
-				repoName: normalizeText(item.repo.data?.name || ""),
-			});
-		}
-	}
+	const candidatePlugins = hideDuplicates
+		? searchablePlugins.filter((p) => !p.isDuplicate)
+		: searchablePlugins;
 
-	const results = fuzzysort.go(normalizedQuery, pluginEntries, {
+	const results = fuzzySearch(normalizedQuery, candidatePlugins, {
 		keys: ["name", "author", "description", "repoName"],
+		priorityKey: "name",
 		threshold: 0.35,
 	});
 
@@ -111,21 +145,17 @@ function filterReposAndPlugins(query) {
 
 	const visibleRepos = new Set();
 	for (const res of results) {
-		res.obj.pluginElement.style.display = "";
-		res.obj.repoItem.element.style.display = "";
-		visibleRepos.add(res.obj.repoItem);
+		const { pluginElement, repoItem } = res.obj;
+		pluginElement.style.display = "";
+		repoItem.pluginsContainer.appendChild(pluginElement);
+		repoItem.element.style.display = "";
+		visibleRepos.add(repoItem);
 	}
 
 	for (const item of renderedRepoItems) {
 		if (!visibleRepos.has(item)) {
-			const repoNameMatch = fuzzysort.single(
-				normalizedQuery,
-				normalizeText(item.repo.data?.name || ""),
-			);
-			const repoDescMatch = fuzzysort.single(
-				normalizedQuery,
-				normalizeText(item.repo.data?.description || ""),
-			);
+			const repoNameMatch = fuzzyMatch(normalizedQuery, item.normalizedName);
+			const repoDescMatch = fuzzyMatch(normalizedQuery, item.normalizedDesc);
 			if (
 				(repoNameMatch && repoNameMatch.score > 0.4) ||
 				(repoDescMatch && repoDescMatch.score > 0.4)
@@ -133,6 +163,7 @@ function filterReposAndPlugins(query) {
 				item.element.style.display = "";
 				for (const p of item.pluginElements) {
 					if (hideDuplicates && p.isDuplicate) continue;
+					item.pluginsContainer.appendChild(p.element);
 					p.element.style.display = "";
 				}
 				visibleRepos.add(item);
@@ -145,15 +176,35 @@ function filterReposAndPlugins(query) {
 			(i) => i.repo.official && visibleRepos.has(i),
 		);
 		officialDivider.style.display = hasOfficial ? "" : "none";
+		if (hasOfficial) reposContainer.appendChild(officialDivider);
 	}
+	for (const item of visibleRepos) {
+		if (item.repo.official) {
+			reposContainer.appendChild(item.element);
+		}
+	}
+
 	if (thirdPartyDivider) {
 		const hasThirdParty = renderedRepoItems.some(
 			(i) => !i.repo.official && visibleRepos.has(i),
 		);
 		thirdPartyDivider.style.display = hasThirdParty ? "" : "none";
+		if (hasThirdParty) reposContainer.appendChild(thirdPartyDivider);
+	}
+	for (const item of visibleRepos) {
+		if (!item.repo.official) {
+			reposContainer.appendChild(item.element);
+		}
 	}
 
-	const totalMatchedPlugins = results.length;
+	let totalMatchedPlugins = 0;
+	for (const item of visibleRepos) {
+		for (const p of item.pluginElements) {
+			if (p.element.style.display !== "none") {
+				totalMatchedPlugins++;
+			}
+		}
+	}
 	const totalMatchedRepos = visibleRepos.size;
 
 	search.updateSubtext(
@@ -190,6 +241,8 @@ async function init() {
 		renderedRepoItems = rendered.renderedRepos;
 		officialDivider = rendered.officialDivider;
 		thirdPartyDivider = rendered.thirdPartyDivider;
+
+		buildSearchablePlugins();
 
 		if (hideDuplicatesToggle) {
 			hideDuplicatesToggle.addEventListener("change", (e) => {
