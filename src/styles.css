@@ -12,6 +12,7 @@
 	--color-text-primary: #e0e0e0;
 	--color-text-secondary: #b0b3b8;
 	--color-text-tertiary: #848485;
+	--color-text-builtin: #4edc54;
 	--color-success: #2db132;
 	--color-success-hover: #249428;
 	--color-warning: #ff9800;
@@ -21,6 +22,7 @@
 	--color-white: #fff;
 	--color-toast-background: #121314c2;
 	--color-border: #282a2d;
+	--color-border-builtin: #2db13259;
 	--color-link-hover: #b161f3;
 	--color-focus-border: #c1cad3;
 	--color-focus-shadow: #7f828799;
@@ -1539,6 +1541,67 @@ html.lg-on {
 	color: var(--color-white);
 }
 
+.plugin-duplicate-badge {
+	padding: 3px 10px;
+	border-radius: var(--radius-button);
+	font-size: 0.8rem;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	background-color: var(--color-background-success-light);
+	color: var(--color-text-builtin);
+	border: 1px solid var(--color-border-builtin);
+}
+
+.repo-builtin-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 8px 16px;
+	border-radius: var(--radius-button);
+	font-size: 0.93rem;
+	font-weight: 500;
+	color: var(--color-text-builtin);
+	background-color: var(--color-background-success-light);
+	border: 1px solid var(--color-border-builtin);
+	user-select: none;
+	white-space: nowrap;
+}
+
+.repo-builtin-badge .material-symbols-rounded {
+	font-size: 1.15rem;
+}
+
+.repo-section-divider {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 16px 0;
+}
+
+.repo-section-divider h2 {
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--color-text-secondary);
+	margin: 0;
+	white-space: nowrap;
+}
+
+.repo-section-divider::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background-color: var(--color-border);
+}
+
+.repo-empty-notice {
+	grid-column: 1 / -1;
+	padding: 10px 0;
+}
+
 /* Mobile Styles for Repo Cards */
 @media (max-width: 768px) {
 	.repo-card .repo-description {
@@ -1549,7 +1612,8 @@ html.lg-on {
 		width: 100%;
 	}
 
-	.repo-buttons .btn {
+	.repo-buttons .btn,
+	.repo-buttons .repo-builtin-badge {
 		flex: 1;
 	}
 }

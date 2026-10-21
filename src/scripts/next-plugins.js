@@ -4,7 +4,13 @@ import { initSearch, normalizeText } from "./search.js";
 import "./shared.js";
 
 const reposContainer = document.getElementById("repos-container");
+const hideDuplicatesToggle = document.getElementById(
+	"hide-builtin-plugins",
+);
 let renderedRepoItems = [];
+let officialDivider = null;
+let thirdPartyDivider = null;
+let hideDuplicates = hideDuplicatesToggle ? hideDuplicatesToggle.checked : true;
 
 const search = initSearch({
 	containerId: "repos-container",
@@ -36,13 +42,34 @@ async function fetchRepoData(repo) {
 	}
 }
 
+function updateRepoCounts() {
+	for (const item of renderedRepoItems) {
+		if (item.repo.official) continue;
+		const countBadge = item.element.querySelector(".repo-count-badge");
+		const total = item.plugins.length;
+		const duplicates = item.pluginElements.filter((p) => p.isDuplicate).length;
+		const visibleCount = hideDuplicates ? total - duplicates : total;
+		const dupText = duplicates > 0 ? ` (${duplicates} built-in)` : "";
+		if (countBadge) {
+			countBadge.textContent = `${visibleCount} plugin${visibleCount === 1 ? "" : "s"}${dupText}`;
+		}
+		if (item.emptyNotice) {
+			item.emptyNotice.style.display =
+				hideDuplicates && total > 0 && visibleCount === 0 ? "" : "none";
+		}
+	}
+}
+
 function resetFilter() {
 	for (const item of renderedRepoItems) {
 		item.element.style.display = "";
 		for (const p of item.pluginElements) {
-			p.element.style.display = "";
+			p.element.style.display = hideDuplicates && p.isDuplicate ? "none" : "";
 		}
 	}
+	if (officialDivider) officialDivider.style.display = "";
+	if (thirdPartyDivider) thirdPartyDivider.style.display = "";
+	updateRepoCounts();
 	search.updateSubtext("");
 }
 
@@ -57,6 +84,7 @@ function filterReposAndPlugins(query) {
 	const pluginEntries = [];
 	for (const item of renderedRepoItems) {
 		for (const p of item.pluginElements) {
+			if (hideDuplicates && p.isDuplicate) continue;
 			pluginEntries.push({
 				repoItem: item,
 				pluginElement: p.element,
@@ -75,6 +103,7 @@ function filterReposAndPlugins(query) {
 
 	for (const item of renderedRepoItems) {
 		item.element.style.display = "none";
+		if (item.emptyNotice) item.emptyNotice.style.display = "none";
 		for (const p of item.pluginElements) {
 			p.element.style.display = "none";
 		}
@@ -103,11 +132,25 @@ function filterReposAndPlugins(query) {
 			) {
 				item.element.style.display = "";
 				for (const p of item.pluginElements) {
+					if (hideDuplicates && p.isDuplicate) continue;
 					p.element.style.display = "";
 				}
 				visibleRepos.add(item);
 			}
 		}
+	}
+
+	if (officialDivider) {
+		const hasOfficial = renderedRepoItems.some(
+			(i) => i.repo.official && visibleRepos.has(i),
+		);
+		officialDivider.style.display = hasOfficial ? "" : "none";
+	}
+	if (thirdPartyDivider) {
+		const hasThirdParty = renderedRepoItems.some(
+			(i) => !i.repo.official && visibleRepos.has(i),
+		);
+		thirdPartyDivider.style.display = hasThirdParty ? "" : "none";
 	}
 
 	const totalMatchedPlugins = results.length;
@@ -124,12 +167,42 @@ async function init() {
 		if (!response.ok) throw new Error(`HTTP ${response.status}`);
 		const repoConfigs = await response.json();
 
+		repoConfigs.sort((a, b) => (b.official ? 1 : 0) - (a.official ? 1 : 0));
+
 		const loadedRepos = await Promise.all(
 			repoConfigs.map((repo) => fetchRepoData(repo)),
 		);
 
-		renderedRepoItems = ui.renderRepos(reposContainer, loadedRepos);
+		const officialPluginIds = new Set();
+		for (const repo of loadedRepos) {
+			if (repo.official && repo.data?.plugins) {
+				for (const id of Object.keys(repo.data.plugins)) {
+					officialPluginIds.add(id);
+				}
+			}
+		}
 
+		const rendered = ui.renderRepos(
+			reposContainer,
+			loadedRepos,
+			officialPluginIds,
+		);
+		renderedRepoItems = rendered.renderedRepos;
+		officialDivider = rendered.officialDivider;
+		thirdPartyDivider = rendered.thirdPartyDivider;
+
+		if (hideDuplicatesToggle) {
+			hideDuplicatesToggle.addEventListener("change", (e) => {
+				hideDuplicates = e.target.checked;
+				if (search.getCurrentValue()) {
+					search.applyCurrentFilter();
+				} else {
+					resetFilter();
+				}
+			});
+		}
+
+		resetFilter();
 		search.initSearchFromURL();
 	} catch (error) {
 		console.error("Error loading Next repositories:", error);

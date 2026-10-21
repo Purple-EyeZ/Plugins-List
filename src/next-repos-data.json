@@ -1,5 +1,10 @@
 [
 	{
+		"url": "https://revenge-mod.github.io/revenge-community-plugins",
+		"sourceUrl": "https://github.com/revenge-mod/revenge-community-plugins",
+		"official": true
+	},
+	{
 		"url": "https://rvp.palmdevs.me/",
 		"sourceUrl": "https://github.com/PalmDevs/revenge-next-plugins"
 	},
